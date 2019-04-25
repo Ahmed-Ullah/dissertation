@@ -361,4 +361,4 @@
   \end{doublespace}
 }
 
-\makeglossaries
+%\makeglossaries

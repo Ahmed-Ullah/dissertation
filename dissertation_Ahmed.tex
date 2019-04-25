@@ -8,7 +8,7 @@
 %% Use one of the following if writing a thesis/dissertation.
 % \documentclass[thesis]{uathesis}
 \documentclass[dissertation]{uathesis}
-
+\graphicspath{{figs/}}
 %% Basic packages you'll probably want to use.
 \usepackage{graphicx}                 %% For using \includegraphics{}
 \usepackage{cite}                     %% For sorting/collapsing citations.
@@ -110,7 +110,7 @@
 %% Note the use of \and to create line breaks and the
 %% inverted pyramid style requested by the graduate school.
 
-\title{A new ADI method for the Poisson-Boltzmann equation with a two-component regularization}
+\title{A new ADI method for the Poisson-Boltzmann equation with \protect\\ a two-component regularization}
 
 \degree{Doctor of Philosophy}   %% Change to suit your degree.
 \department{Mathematics}        %% Change to suit your department.
@@ -156,12 +156,23 @@
 
 
 % --------------------------- Chapter 2 ----------------------------------------
-\chapter{\MakeUppercase{Governing equations and boundary conditions for a bilayer coating a compliant tube}}\label{chap: Governing_Eqn_boundary_conditions_dim}
-\input{full_problem_1}
-\chapter{THEORY AND ALGORITHM}
-\label{chap: theory}
-\input{theory}
+\chapter{POISSON-BOLTZMANN EQUATION (PBE)}
+\label{chap: PBE}
+\input{PBE.tex}
 
+% --------------------------- Chapter 2 ----------------------------------------
+\chapter{OPERATOR SPLITTING SCHEMES}
+\label{chap:opt_split}
+\input{opt_split}
+% --------------------------- Chapter 3 ----------------------------------------
+\chapter{A NEW DERIVATION FOR GHOST FLUID METHOD}
+\label{chap:new_GFM}
+\input{new_GFM}
+
+% --------------------------- Chapter 4 ----------------------------------------
+\chapter{NUMERICAL VALIDATION}
+\label{chap:num_vald}
+\input{num_vald} 
 
 %% -----------------------------Chapter 7 ---------------------------------------
 \chapter{CONCLUSIONS}

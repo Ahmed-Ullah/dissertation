@@ -2,6 +2,14 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces A liquid bilayer coating a compliant cylindrical tube with an insoluble surfactant monolayer present at the \textit {gas-mucus} interface.\relax }}{5}
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 1D GFM\relax }}{17}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 2D GFM\relax }}{19}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Temporal convergence, (have to add ADI)\relax }}{27}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Electrostatic potential for 1cbn using $dt = 0.05$ and $h= 0.5$. \relax }}{29}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Difference in solvation energy(left) and CPU time (right) in solving nonlinear PB eqation for 24 protein. \relax }}{31}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Electrostatic potential for 2a9x using GFM-ADI for $\Delta t = 0.05$ and $h = 0.5$\relax }}{33}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces The salt dependence of the binding affinities\relax }}{35}
 \addvspace {10\p@ }

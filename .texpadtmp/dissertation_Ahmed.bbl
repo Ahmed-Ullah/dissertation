@@ -11,6 +11,12 @@ L.~Chen, M.~Holst, and J.~Xu.
   Equation}.
 \newblock {\em SIAM Journal on Numerical Analysis}, 45(6):2298--2320, 2007.
 
+\bibitem{Yakonov_1963}
+E.~D'Yakonov.
+\newblock Difference schemes with split operators for multidimensional unsteady
+  prob- lems (english translation).
+\newblock {\em USSR Comp. Math.}, 3:518--607, 1963.
+
 \bibitem{Fedkiw1999}
 R.~P. Fedkiw, T.~Aslam, B.~Merriman, and S.~Osher.
 \newblock {A Non-oscillatory Eulerian Approach to Interfaces in Multimaterial
@@ -35,6 +41,12 @@ W.~Geng and R.~Krasny.
   for electrostatics of solvated biomolecules}.
 \newblock {\em Journal of Computational Physics}, 247:62--78, 2013.
 
+\bibitem{GENG_WEI2011}
+W.~Geng and G.~Wei.
+\newblock Multiscale molecular dynamics using the matched interface and
+  boundary method.
+\newblock {\em Journal of Computational Physics}, 230(2):435 -- 457, 2011.
+
 \bibitem{Geng2007}
 W.~Geng, S.~Yu, and G.~Wei.
 \newblock Treatment of charge singularities in implicit solvent models.
@@ -52,11 +64,24 @@ W.~Geng and S.~Zhao.
   regularization for charge singularity in implicit solvation}.
 \newblock {\em Journal of Computational Physics}, 351:25--39, 2017.
 
+\bibitem{Gilson}
+M.~K. Gilson, M.~E. Davis, B.~A. Luty, and J.~A. McCammon.
+\newblock Computation of electrostatic forces on solvated molecules using the
+  poisson-boltzmann equation.
+\newblock {\em The Journal of Physical Chemistry}, 97(14):3591--3600, 1993.
+
 \bibitem{Holst2010}
 M.~Holst, J.~A. McCammon, Z.~Yu, Y.~Zhou, and Y.~Zhu.
 \newblock {Adaptive Finite Element Modeling Techniques for the
   Poisson-Boltzmann Equation}.
 \newblock {\em Communications in computational physics}, m(1):28, 2010.
+
+\bibitem{Holst:1993}
+M.~J. Holst.
+\newblock {\em Multilevel Methods for the Poisson-Boltzmann Equation}.
+\newblock PhD thesis, University of Illinois at Urbana-Champaign, Champaign,
+  IL, USA, 1993.
+\newblock UMI Order No. GAX94-11653.
 
 \bibitem{Holst1995}
 M.~J. Holst and F.~Saied.
@@ -70,6 +95,11 @@ W.~Im, D.~Beglov, and B.~Roux.
   numerical solutions to the poisson-boltzmann equation.
 \newblock {\em Computer Physics Communication}, 11(1-3):59--75, 1998.
 
+\bibitem{Leeper2005}
+T.~C. Leeper, Z.~Athanassiou, R.~L. Dias, J.~A. Robinson, and G.~Varani.
+\newblock {TAR RNA recognition by a cyclic peptidomimetic of Tat protein}.
+\newblock {\em Biochemistry}, 44(37):12362--12372, 2005.
+
 \bibitem{Li2017}
 C.~Li and S.~Zhao.
 \newblock {A matched Peaceman--Rachford ADI method for solving parabolic
@@ -82,11 +112,23 @@ Z.~Li and A.~Mayo.
   Arbitrary Interface}.
 \newblock IBM Thomas J. Watson Research Division, 1993.
 
+\bibitem{Li1999}
+Z.~Li and Y.-Q. Shen.
+\newblock A numerical method for solving heat equations involving interfaces.
+\newblock In {\em Electronic Journal of Differential Equations, Conf},
+  volume~3, pages 100--108, 1999.
+
 \bibitem{Liu2013}
 J.~Liu and Z.~Zheng.
 \newblock {IIM-based ADI finite difference scheme for nonlinear
   convection-diffusion equations with interfaces}.
 \newblock {\em Applied Mathematical Modelling}, 37(3):1196--1207, 2013.
+
+\bibitem{Liu2000}
+X.-D. Liu, R.~P. Fedkiw, and M.~Kang.
+\newblock {A Boundary Condition Capturing Method for Poisson's Equation on
+  Irregular Domains}.
+\newblock {\em Journal of Computational Physics}, 160(1):151--178, 2000.
 
 \bibitem{Luty1992}
 B.~A. Luty, M.~E. Davis, and J.~A. McCammon.
@@ -106,6 +148,19 @@ A.~Sayyed-Ahmad, K.~Tuncay, and P.~J. Ortoleva.
   equation}.
 \newblock {\em Journal of Computational Chemistry}, 25(8):1068--1074, 2004.
 
+\bibitem{Sharp_Honig}
+K.~A. Sharp and B.~Honig.
+\newblock Calculating total electrostatic energies with the nonlinear
+  poisson-boltzmann equation.
+\newblock {\em The Journal of Physical Chemistry}, 94(19):7684--7692, 1990.
+
+\bibitem{shestakov_solution_2002}
+A.~Shestakov, J.~Milovich, and A.~Noy.
+\newblock Solution of the {Nonlinear} {Poisson}--{Boltzmann} {Equation} {Using}
+  {Pseudo}-transient {Continuation} and the {Finite} {Element} {Method}.
+\newblock {\em Journal of Colloid and Interface Science}, 247(1):62--79, Mar.
+  2002.
+
 \bibitem{Shestakov2002}
 A.~I. Shestakov, J.~L. Milovich, and A.~Noy.
 \newblock {Solution of the nonlinear Poisson-Boltzmann equation using
@@ -116,6 +171,12 @@ A.~I. Shestakov, J.~L. Milovich, and A.~Noy.
 J.~Strikwerda.
 \newblock {\em Finite Difference Schemes and Partial Differential Equations}.
 \newblock SIAM, 2004.
+
+\bibitem{1cbn_paper}
+M.~M. Teeter, S.~Roe, and N.~H. Heo.
+\newblock Atomic resolution (0·83 Å) crystal structure of the hydrophobic
+  protein crambin at 130 k.
+\newblock {\em Journal of Molecular Biology}, 230(1):292 -- 311, 1993.
 
 \bibitem{Wilson2016}
 L.~Wilson and S.~Zhao.
@@ -130,12 +191,49 @@ D.~Xie.
   poisson--boltzmann equation in calculation of biomolecular electrostatics.
 \newblock {\em Journal of Computational Physics}, 275:294 -- 309, 2014.
 
+\bibitem{Yanenko_1963}
+N.~Yanenko.
+\newblock Convergence of the method of splitting for the heat conduction
+  equations with variable coefficients (english translation).
+\newblock {\em USSR Comp. Math.}, 3:1094--1100, 1963.
+
+\bibitem{Yanenko_1967}
+N.~Yanenko.
+\newblock {\em The method of fractional steps (English translation; originally
+  published in Russian)}.
+\newblock Springer-Verlag, Berlin, Heidelberg, and New York, 1967.
+
+\bibitem{Yu2005}
+S.~Yu, S.~Zhao, and G.~W. Wei.
+\newblock {Local spectral time splitting method for first- and second-order
+  partial differential equations}.
+\newblock {\em Journal of Computational Physics}, 206(2):727--780, 2005.
+
+\bibitem{Zhan_2011}
+Zhan, Baker, and W.~GW.
+\newblock Differential geometry based solvation model ii: Lagrangian
+  formulation.
+\newblock {\em Journal of mathematical biology}, 63(6):1139--1200, 2011.
+
 \bibitem{Zhao2011}
 S.~Zhao.
 \newblock {Pseudo-time-coupled nonlinear models for biomolecular surface
   representation and solvation analysis}.
 \newblock {\em International Journal for Numerical Methods in Biomedical
   Engineering}, 27(12):1964--1981, 2011.
+
+\bibitem{zhao_pseudo-time-coupled_2011}
+S.~Zhao.
+\newblock Pseudo-time-coupled nonlinear models for biomolecular surface
+  representation and solvation analysis.
+\newblock {\em International Journal for Numerical Methods in Biomedical
+  Engineering}, 27(12):1964--1981, Dec. 2011.
+
+\bibitem{zhao_operator_2014}
+S.~Zhao.
+\newblock Operator splitting adi schemes for pseudo-time coupled nonlinear
+  solvation simulations.
+\newblock {\em Journal of Computational Physics}, 257:1000 -- 1021, 2014.
 
 \bibitem{Zhao2015}
 S.~Zhao.

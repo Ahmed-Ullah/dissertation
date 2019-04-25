@@ -3,16 +3,12 @@
 \@newglossary{acronym}{alg}{acr}{acn}
 \@writefile{lof}{\noaddvspace }
 \@writefile{lot}{\noaddvspace }
-\providecommand\@glsorder[1]{}
-\providecommand\@istfilename[1]{}
-\@istfilename{dissertation_Ahmed.xdy}
-\@glsorder{word}
 \babel@aux{english}{}
 \@writefile{toc}{\contentsline {chapter}{ABSTRACT}{ii}}
 \@writefile{toc}{\contentsline {chapter}{DEDICATION}{iii}}
 \@writefile{toc}{\contentsline {chapter}{LIST OF ABBREVIATIONS AND SYMBOLS}{iii}}
-\@writefile{toc}{\contentsline {chapter}{ACKNOWLEDGMENTS}{iv}}
-\@writefile{toc}{\contentsline {chapter}{LIST OF FIGURES}{vi}}
+\@writefile{toc}{\contentsline {chapter}{ACKNOWLEDGMENTS}{vi}}
+\@writefile{toc}{\contentsline {chapter}{LIST OF FIGURES}{ix}}
 \citation{Wilson2016}
 \citation{Im1998}
 \citation{Rocchia2001}
@@ -35,48 +31,196 @@
 \citation{Li2017}
 \citation{Geng2017a}
 \citation{Fedkiw1999}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}\MakeUppercase  {Governing equations and boundary conditions for a bilayer coating a compliant tube}}{5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}POISSON-BOLTZMANN EQUATION (PBE)}{5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap: Governing_Eqn_boundary_conditions_dim}{{2}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces A liquid bilayer coating a compliant cylindrical tube with an insoluble surfactant monolayer present at the \textit  {gas-mucus} interface.\relax }}{5}}
+\newlabel{chap: PBE}{{2}{5}}
+\newlabel{pbe}{{2.1}{5}}
+\newlabel{bd_cond}{{2.2}{5}}
+\newlabel{rho}{{2.3}{5}}
+\citation{Holst:1993}
+\citation{Cai2009}
+\newlabel{ju_cond}{{2.4}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Two-component regularization for singular sources}{6}}
+\newlabel{2_comp_reg}{{2.1}{6}}
+\newlabel{rho_eq}{{2.5}{6}}
+\citation{Cai2009}
+\citation{Cai2009}
+\citation{Geng2017a}
+\newlabel{Green}{{2.6}{7}}
+\citation{Geng2017a}
+\newlabel{phitilde1}{{2.10}{8}}
+\newlabel{phitilde2}{{2.11}{8}}
+\newlabel{phitilde3}{{2.12}{8}}
+\newlabel{phitilde4}{{2.13}{8}}
+\newlabel{phitilde5}{{2.13}{8}}
+\newlabel{RPB}{{2.14}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Solvation energy from Electrostatic potential}{8}}
+\newlabel{eq_Gele}{{2.15}{8}}
+\newlabel{eq_Ecou}{{2.16}{8}}
+\citation{Sharp_Honig}
+\citation{GENG_WEI2011,Gilson,Sharp_Honig}
+\citation{zhao_pseudo-time-coupled_2011}
+\citation{Sayyed-Ahmad2004}
+\citation{shestakov_solution_2002}
+\citation{zhao_pseudo-time-coupled_2011}
+\newlabel{eq_solvation}{{2.18}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Pseudo-transient continuation approach for the PBE}{9}}
+\newlabel{tdrpb}{{2.19}{9}}
+\newlabel{jump}{{2.21}{9}}
+\citation{Sayyed-Ahmad2004}
+\citation{shestakov_solution_2002}
+\citation{zhao_pseudo-time-coupled_2011}
+\citation{zhao_operator_2014}
+\citation{Sayyed-Ahmad2004}
+\citation{shestakov_solution_2002}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}OPERATOR SPLITTING SCHEMES}{11}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:opt_split}{{3}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Implicit-Euler method with Alternating Direction Implicit scheme (GFM-ADI)}{11}}
+\newlabel{GFM-ADI_sec}{{3.1}{11}}
+\newlabel{non_linear_ADI}{{3.1}{11}}
+\newlabel{diffusion_ADI}{{3.2}{11}}
+\newlabel{anal_sol}{{3.3}{11}}
+\newlabel{imp-eu}{{3.4}{12}}
+\newlabel{dif_opx}{{3.5}{12}}
+\newlabel{dif_opz}{{3.5}{12}}
+\citation{Yu2005}
+\newlabel{GFM-ADI}{{3.6}{13}}
+\newlabel{GFM-ADI2}{{3.7}{13}}
+\newlabel{GFM-ADI3}{{3.8}{13}}
+\newlabel{adi_tailor}{{3.9}{13}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Crank-Nicolson method with Locally One Dimensional Scheme(GFM-LODCN)}{13}}
+\newlabel{GFM-LODCN}{{3.2}{13}}
+\citation{Yakonov_1963}
+\citation{Yanenko_1963}
+\citation{Yanenko_1967}
+\newlabel{non_linear1_LOD-CN}{{3.10}{14}}
+\newlabel{diffusion_LOD-CN}{{3.11}{14}}
+\newlabel{non_linear2_LOD-CN}{{3.12}{14}}
+\newlabel{LODCN_eq}{{3.14}{14}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Implicit-Euler method with Locally One Dimensional Scheme(GFM-LODIE)}{15}}
+\citation{Fedkiw1999}
+\citation{Liu2000}
+\citation{Liu2000}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}A NEW DERIVATION FOR GHOST FLUID METHOD}{16}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:new_GFM}{{4}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}One dimension}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces 1D GFM\relax }}{17}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:geometry}{{2.1}{5}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}THEORY AND ALGORITHM}{8}}
+\newlabel{fig_1}{{4.1}{17}}
+\newlabel{1d_GFM}{{4.1}{17}}
+\newlabel{fnt-op}{{4.2}{17}}
+\newlabel{u_fact}{{4.3}{18}}
+\newlabel{fnt-op-2}{{4.4}{18}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Two dimensions}{18}}
+\citation{Liu2000}
+\citation{Liu2000}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces 2D GFM\relax }}{19}}
+\newlabel{fig_gfm_2D}{{4.2}{19}}
+\newlabel{epun}{{4.6}{19}}
+\newlabel{eput}{{4.6}{19}}
+\newlabel{epux1}{{4.7}{19}}
+\newlabel{epuy1}{{4.7}{19}}
+\newlabel{epux2}{{4.8}{19}}
+\newlabel{epuy2}{{4.8}{19}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Three dimensions}{20}}
+\newlabel{eqtran1}{{4.9}{21}}
+\newlabel{eqtran2}{{4.10}{21}}
+\newlabel{3d_gfm1}{{4.11}{21}}
+\newlabel{3d_gfm2}{{4.12}{21}}
+\newlabel{3d_gfm3}{{4.13}{22}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Corner point for the new GFM method}{22}}
+\citation{Geng2013_Fully}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}NUMERICAL VALIDATION}{24}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap: theory}{{3}{8}}
-\bibdata{bibl}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}CONCLUSIONS}{9}}
+\newlabel{chap:num_vald}{{5}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.0.1}Krikwood Sphere with analytical solution}{24}}
+\newlabel{krik}{{5.0.1}{24}}
+\newlabel{Eq_sphere1}{{5.1}{24}}
+\newlabel{Eq_sphere2}{{5.2}{24}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Solving the nonlinear PB equation for the krikwood sphere with $\epsilon ^+=80$, $\epsilon ^-=1$, $\Delta t = 0.001$, $T=10$, $I_s=0.01$ and $\kappa = 1$. The centered charge of unit $1e_c $ is located at (0, 0, 0).\relax }}{26}}
+\newlabel{tab-krikwood}{{5.1}{26}}
+\citation{1cbn_paper}
+\citation{1cbn_paper}
+\citation{1cbn_paper}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Temporal convergence, (have to add ADI)\relax }}{27}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Biological applications}{27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Protein Crambin }{27}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Solvation Energy ({\it  kcal/mol}) of 1cbn for $h=0.5$ and the ionic strength $I_s= 0.15$\relax }}{28}}
+\newlabel{tab-1cbn}{{5.2}{28}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Electrostatic potential for 1cbn using $dt = 0.05$ and $h= 0.5$. \relax }}{29}}
+\newlabel{fig_1cbn}{{5.2}{29}}
+\citation{Geng2007,Geng2017a}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Solvation energy of 24 proteins}{30}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Solvation energies ({\it  kcal/mol}) of 24 Proteins considering $\Delta t = 0.001$ for ADI and $\Delta t =0.05$ for GFM-ADI, GFM-LODCN, GFM-LODIE\relax }}{30}}
+\newlabel{tab_24protein}{{5.3}{30}}
+\citation{Leeper2005}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Difference in solvation energy(left) and CPU time (right) in solving nonlinear PB eqation for 24 protein. \relax }}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Binding energy of 2a9x}{31}}
+\newlabel{eq_bind}{{5.4}{32}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces Binding energy of 2a9x\relax }}{32}}
+\newlabel{tab_2a9x}{{5.4}{32}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Salt effect on the binding affinity}{32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Electrostatic potential for 2a9x using GFM-ADI for $\Delta t = 0.05$ and $h = 0.5$\relax }}{33}}
+\citation{zhao_pseudo-time-coupled_2011}
+\citation{Zhan_2011}
+\newlabel{eq_del_e_bind}{{5.5}{34}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces Comparison of binding affinities of the protein complexes 1emv and 1beb\relax }}{34}}
+\newlabel{tab_salt_effect}{{5.5}{34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces The salt dependence of the binding affinities\relax }}{35}}
+\newlabel{fig_salt_effect}{{5.5}{35}}
+\bibdata{../bibl}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}CONCLUSIONS}{36}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap: conclusions}{{4}{9}}
-\@writefile{toc}{\contentsline {chapter}{REFERENCES}{9}}
+\newlabel{chap: conclusions}{{6}{36}}
+\@writefile{toc}{\contentsline {chapter}{REFERENCES}{36}}
 \bibcite{Cai2009}{1}
 \bibcite{Chen2007}{2}
-\bibcite{Fedkiw1999}{3}
-\bibcite{Fogolari2002}{4}
-\bibcite{Geng2015}{5}
-\bibcite{Geng2013_tree}{6}
-\bibcite{Geng2007}{7}
-\bibcite{Geng2013_Fully}{8}
-\bibcite{Geng2017a}{9}
-\bibcite{Holst2010}{10}
-\bibcite{Holst1995}{11}
-\bibcite{Im1998}{12}
-\bibcite{Li2017}{13}
-\bibcite{Mayo1993}{14}
-\bibcite{Liu2013}{15}
-\bibcite{Luty1992}{16}
-\bibcite{Rocchia2001}{17}
-\bibcite{Sayyed-Ahmad2004}{18}
-\bibcite{Shestakov2002}{19}
-\bibcite{FD_PDE}{20}
-\bibcite{Wilson2016}{21}
-\bibcite{XIE2014}{22}
-\bibcite{Zhao2011}{23}
-\bibcite{Zhao2015}{24}
-\bibcite{Zhou_1996}{25}
+\bibcite{Yakonov_1963}{3}
+\bibcite{Fedkiw1999}{4}
+\bibcite{Fogolari2002}{5}
+\bibcite{Geng2015}{6}
+\bibcite{Geng2013_tree}{7}
+\bibcite{GENG_WEI2011}{8}
+\bibcite{Geng2007}{9}
+\bibcite{Geng2013_Fully}{10}
+\bibcite{Geng2017a}{11}
+\bibcite{Gilson}{12}
+\bibcite{Holst2010}{13}
+\bibcite{Holst:1993}{14}
+\bibcite{Holst1995}{15}
+\bibcite{Im1998}{16}
+\bibcite{Leeper2005}{17}
+\bibcite{Li2017}{18}
+\bibcite{Mayo1993}{19}
+\bibcite{Li1999}{20}
+\bibcite{Liu2013}{21}
+\bibcite{Liu2000}{22}
+\bibcite{Luty1992}{23}
+\bibcite{Rocchia2001}{24}
+\bibcite{Sayyed-Ahmad2004}{25}
+\bibcite{Sharp_Honig}{26}
+\bibcite{shestakov_solution_2002}{27}
+\bibcite{Shestakov2002}{28}
+\bibcite{FD_PDE}{29}
+\bibcite{1cbn_paper}{30}
+\bibcite{Wilson2016}{31}
+\bibcite{XIE2014}{32}
+\bibcite{Yanenko_1963}{33}
+\bibcite{Yanenko_1967}{34}
+\bibcite{Yu2005}{35}
+\bibcite{Zhan_2011}{36}
+\bibcite{Zhao2011}{37}
+\bibcite{zhao_pseudo-time-coupled_2011}{38}
+\bibcite{zhao_operator_2014}{39}
+\bibcite{Zhao2015}{40}
+\bibcite{Zhou_1996}{41}
 \bibstyle{abbrv}
-\newlabel{bib}{{4}{12}}
-\@writefile{toc}{\contentsline {chapter}{APPENDIX}{12}}
+\newlabel{bib}{{6}{40}}
+\@writefile{toc}{\contentsline {chapter}{APPENDIX}{40}}
