@@ -3,28 +3,30 @@
 \contentsline {chapter}{DEDICATION}{iii}
 \contentsline {chapter}{LIST OF ABBREVIATIONS AND SYMBOLS}{iii}
 \contentsline {chapter}{ACKNOWLEDGMENTS}{vi}
-\contentsline {chapter}{LIST OF FIGURES}{ix}
+\contentsline {chapter}{LIST OF FIGURES}{x}
 \contentsline {chapter}{\numberline {1}INTRODUCTION}{1}
-\contentsline {chapter}{\numberline {2}POISSON-BOLTZMANN EQUATION (PBE)}{5}
-\contentsline {section}{\numberline {2.1}Two-component regularization for singular sources}{6}
-\contentsline {section}{\numberline {2.2}Solvation energy from Electrostatic potential}{8}
-\contentsline {section}{\numberline {2.3}Pseudo-transient continuation approach for the PBE}{9}
-\contentsline {chapter}{\numberline {3}OPERATOR SPLITTING SCHEMES}{11}
-\contentsline {section}{\numberline {3.1}Implicit-Euler method with Alternating Direction Implicit scheme (GFM-ADI)}{11}
-\contentsline {section}{\numberline {3.2}Crank-Nicolson method with Locally One Dimensional Scheme(GFM-LODCN)}{13}
-\contentsline {section}{\numberline {3.3}Implicit-Euler method with Locally One Dimensional Scheme(GFM-LODIE)}{15}
-\contentsline {chapter}{\numberline {4}A NEW DERIVATION FOR GHOST FLUID METHOD}{16}
-\contentsline {section}{\numberline {4.1}One dimension}{16}
-\contentsline {section}{\numberline {4.2}Two dimensions}{18}
-\contentsline {section}{\numberline {4.3}Three dimensions}{20}
-\contentsline {section}{\numberline {4.4}Corner point for the new GFM method}{22}
-\contentsline {chapter}{\numberline {5}NUMERICAL VALIDATION}{24}
-\contentsline {subsection}{\numberline {5.0.1}Krikwood Sphere with analytical solution}{24}
-\contentsline {section}{\numberline {5.1}Biological applications}{27}
-\contentsline {subsection}{\numberline {5.1.1}Protein Crambin }{27}
-\contentsline {subsection}{\numberline {5.1.2}Solvation energy of 24 proteins}{30}
-\contentsline {subsection}{\numberline {5.1.3}Binding energy of 2a9x}{31}
-\contentsline {subsection}{\numberline {5.1.4}Salt effect on the binding affinity}{32}
-\contentsline {chapter}{\numberline {6}CONCLUSIONS}{36}
-\contentsline {chapter}{REFERENCES}{36}
-\contentsline {chapter}{APPENDIX}{40}
+\contentsline {chapter}{\numberline {2}PROTEIN DATA FILE PREPARATION}{5}
+\contentsline {chapter}{\numberline {3}CLEANING THE OLD ADIMSMS CODING PACKAGE FOR THE NEW SIMULATIONS}{7}
+\contentsline {chapter}{\numberline {4}POISSON-BOLTZMANN EQUATION (PBE)}{8}
+\contentsline {section}{\numberline {4.1}Two-component regularization for singular sources}{9}
+\contentsline {section}{\numberline {4.2}Solvation energy from Electrostatic potential}{11}
+\contentsline {section}{\numberline {4.3}Pseudo-transient continuation approach for the PBE}{12}
+\contentsline {chapter}{\numberline {5}OPERATOR SPLITTING SCHEMES}{14}
+\contentsline {section}{\numberline {5.1}Implicit-Euler method with Alternating Direction Implicit scheme (GFM-ADI)}{14}
+\contentsline {section}{\numberline {5.2}Crank-Nicolson method with Locally One Dimensional Scheme(GFM-LODCN)}{16}
+\contentsline {section}{\numberline {5.3}Implicit-Euler method with Locally One Dimensional Scheme(GFM-LODIE)}{18}
+\contentsline {chapter}{\numberline {6}A NEW DERIVATION FOR GHOST FLUID METHOD}{19}
+\contentsline {section}{\numberline {6.1}One dimension}{19}
+\contentsline {section}{\numberline {6.2}Two dimensions}{21}
+\contentsline {section}{\numberline {6.3}Three dimensions}{23}
+\contentsline {section}{\numberline {6.4}Corner point for the new GFM method}{25}
+\contentsline {chapter}{\numberline {7}NUMERICAL VALIDATION}{27}
+\contentsline {subsection}{\numberline {7.0.1}Krikwood Sphere with analytical solution}{27}
+\contentsline {section}{\numberline {7.1}Biological applications}{30}
+\contentsline {subsection}{\numberline {7.1.1}Protein Crambin }{30}
+\contentsline {subsection}{\numberline {7.1.2}Solvation energy of 24 proteins}{33}
+\contentsline {subsection}{\numberline {7.1.3}Binding energy of 2a9x}{34}
+\contentsline {subsection}{\numberline {7.1.4}Salt effect on the binding affinity}{35}
+\contentsline {chapter}{\numberline {8}CONCLUSIONS}{39}
+\contentsline {chapter}{REFERENCES}{39}
+\contentsline {chapter}{APPENDIX}{43}

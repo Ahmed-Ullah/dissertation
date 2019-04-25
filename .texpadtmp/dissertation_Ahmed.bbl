@@ -136,6 +136,13 @@ B.~A. Luty, M.~E. Davis, and J.~A. McCammon.
   equation}.
 \newblock {\em Journal of Computational Chemistry}, 13(9):1114--1118, 1992.
 
+\bibitem{RCSB}
+A.~Prlic, B.~Yukich, B.~Beran, C.~Zardecki, C.~Bi, D.~S. Goodsell,
+  D.~Dimitropoulos, G.~B. Quinn, H.~M. Berman, J.~Young, J.~D. Westbrook,
+  M.~Quesada, W.~F. Bluhm, P.~W. Rose, and P.~E. Bourne.
+\newblock The rcsb protein data bank: redesigned web site and web services.
+\newblock {\em Nucleic Acids Research}, 39(suppl1):D392--D401, 10 2010.
+
 \bibitem{Rocchia2001}
 W.~Rocchia, E.~Alexov, and B.~Honig.
 \newblock {Extending the applicability of the nonlinear Poisson-Boltzmann

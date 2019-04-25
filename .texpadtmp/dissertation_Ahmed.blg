@@ -3,44 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: /Users/Ahmed/Google_Drive/Thesis_PhD/dessertation/.texpadtmp/dissertation_Ahmed.aux
 The style file: abbrv.bst
 Database file #1: ../bibl.bib
-You've used 41 entries,
+You've used 42 entries,
             2118 wiz_defined-function locations,
-            773 strings with 11293 characters,
-and the built_in function-call counts, 13780 in all, are:
-= -- 1384
-> -- 607
+            782 strings with 11719 characters,
+and the built_in function-call counts, 14528 in all, are:
+= -- 1444
+> -- 685
 < -- 2
-+ -- 241
-- -- 198
-* -- 1065
-:= -- 2324
-add.period$ -- 124
-call.type$ -- 41
-change.case$ -- 218
++ -- 273
+- -- 228
+* -- 1147
+:= -- 2458
+add.period$ -- 127
+call.type$ -- 42
+change.case$ -- 236
 chr.to.int$ -- 0
-cite$ -- 41
-duplicate$ -- 462
-empty$ -- 1085
-format.name$ -- 198
-if$ -- 2813
+cite$ -- 42
+duplicate$ -- 473
+empty$ -- 1114
+format.name$ -- 228
+if$ -- 2950
 int.to.chr$ -- 0
-int.to.str$ -- 41
-missing$ -- 43
-newline$ -- 209
-num.names$ -- 82
-pop$ -- 163
+int.to.str$ -- 42
+missing$ -- 44
+newline$ -- 214
+num.names$ -- 84
+pop$ -- 179
 preamble$ -- 1
-purify$ -- 181
+purify$ -- 198
 quote$ -- 0
-skip$ -- 308
+skip$ -- 315
 stack$ -- 0
-substring$ -- 1099
-swap$ -- 52
+substring$ -- 1132
+swap$ -- 53
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 158
+type$ -- 162
 warning$ -- 0
-while$ -- 142
-width$ -- 43
-write$ -- 453
+while$ -- 145
+width$ -- 44
+write$ -- 464

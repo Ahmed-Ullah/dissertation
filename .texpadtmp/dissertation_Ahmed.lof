@@ -4,12 +4,14 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 1D GFM\relax }}{17}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 2D GFM\relax }}{19}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Temporal convergence, (have to add ADI)\relax }}{27}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Electrostatic potential for 1cbn using $dt = 0.05$ and $h= 0.5$. \relax }}{29}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Difference in solvation energy(left) and CPU time (right) in solving nonlinear PB eqation for 24 protein. \relax }}{31}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Electrostatic potential for 2a9x using GFM-ADI for $\Delta t = 0.05$ and $h = 0.5$\relax }}{33}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces The salt dependence of the binding affinities\relax }}{35}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces 1D GFM\relax }}{20}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces 2D GFM\relax }}{22}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Temporal convergence\relax }}{30}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Electrostatic potential for 1cbn using $dt = 0.05$ and $h= 0.5$. \relax }}{32}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Difference in solvation energy(left) and CPU time (right) in solving nonlinear PB eqation for 24 protein. \relax }}{34}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Electrostatic potential for 2a9x using GFM-ADI for $\Delta t = 0.05$ and $h = 0.5$\relax }}{36}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces The salt dependence of the binding affinities\relax }}{38}
 \addvspace {10\p@ }
