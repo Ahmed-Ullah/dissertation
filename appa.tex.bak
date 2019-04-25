@@ -1,0 +1,229 @@
+\chapter{\MakeTextUppercase{The Classical Lubrication Theory}}\label{appa_appendix}
+%\section{$f_i$ functions and flow rates in the bilayer:}
+\section{Introduction}\label{local_coordinates}
+In this chapter, we apply an adhoc version of lubrication theory that is valid for thin liquid layers. It is based on an asymptotically consistent approach (Hammond \cite{Hammond1983}) in the limit as the unperturbed bilayer thickness tends to zero ($\eps\rightarrow 0$), but retains some higher order terms in $\eps$ in the curvature terms that appear in the expression for the pressure (Gauglitz \& Radke \cite{GAUGLITZ1988}). Gauglitz \& Radke illustrated that these higher order terms were required by considering the stability of a wetting collar inside a cylindrical capillary. If the volume of the collar was sufficiently large, they showed that the collar became unstable resulting in a liquid plug blocking a tube. This prediction could not be obtained using the asymptotically consistent lubrication theory model of Hammond \cite{Hammond1983}.
+
+Halpern \& Grotberg \cite{HALPERN1992},\cite{Halpern1993} used the adhoc theory of Gauglitz \& Radke \cite{GAUGLITZ1988}  to model the phenomenon of airway closure. In sections \ref{sub_local_compliant} and \ref{2layer_case2_surf} below, we derive using the adhoc theory of Gauglitz \& Radke \cite{GAUGLITZ1988}, a system of nonlinear evolution equations to investigate (1) the stability of a liquid bilayer in a compliant tube without surfactants and (2) the stability of a liquid bilayer in a rigid tube with surfactant present.
+
+These two models will be compared with the other approaches derived in this thesis (see chapter \ref{chap: log_approach}).
+\section{A bilayer coating a compliant tube with clean interfaces} \label{sub_local_compliant}
+In this section, a system of nonlinear evolution equations is derived which can be used to investigate the stability of a bilayer coating in a compliant tube with no surfactant.
+
+%\subsection{Nondimensionalization}\label{sub:local:2layer_compliant}
+All lengthscales are nondimensionalized with respect to the unperturbed tube radius $a$ as in section \ref{nondimensionalization}. But we use $\eta^\ast$, $\alpha^\ast$, and $\beta^\ast$ for the deflections of the tube wall, the \textit{serous-mucus} interface, and the \textit{mucus-gas} interface, respectively.
+%%%%%%h--\alpha--serous deflection; \alpha-\beta--mucus deflection%%%%%%%%%%%
+\begin{align}
+(\eta^\ast, \alpha^\ast, \beta^\ast, r^\ast, z^\ast )&=a(\epsilon\eta,\eps_s \alpha,\eps\beta,r,z)\label{non_local_1}
+\end{align}
+In deriving the evolution equations, it is convenient to introduce new independent local radial variables $y_s$ and $y_m$ for the two layers, such that
+\begin{align}
+r=1+\eps\eta-\eps y_s, \quad\quad\quad &1-\eps_s+\eps_s\alpha \leq r \leq 1+\eps\eta \label{local_ysm} \\
+r=1-\eps_s\left(1-\alpha\right)-\eps y_m, \quad\quad\quad&1-\eps+\eps\beta \leq r \leq 1-\eps_s+\eps_s\alpha \label{local_ymg}
+\end{align}
+so that in equation (\ref{local_ysm}), $\displaystyle{y_s=0}$ defines the \textit{wall-serous} interface, and \\$\displaystyle{y_s=Y_{sm}=\eta+\lambda\left(1-\alpha\right)}$ the \textit{serous-mucus} interface. In equation (\ref{local_ymg}), $\displaystyle{y_m=0}$ defines the \textit{serous-mucus} interface and $\displaystyle{y_m=Y_{mg}=\lambda\alpha+\left(1-\lambda\right)\left(1-\beta\right)}$ the \textit{mucus-gas} interface. Therefore $\displaystyle{\partial{r}=-\eps\partial{y_{i}}}$ for $i=s$ (the serous layer) and $i=m$ (the mucus layer). We consider thin liquid layers so that $\epsilon\ll 1$.
+
+From the normal stress conditions (\ref{normal_Rsm}) and (\ref{normal_Rmg}) at the interfaces, we choose the pressure scale to be $\displaystyle{\eps\frac{\sigma_{sm}^\ast}{a}}$. From the axial component of the momentum equations (\ref{gov_dim2}), the scale for the axial velocity $w_i$ is proportional to $\eps^3$. By substituting the new independent variables $y_s$ and $y_m$ into the continuity equation (\ref{dim_continuity2}), the radial velocities $u_i^\ast$ are of order $\eps^4$. The nondimensionalization is the same as Hammond \cite{Hammond1983} and Halpern \& Grotberg \cite{HALPERN1992}
+\begin{align}
+ w_i^\ast=\epsilon^3\frac{\sigma_{sm}^\ast}{\mu_s}w_i,\quad
+ u_i^\ast=\epsilon^4\frac{\sigma_{sm}^\ast}{\mu_s}u_i,\quad
+ Q_i^\ast=\epsilon^3 a^2
+\frac{\sigma_{sm}^\ast}{\mu_s}Q_i, \quad p_i^\ast=\epsilon \frac{\sigma_{sm}^\ast}{a}p_i,\quad t^\ast=\frac{\mu_s a
+}{\sigma_{sm}^\ast\epsilon^3} t. \label{local_w_i&u_i}
+\end{align}
+
+%Other quantities, flow rates $Q_i^\ast$, pressures $p_i$, and time $t^\ast$ for the liquid bilayer are scaled as in (\ref{non_dim}). The thickness parameter $\eps$ and thickness ratio $\lambda$ are defined in the same way as in section \ref{nondimensionalization}.
+
+%which is different from section \ref{nondimensionalization}. The scales of flow rates $Q_i^\ast$, pressures $p_i$, and time $t^\ast$ remain the same.
+%The evolution equations (\ref{eq:tube-dim}), (\ref{eq:fluid1-dim}) and (\ref{eq:fluid2-dim}) are non-dimensionalized using the following scalings(\textit{Hammond}\cite{Hammond1983}):
+%\begin{align}
+%& u_i^\ast=\eps^4\frac{\sigma}{\mu}u_i,\quad w_i^\ast=\eps^3\frac{\sigma}{\mu}w_i,
+%\quad p_i^\ast=\eps \frac{\sigma}{\mu}p_i,\quad t^\ast=\frac{\mu a }{\sigma}\eps^3 t, \quad Q_i^\ast=\eps^4 a^2 %\frac{\sigma}{\mu}Q_i, \quad \text{where $i=1,2$} \\
+%& u_3^\ast=\eps^3\frac{\sigma}{\mu}u_3,\quad w_3^\ast=\eps^3\frac{\sigma}{\mu}w_3,
+%\quad p_3^\ast=\eps \frac{\sigma}{\mu}p_3
+%\end{align}
+%%%%%%%%%Normal Modes%%%%%%%%%%%(goes into linear stability analysis)
+%For small deflections, the evolution equations can be linearized. Then the normal modes method is applied:
+%\begin{equation}
+%\eta=\eta_0 e^{\xi t+ikz}, \quad h=h_0 e^{\xi t+ikz}, \quad \alpha=\alpha_0 e^{\xi t+ikz} \label{normal_modes}
+%\end{equation}
+%where $|\eta_0|\ll 1$, $|h_0|\ll 1$, and $|\alpha_0|\ll 1$ are the constant amplitudes, $\xi$ is the growth rate, and $k$ is the %wavenumber.
+
+The momentum equations in the bilayer (\ref{gov_dim2}) become to leading order in $\eps$,
+\begin{align}
+\pa{p_s}{y_s}&= \Or\left(\eps^2,\eps^4\Rey\right), \label{psy}\\
+\pa{p_s}{z}& =\pa{ ^2 w_s}{y_s^2}+\Or\left(\eps^2,\eps^2\Rey\right)\label{psz} \\
+\pa{p_m}{y_m}&= \Or\left(\eps^2,\eps^4m\Rey\right), \label{pmy}\\
+\pa{p_m}{z}& =\gamma\pa{ ^2 w_m}{y_m^2}+\Or\left(\eps^2,\eps^2m\Rey\right)\label{pmz}
+\end{align}
+where $\Rey$ is the Reynolds number, $\lambda$ is the thickness ratio, $m$ is the density ratio, and $\gamma$ is the viscosity ratio  defined in Chapter \ref{chap: Governing_Eqn_boundary_conditions_dim}. Equations (\ref{psy})-(\ref{pmz}) show that pressures $p_s$ and $p_m$ are only functions of $z$ and $t$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%put non-dim boundary conditions(first: unit tangential&normal vectors, and kappa), then later list all interfacial boundary conditions at the interfaces%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+By taking $\displaystyle{\Delta_j}=\sqrt{1+\Rjz^2}\approx 1$, the unit normal, tangential vectors $\mathbf{\hat{n}}_{j}$ and $\mathbf{\hat{t}}_{j}$ (\ref{unit_normal_tang_dim}) are approximated as
+\begin{align}
+\mathbf{\hat{n}}_{sm}&=\left(\eps\pa{y_s}{z},0,1\right), \quad \mathbf{\hat{t}}_{sm}=\left(1,0,-\eps\pa{y_s}{z}\right); \label{unit_ysm}  \\
+\mathbf{\hat{n}}_{mg}&=\left(\eps\pa{y_m}{z},0,1\right), \quad \mathbf{\hat{t}}_{mg}=\left(1,0,-\eps\pa{y_m}{z}\right). \label{unit_ymg}
+\end{align}
+The interfacial curvatures (\ref{kappa}) are nondimensionalized and approximated as
+\begin{align}
+\kappa_{sm}&=\frac{1}{1-\eps_s\left(1-\alpha\right)}\left(1-\eps_s\alpha_{zz}\right),\label{kappa_Rsm_non} \\
+\kappa_{mg}&=\frac{1}{1-\eps+\eps\beta}\left(1-\eps\beta_{zz}\right).\label{kappa_Rmg_non}
+\end{align}
+At the tube wall, $\displaystyle{y_s=0}$, the no slip condition (\ref{no_slip_wall_dim}) and the kinematic boundary condition (\ref{Rw_kine_dim}) are
+\begin{align}
+w_s&=0, \label{local: noslip} \\
+u_s&=\pa{\eta}{t}, \label{local: kine_wall}
+\end{align}
+
+At the \textit{serous-mucus} interface, that is, $\displaystyle{y_s=Y_{sm}}$ for the serous layer and $\displaystyle{y_m=0}$ for the mucus layer, the continuity of velocity condition (\ref{cont_vel_Rsm}), the normal stress condition (\ref{normal_Rsm}), and the tangential stress condition (\ref{tang_Rsm}) become to leading order of $\eps$
+\begin{align}
+&{w_s}{\left(y_s=Y_{sm}\right)}={w_m}{\left(y_m=0\right)}, \label{local: con_Rsm} \\
+&p_s-p_m=-\frac{1}{1-\eps_s+\eps_s\alpha}\left(\frac{1}{\eps}-\lambda\azz\right), \label{local: normal_Rsm} \\
+&{\pa{w_s}{y_s}}|_{\left(y_s=Y_{sm}\right)}=\gamma{\pa{w_m}{y_m}}|_{\left(y_m=0\right)}. \label{local: tang_Rsm}
+\end{align}
+
+At the \textit{mucus-gas} interface, $\displaystyle{y_m=Y_{mg}}$, the normal stress condition (\ref{normal_Rmg}) and the tangential stress condition (\ref{tang_Rmg}) are to the leading order in $\eps$
+\begin{align}
+&p_m-p_g=-\frac{s}{1-\eps+\eps\beta} \left(\frac{1}{\eps}-\bzz\right), \label{local: normal_Rmg}\\
+&{\pa{w_m}{y_m}}|_{\left(y_m=Y_{mg}\right)}= 0. \label{local: tang_Rmg}
+\end{align}
+where $p_g$ is the constant pressure of the gas core, $\displaystyle{p_g=\frac{s}{\eps\left(1-\eps\right)}}$, obtained by setting $\beta=0$. For $\displaystyle{\eps\rightarrow 0}$, equation (\ref{local: normal_Rmg}) is asymptotically equivalent to $\displaystyle{p_m=s\left(\beta+\bzz\right)+\Or(\eps)}$. Gauglitz \& Radke \cite{GAUGLITZ1988} showed that it is possible to predict the formation of liquid plug by retaining some higher-order terms in the expressions for the unperturbed radii of curvature. This technique of keeping certain higher-order terms is often known as 'regularization' and has been used in many different problems. Oron \& Rosenau \cite{Oron1997} derived a 'regularized' Kuramoto-Sivashinsky equation by applying an asymptotic approach which considered large gradients and used the full expression for the curvature so that wave breaking could be predicted. Gauglitz \& Radke \cite{GAUGLITZ1988} proved by calculating the static shape of an interface that has constant mean curvature due to a uniform pressure difference that (\ref{local: normal_Rmg}) and (\ref{local: normal_Rsm}) are good approximations to the interfacial curvature $\kappa_j$ in predicting what the maximum volume and radii of the liquid collar are before the formation of a liquid plug.
+
+When there is no motion, the unperturbed pressure in the mucus layer is $\displaystyle{p_{m0}=0}$ by equation(\ref{local: normal_Rmg}), and the unperturbed pressure in the serous layer is $\displaystyle{p_{s0}=-\frac{1}{\eps\left(1-\eps_s\right)}}$ by equation(\ref{local: normal_Rsm}). From the normal stress balance at the \textit{wall-serous} interface (\ref{wall_dim1}), we obtain $\displaystyle{p_{ext}=-\frac{1}{\eps\left(1-\eps_s\right)}-\frac{T_0}{\eps}}$. Therefore, the pressures in the bilayer are
+\begin{align}
+p_s&=s\left(\frac{\beta}{\left(1-\eps\right)^2}+\frac{\bzz}{1-\eps+\eps\beta}\right)-\frac{1}{1-\eps_s\left(1-\alpha\right)}\left(\frac{1}{\eps}-\lambda\azz\right),\label{local: ps} \\
+p_m&=s\left(\frac{\beta}{\left(1-\eps\right)^2}+\frac{\bzz}{1-\eps+\eps\beta}\right). \label{local: pm}
+\end{align}
+
+Besides $\displaystyle{\eps\rightarrow 0}$, we  also assume negligible inertia in both liquid layers, that is $\eps^2 \Rey\ll1$. Since the pressures $p_s$ and $p_m$ are only functions of $z$ and $t$, the axial components of velocity $w_s$ and $w_m$ can be obtained by integrating (\ref{psz}) and (\ref{pmz})
+\begin{align}
+w_s&=\frac{1}{2}\pa{p_s}{z}y_s^2+f_1 y_s+f_2, \label{ws_local}\\
+w_m&=\frac{1}{2\gamma}\pa{p_m}{z} y_m^2+f_3 y_m+f_4, \label{wm_local}
+\end{align}
+where $f_i$ ($i=1,2,3,4$) are functions of $z$ and $t$, which can be determined by substituting (\ref{ws_local}) and (\ref{wm_local}) into interfacial boundary conditions (\ref{local: noslip}), (\ref{local: con_Rsm}), (\ref{local: tang_Rsm}) and (\ref{local: tang_Rmg}):
+
+\begin{align}
+f_1&=- \pa{p_s}{z}Y_{sm}-\pa{p_m}{z}Y_{mg}, \label{local:f1} \\
+f_2&=0, \label{local:f2} \\
+f_3&=-\frac{1}{\gamma} \pa{p_m}{z}Y_{mg}, \label{local:f3} \\
+f_4&=-\frac{1}{2} \pa{p_s}{z}Y_{sm}^2- \pa{p_m}{z}Y_{sm}Y_{mg}, \label{local:f4}
+\end{align}
+The axial velocities $w_s$ and $w_m$ in terms of local variables $y_s$ and $y_m$ are
+\begin{align}
+w_s&=\frac{1}{2} \pa{p_s}{z}y_s^2-\left( \pa{p_s}{z}Y_{sm}+ \pa{p_m}{z}Y_{mg}\right)y_s, \label{local:ws} \\
+w_m&=\frac{1}{2\gamma}\pa{p_m}{z}\left(y_m^2-2y_mY_{mg}
+\right)-\frac{1}{2} \pa{p_s}{z}Y_{sm}^2-\pa{p_m}{z}Y_{sm}Y_{mg}. \label{local:wm}
+\end{align}
+
+The flow rates $Q_s$, $Q_m$ can also be integrated with respect to the new local variables, and are given by
+\begin{align}
+Q_s&=\int_0^{Y_{sm}}w_s dy_s=-\frac{1}{3}\pa{p_s}{z}Y_{sm}^3-\frac{1}{2}\pa{p_m}{z} Y_{mg}Y_{sm}^2, \label{local:Qs} \\
+Q_m&=\int_0^{Y_{mg}}w_m d y_m=-\frac{1}{3\gamma}\pa{p_m}{z}Y_{mg}^3-\frac{1}{2}\pa{p_s}{z}Y_{sm}^2Y_{mg}- \pa{p_m}{z}Y_{sm}Y_{mg}^2, \label{local:Qm} \\
+Q&=Q_s+Q_m \label{local:Q}
+\end{align}
+
+%\subsection{Nonlinear Evolution Equations}\label{local:non_eqn_1}
+From the normal stress balance at the \textit{wall-serous} (\ref{wall_dim1}), the kinematic boundary condition at the \textit{serous-mucus} interface (\ref{eqn:kine_Rsm}), and the kinematic boundary condition at the \textit{mucus-gas} interface (\ref{eqn:kine_Rmg}), the nonlinear evolution equations are given by
+\begin{align}
+\phi\pa{\eta}{t}&=T_0\eta-\frac{\eta}{\Gamma}\frac{1}{\left(1+\eps\eta\right)^2}+T_{\ell}\pa{^2\eta}{z^2}+
+\lambda\left(\frac{\alpha}{\left(1-\eps_s\right)^2}+\frac{\azz}{1-\eps_s\left(1-\alpha\right)}\right)\notag\\
+&\quad\quad\quad\quad+s\left(\frac{\beta}{\left(1-\eps\right)^2}+\frac{\bzz}{1-\eps+\eps\beta}\right), \label{local:wall_eqn} \\
+\pa{\alpha}{t}&=\frac{1}{\lambda}\left(\pa{\eta}{t}+\pa{Q_s}{z}\right),\label{local:sm} \\
+\pa{\beta}{t}&=\pa{\eta}{t}+\pa{Q}{z}.\label{local:mg}
+\end{align}
+The single layer model can be recovered by setting $\lambda=0$ or $\lambda=1$.
+
+In the next chapter, nonlinear evolution equations (\ref{local:wall_eqn}), (\ref{local:sm}), and (\ref{local:mg}) are linearized for linear stability analysis purposes.
+
+\section{A bilayer coating a rigid tube with surfactant along \textit{mucus-gas} interface}\label{2layer_case2_surf}
+The governing equations (\ref{dim_continuity2}) and (\ref{gov_dim2}) and interfacial boundary conditions derived in section \ref{govern_eqn} are used here. Since the tube wall is rigid, we use $\Rw^\ast=a$ to represent the location of the tube wall. The normal forces balance equation of the tube wall (\ref{local:wall_eqn}) is not needed for this case. But we are considering the effect of surfactant along the \textit{mucus-gas} interface and so, equation (\ref{eqn:surf_dim}) is used here, and the surface tension $\sigma_{mg}^\ast$ is a function of surfactant concentration $\C^\ast$.
+
+%\subsection{Nondimensionalization}\label{sub:local:2layer_surf}
+The same nondimensionalization is used here as in section \ref{sub_local_compliant} (see (\ref{local_w_i&u_i})). Local independent variables $y_s$ and $y_m$ are introduced
+\begin{align}
+r=1-\eps y_s, \quad\quad\quad &1-\eps_s+\eps_s\alpha \leq r \leq 1 \label{local_ysm2} \\
+r=1-\eps_s\left(1-\alpha\right)-\eps y_m. \quad\quad\quad&1-\eps+\eps\beta \leq r \leq 1-\eps_s+\eps_s\alpha\label{local_ymg2}
+\end{align}
+so that in equation (\ref{local_ysm2}), $\displaystyle{y_s=0}$ defines the \textit{wall-serous} interface, and \\ $\displaystyle{y_s=Y_{sm}=\lambda\left(1-\alpha\right)}$ the \textit{serous-mucus} interface, which is different from the previous case since the tube is rigid. In equation (\ref{local_ymg2}), $\displaystyle{y_m=0}$ defines the \textit{serous-mucus} interface and $\displaystyle{y_m=Y_{mg}=\lambda\alpha+\left(1-\lambda\right)\left(1-\beta\right)}$ the \textit{mucus-gas} interface. The unit normal and tangential vectors $\displaystyle{\mathbf{\hat{n}}_{j}}$ and $\displaystyle{\mathbf{\hat{t}}_{j}}$ are the same as (\ref{unit_ysm}) and (\ref{unit_ysm}), and the interfacial curvatures $\kappa_j$ (\ref{kappa}) are the same as (\ref{kappa_Rsm_non}) and (\ref{kappa_Rmg_non}).
+
+The normal stress conditions at interfaces $Y_{sm}$ and $Y_{mg}$ are given by
+\begin{align}
+ &-p_s+p_m=\kappa_{sm},\label{local:ps2}\\
+ &-p_m+p_g=\sigma_{mg}\kappa_{mg}\label{local:pm2}
+\end{align}
+where $\displaystyle{\sigma_{mg}=s-\frac{E_{\ell}\C_0^\ast}{\sigma_s}
+\left(\C-1\right)}$, $\displaystyle{s=\frac{\sigma_{mg0}}{\sigma_s}}$ is
+the surface tension ratio. Let
+$\displaystyle{\Ma=\frac{E_{\ell}\C_0^\ast}{\sigma_s}}$, so that $\displaystyle{\sigma_{mg}=s-\Ma\left(\C-1\right)}$. Let $\displaystyle{\C=1+\epsilon G}$, where $G$ is the derivation of the surfactant concentration from its base state.
+
+%%%%%%%boundary conditions%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%Boundary conditions at the rigid tube%%%%%%%%%%%%%%%%%%
+At the tube wall, $\displaystyle{y_s=0}$, no slip (\ref{no_slip_wall_dim}) and no penetration conditions apply
+\begin{align}
+w_s&=0, \label{local: tube_noslip} \\
+u_s&=0. \label{local: kine_wall}
+\end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Serous-mucus interface%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+At the \textit{serous-mucus} interface, that is, $\displaystyle{y_s=Y_{sm}}$ for the serous layer and $\displaystyle{y_m=0}$ for the mucus layer, the continuity of velocity condition (\ref{cont_vel_Rsm}), the normal stress condition (\ref{normal_Rsm}), and the tangential stress condition (\ref{tang_Rsm}) to the leading order of $\eps$ are the same as equations (\ref{local: con_Rsm}), (\ref{local: normal_Rsm}), and (\ref{local: tang_Rsm}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Mucus-gas interface%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+At the \textit{mucus-gas} interface, $\displaystyle{y_m=Y_{mg}}$, the normal stress condition (\ref{normal_Rmg}) and the tangential stress condition (\ref{tang_Rmg}) are nondimensionalized and approximated to the leading order in $\eps$ as follows:
+\begin{align}
+p_m-p_g&=-\frac{s-\Ma\eps\G}{1-\eps+\eps\beta} \left(\frac{1}{\eps}-\bzz\right), \label{local: normal_Rmg2}\\
+\pa{w_m}{y_m}|_{y_m=Y_{mg}}&=-\frac{1}{\eps\gamma}\Ma\G _z. \label{local: tang_Rmg2}
+\end{align}
+When there is no motion, the unperturbed pressure in the mucus layer is $\displaystyle{p_{m0}=0}$. From equation(\ref{local: normal_Rmg}) the gas core pressure is $\displaystyle{p_g=\frac{s}{\eps\left(1-\eps\right)}}$, and the unperturbed pressure in the serous layer is $\displaystyle{p_{s0}=-\frac{1}{\eps\left(1-\eps_s\right)}}$ (\ref{local: normal_Rsm}). Therefore, the pressures in the bilayer are, from equations (\ref{local: normal_Rsm}) and (\ref{local: normal_Rmg}),
+\begin{align}
+p_s&=s\left(\frac{\beta}{\left(1-\eps\right)^2}+\frac{\bzz}{1-\eps+\eps\beta}\right)+\frac{\Ma\G}{1-\eps+\eps\beta} -\frac{1}{1-\eps_s\left(1-\alpha\right)}\left(\frac{1}{\eps}-\lambda\azz\right),\label{local: ps} \\
+p_m&=s\left(\frac{\beta}{\left(1-\eps\right)^2}+\frac{\bzz}{1-\eps+\eps\beta}\right)+\frac{\Ma\G}{1-\eps+\eps\beta}. \label{local: pm}
+\end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%The linearized interfacial curvatures are
+%$\displaystyle{\kappa_{sm}
+%=1+\lambda\epsilon\left(1-\alpha-\alpha_{zz}\right)}$, and
+%$\displaystyle{\kappa_{mg}=1+\epsilon\left(1-\beta-\beta_{zz}
+%\right)} $.
+%Then, normal stress conditions at two interfaces can be rewritten as follows:
+%\begin{align}
+% p_g&=\frac{1}{\epsilon}\left(1+\lambda\epsilon\right)+\frac{1}{\epsilon}
+%\left(1+\epsilon\right), \label{local:gas_core}\\
+% -p_s+p_m&=\frac{1}{\epsilon}\left(1+\lambda\epsilon\left(1-\alpha-\alpha_{zz}\right)\right),\label{local:ps2}\\
+% -p_m+p_g&=\frac{1}{\epsilon}\left(s-\Ma\eps \G\right)\left(1+\epsilon\left(1-\beta-\beta_{zz}
+%\right)\right)\label{local:pm2}
+%\end{align}
+Similar to section \ref{sub_local_compliant}, we have same momentum equations (\ref{psy}), (\ref{psz}), (\ref{pmy}), and (\ref{pmz}). Same conclusions apply here: pressures $p_s$ and $p_m$ are only functions of $z$ and $t$. Then the axial components of velocity $w_s$ and $w_m$ can be obtained by integrating (\ref{psz}) and (\ref{pmz}), which have the same form as equations (\ref{ws_local}) and (\ref{wm_local}) with different coefficient functions $A(z,t)$, $B(z,t)$, $C(z,t)$ and $D(z,t)$ due to different interfacial boundary conditions.
+\begin{align}
+\quad \pa{p_s}{z}=\frac{\partial^2 w_s}{\partial y_s^2} \quad&\Rightarrow\quad
+w_s=\frac{1}{2}\pa{p_s}{z}y_s^2+\hat{A}y_s+\hat{B}, \notag\\
+\quad \frac{\partial p_m}{\partial
+z}=\gamma\frac{\partial^2 w_s}{\partial y_m^2} \quad&\Rightarrow\quad
+w_m=\frac{1}{2\gamma}\pa{p_m}{z}y_m^2+\hat{C}y_m+\hat{D}. \notag
+\end{align}
+By applying boundary conditions (\ref{local: tube_noslip}), (\ref{local: con_Rsm}), (\ref{local: tang_Rsm}) and (\ref{local: tang_Rmg2}) we can solve for the functions $\hat{A}(z,t)$, $\hat{B}(z,t)$, $\hat{C}(z,t)$ and $\hat{D}(z,t)$:
+\begin{align}
+ & \hat{A}=-\frac{1}{\eps}\Ma\G_z-\pa{p_s}{z}Y_{sm}-\pa{p_m}{z}Y_{mg}, \label{A} \\
+ & \hat{B}=0, \label{B} \\
+ & \hat{C}=-\frac{1}{\gamma}\left(\frac{1}{\eps}\Ma\G_z+\pa{p_m}{z}Y_{mg}\right),\label{C} \\
+ & \hat{D}=-\frac{1}{2}\pa{p_s}{z}Y_{sm}^2-\frac{1}{\eps}\Ma\G_z Y_{sm}-\pa{p_m}{z}Y_{sm}Y_{mg}.\label{D}
+\end{align}
+The flow rates defined in (\ref{local:Qs}) and (\ref{local:Qs}) can be computed in terms of $Y_{sm}$, $Y_{mg}$, $\displaystyle{\pa{p_s}{z}}$, and $\displaystyle{\pa{p_m}{z}}$:
+\begin{align}
+&Q_s=-\frac{1}{3}\pa{p_s}{z}Y_{sm}^3-\frac{1}{2}\pa{p_m}{z}Y_{sm}^2Y_{mg}-\frac{\Ma}{2\eps}\G_z Y_{sm}^2, \label{local:Qs2} \\
+&Q_m=-\frac{1}{2}\pa{p_s}{z}Y_{sm}^2Y_{mg}-\pa{p_m}{z}Y_{sm}Y_{mg}^2-\frac{1}{3\gamma}
+\pa{p_m}{z}Y_{mg}^3-\frac{1}{\eps}\Ma\G_z Y_{mg}\left(\frac{1}{2\gamma}Y_{mg}+Y_{sm}\right), \label{local:Qm2}
+\end{align}
+where the total flow rate is still $Q=Q_s+Q_m$.
+
+%\subsection{Nonlinear Evolution Equations}\label{local:non_eqn_2}
+Using the dimensional kinematic boundary conditions at two interfaces (\ref{eqn:kine_Rsm}) and (\ref{eqn:kine_Rmg}), and the surfactant transport equation (\ref{eqn:surf_dim}), we arrive at the following nonlinear evolution equations
+\begin{align}
+ \pa{\alpha}{t}&= \frac{1}{\lambda}\pa{ Q_s}{z}\label{local: Rsm2} \\
+ \pa{\beta}{t}&=\pa{Q_s}{z}+\pa{Q_m}{z} \label{local: Rmg2} \\
+ \pa{}{t}\left[s_{mg}\C\left(1+{s_{mg}}_z^2\right)^{1/2}\right]&=-\pa{}{z}\left[s_{mg}\C w_m|_{y_m=Y_{mg}}\left(1+{s_{mg}}_z^2\right)^{1/2}\right]\label{local:surf}
+\end{align}
+where $\displaystyle{s_{mg}=\left(1-\eps+\eps\beta\right)}$ is the \textit{mucus-gas} interface.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%write something about next chapter%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In the next chapter, nonlinear evolution equations obtained in \ref{sub_local_compliant} and \ref{2layer_case2_surf} are linearized based on the classic version of lubrication theory. The linear stability analysis of these two cases are served as validation for the results obtained by using the extended lubrication theory model. 

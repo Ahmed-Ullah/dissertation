@@ -1,0 +1,223 @@
+%%
+%% THESIS/DISSERTATION TEMPLATE FOR THE UNIVERSITY OF ALABAMA.
+%%
+%% This example is written by Paul Kilgo. It highlights all the (few) features
+%% of uathesis.cls
+%%
+
+%% Use one of the following if writing a thesis/dissertation.
+% \documentclass[thesis]{uathesis}
+\documentclass[dissertation]{uathesis}
+
+%% Basic packages you'll probably want to use.
+\usepackage{graphicx}                 %% For using \includegraphics{}
+\usepackage{cite}                     %% For sorting/collapsing citations.
+\usepackage{color}                    %% For colors used in listings.
+\usepackage{listings}                 %% Code listings (for engineers)
+\usepackage{lipsum}
+\usepackage[section]{placeins}
+\usepackage{calc}
+\usepackage{amsmath,array}
+\usepackage{epstopdf}
+\usepackage{morefloats}
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage[countmax]{subfloat}
+%\usepackage[]{mcode}
+\usepackage{setspace}
+%\usepackage{breqn}
+%% Includes
+%\input{inc/glossary.tex} %nomenclature
+% TODO: If you have any special commands defined, include them here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%New commands%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\Real{\mbox{Re}} % cf plain TeX's \Re and Reynolds number
+\newcommand\Imag{\mbox{Im}} % cf plain TeX's \Im
+\newcommand\Rey{\mbox{\textit{Re}}}  % Reynolds number
+\newcommand\Ma{\mbox{\textit{Ma}}}  % Marangoni number
+\newcommand\C{\mbox{\textit{C}}}  % Surfactant concentration
+\newcommand\G{\mbox{\textit{G}}}
+%\newcommand\A21{\mbox{\textit{\left[A\right]^2_1}}} % For the example of [A]^2_1
+\newcommand\Ca{\mbox{\textit{Ca}}}  % Modified Capillary number
+\newcommand\Or{\mbox{\textit{O}}}
+\newcommand\slsA{\mathsfbi{A}} % for sans serif bold-sloping Q
+\newcommand\etal{\mbox{\textit{et al.}}}
+\newcommand\eps{\epsilon}
+\newcommand{\pa}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\de}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
+\newcommand\Rsm{R_{sm}}
+\newcommand\Rmg{R_{mg}}
+\newcommand\Rw{R_{ws}}
+\newcommand\Rwi{\overline{\Rw}}
+\newcommand\Rsmi{\overline{\Rsm}}
+\newcommand\Rmgi{\overline{\Rmg}}
+\newcommand\Rj{{R_{j}}}
+\newcommand\Rjz{{R_{j}}_z}
+\newcommand\Rjzz{{R_{j}}_{zz}}
+\newcommand\Rjzs{{R^\ast_{j}}_{z^\ast}}
+\newcommand\Rjzzs{{R^\ast_{j}}_{z^\ast z^\ast}}
+\newcommand\Rwz{{R_{ws}}_z}
+\newcommand\Rsmz{{R_{sm}}_z}
+\newcommand\Rmgz{{R_{mg}}_z}
+\newcommand\Rwzz{{R_{ws}}_{zz}}
+\newcommand\Rsmzz{{R_{sm}}_{zz}}
+\newcommand\Rmgzz{{R_{mg}}_{zz}}
+\newcommand\Rwt{{R_{ws}}_t}
+\newcommand\Rsmt{{R_{sm}}_t}
+\newcommand\Rmgt{{R_{mg}}_t}
+\newcommand\ez{\eta_z}
+\newcommand\az{\alpha_z}
+\newcommand\bz{\beta_z}
+\newcommand\gz{\mbox{\textit{G}}_z}
+\newcommand\ezz{\eta_{zz}}
+\newcommand\azz{\alpha_{zz}}
+\newcommand\bzz{\beta_{zz}}
+\newcommand\gzz{\mbox{\textit{G}}_{zz}}
+\newcommand\ezzz{\eta_{zzz}}
+\newcommand\azzz{\alpha_{zzz}}
+\newcommand\bzzz{\beta_{zzz}}
+\newcommand\gzzz{\mbox{\textit{G}}_{zzz}}
+\newcommand\ezzzz{\eta_{zzz}}
+\newcommand\azzzz{\alpha_{zzzz}}
+\newcommand\bzzzz{\beta_{zzzz}}
+\newcommand\gzzzz{\mbox{\textit{G}}_{zzzz}}
+\newcommand\et{\eta_t}
+\newcommand\at{\alpha_t}
+\newcommand\bt{\beta_t}
+\newcommand\gt{\mbox{\textit{G}}_t}
+\newcommand\Rmgif{\Rmgi^4}
+\newcommand\Rmgit{\Rmgi^2}
+\newcommand\Rsmif{\Rmgi^4}
+\newcommand\Rsmit{\Rsmi^2}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% Required parameters (these default to undefined)
+\author{Yuanyuan Song}       %% Your name!
+\adviser{David Halpern}   %% Your adviser/committee chair!
+
+%% The people on your committee.
+%% Use \and to break them up between lines.
+\committee{
+  LAYACH HADJI \and
+  RYAN HARTMAN \and
+  KABE MOEN \and
+  SHAN ZHAO
+}
+
+%% Note the use of \and to create line breaks and the
+%% inverted pyramid style requested by the graduate school.
+%% You have to do this manually. Sorry.
+\title{STABILITY ANALYSIS OF A BILAYER CONTAINED WITHIN A \and
+  CYLINDRICAL TUBE}
+
+\degree{Doctor of Philosophy}   %% Change to suit your degree.
+\department{Mathematics}   %% Change to suit your department.
+
+%% These are body text paragraphs to be placed in the front matter.
+\abstract{
+\input{abstract}
+}
+
+\dedication{
+\input{dedication}
+}
+
+\acknowledgments{
+\input{acknowledgments}
+
+}
+
+%% Optional parameters. The default usage is shown.
+\university{The University of Alabama}
+\school{Graduate School}
+\gradyear{2015}
+\place{Tuscaloosa, Alabama}
+
+\begin{document}
+
+
+%% Makes the title, abstract, dedication, table of contents, etc.
+%% Must be before \begin{body}
+\makefrontmatter
+
+%% BODY PORTION
+%% The bulk of your thesis.
+%% Begin your \chapter's here.
+
+\begin{body}
+
+%% Body chapters.
+%---------------------------- Chapter 1 ----------------------------------------
+% Introduce the problem and the reason why that is interesting and is worth doing.
+% Also summarize previous results, be careful with references.
+%\begin{singlespace}
+\chapter{\MakeUppercase{Introduction}}\label{chap: introduction}
+%\end{singlespace}
+\input{intro}
+
+% --------------------------- Chapter 2 ----------------------------------------
+% Extended Lubrication Theory model with evolution equations for the full problem
+% and full boundary conditions.
+% Nonlinear-General Case: Bilayer+Surfactant+Compliant Tube Date: 04/01/14
+%\begin{singlespace}
+\chapter{\MakeUppercase{Governing equations and boundary conditions for a bilayer coating a compliant tube}}\label{chap: Governing_Eqn_boundary_conditions_dim}
+%\end{singlespace}
+\input{full_problem_1}
+
+% ----------------------------Chapter 3--------------------------------------
+%\chapter{\MakeUppercase{Lubrication Theory of a liquid bilayer coating a tube}}\label{chap:local_coordinate}
+%\input{full_problem_2}
+%\chapter{\MakeUppercase{Nonlinear evolution equations of a liquid bilayer coating a compliant tube with surfactant at the liquid-gas interface}}\label{chap: Governing_Eqn_boundary_conditions_dim}
+%Derivation of nonlinear evolution equations by applying extended lubrication theory of a liquid bilayer coating a compliant tube with surfactant presence at the liquid-gas interface
+%\begin{singlespace}
+
+
+
+
+%% -----------------------------Chapter 7 ---------------------------------------
+\chapter{CONCLUSIONS}
+\label{chap: conclusions}
+\input{conclusions}
+
+%% ---------------------------- Reference ---------------------------------------
+\addcontentsline{toc}{chapter}{REFERENCES}
+%\newgeometry{top=2in,bottom=1in,left=1in}
+\renewcommand{\bibname}{REFERENCES}
+%\restoregeometry
+\begin{singlespace}
+\bibliography{stability}
+\bibliographystyle{abbrv}
+\label{bib}
+%\bibliographystyle{unsrt}
+\end{singlespace}
+
+%%%%%%%%%%%%%%%%%%APPENDIX%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{chapter}{APPENDIX}
+\appendix
+
+\input{appa}
+
+
+
+%% Currently adding the references to the table of contents is not automatic
+%% So we are forced to do it manually.
+
+%% TODO: This is not a fix. This line has to come after the \chapter command
+%% in order for the correct page to be inferred for the table of contents.
+%\addcontentsline{toc}{chapter}{REFERENCES}
+
+%% Generates the bibliography.
+%\bibliographystyle{uathesis-plain}
+%\bibliography{thesis-template}
+
+
+%% Appendix chapters.
+%\appendix
+
+%\chapter{A BIG APPENDIX}
+
+\end{body}
+\end{document}

@@ -1,0 +1,38 @@
+%%%%%%%%%%%%%%%%%%%%%Full problem%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%Governing Equations and boundary conditions%%%%%%%%%%%
+\lipsum
+%%%%%%%%%%%%%%%%%%%nomenclatures%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%You need to fix the order, Roman first and then greek%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%Roman%%%%
+\nom{$g$}{the wall damping coefficient}
+%\nom{$k_c$}{the critical wavenumber where infinite growth rate occurs}
+%\nom{$\Ma$}{a measure of the ability of surfactant to lower the surface tension at the mucus-gas interface}
+%\nom{$Pe$}{\textit{P$\acute{e}$clet number}}
+%\nom{$\Rey$}{Reynolds number}
+%\nom{$r^\ast$}{the radial axis}
+%\nom{$\displaystyle{s=\frac{{\sigma_{mg}}_0}{\sigma_{sm}}}$}{the surface tension ratio of the base state mucus-gas surface tension to the serous-mucus surface tension}
+%\nom{$T_{\ell}$}{longitudinal wall tension to surface tension}
+%\nom{$T_0$}{initial circumferential tension of the tube wall to the surface tension}
+%\nom{$h_0$}{the initial thickness of the tube}
+%\nom{$z^\ast$}{the axial axis}
+%%%%%%%%%Greek%%%%%%%%%%
+%\nom{$\gamma_w$}{the Poisson ratio}
+%\nom{$\displaystyle{\gamma=\frac{\mu_m}{\mu_s}}$}{the viscosity ratio of the mucus layer to the serous layer}
+%\nom{$\Gamma$}{tube wall surface tension forces to elastic forces}
+%\nom{$\eps=\eps_s+\eps_m$}{the thickness of the bilayer to the tube radius}
+%\nom{$\displaystyle{\lambda=\frac{\epsilon_s}{\eps}}$}{the thickness ratio of serous layer to the bilayer}
+%\nom{$\mu_{i}$}{viscosity of the liquid layer, $i=$\textit{serous, mucus}}
+%\nom{$\rho_w$}{the wall density}
+%\nom{$\phi$}{the tube wall damping parameter}
+%\nom{$E$}{the sensitivity of the surface tension to the surfactant concentration}
+%\nom{$Pe$}{\textit{P$\acute{e}$clet number}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%Problem Description%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.98\textwidth]{geometry_full.eps}
+\end{center}
+\caption{A liquid bilayer coating a compliant cylindrical tube with an insoluble surfactant monolayer present at the \textit{gas-mucus} interface.}
+\label{fig:geometry}
+\end{figure}
+\lipsum 

@@ -1,0 +1,152 @@
+\begin{thebibliography}{10}
+
+\bibitem{Cai2009}
+Q.~Cai, J.~Wang, H.~K. Zhao, and R.~Luo.
+\newblock On removal of charge singularity in poisson-boltzmann equation.
+\newblock {\em Journal of Chemical Physics}, 130(14), 2009.
+
+\bibitem{Chen2007}
+L.~Chen, M.~Holst, and J.~Xu.
+\newblock {The Finite Element Approximation of the Nonlinear Poisson-Boltzmann
+  Equation}.
+\newblock {\em SIAM Journal on Numerical Analysis}, 45(6):2298--2320, 2007.
+
+\bibitem{Fedkiw1999}
+R.~P. Fedkiw, T.~Aslam, B.~Merriman, and S.~Osher.
+\newblock {A Non-oscillatory Eulerian Approach to Interfaces in Multimaterial
+  Flows (the Ghost Fluid Method)}.
+\newblock {\em Journal of Computational Physics}, 152(2):457--492, 1999.
+
+\bibitem{Fogolari2002}
+F.~Fogolari, A.~Brigo, and H.~Molinari.
+\newblock {The Poisson-Boltzmann equation for biomolecular electrostatics: A
+  tool for structural biology}.
+\newblock {\em Journal of Molecular Recognition}, 15(6):377--392, 2002.
+
+\bibitem{Geng2015}
+W.~Geng.
+\newblock {A boundary integral Poisson-Boltzmann solvers package for solvated
+  bimolecular simulations}.
+\newblock {\em Computational and Mathematical Biophysics}, 3(1):54--69, 2015.
+
+\bibitem{Geng2013_tree}
+W.~Geng and R.~Krasny.
+\newblock {A treecode-accelerated boundary integral Poisson-Boltzmann solver
+  for electrostatics of solvated biomolecules}.
+\newblock {\em Journal of Computational Physics}, 247:62--78, 2013.
+
+\bibitem{Geng2007}
+W.~Geng, S.~Yu, and G.~Wei.
+\newblock Treatment of charge singularities in implicit solvent models.
+\newblock {\em The Journal of Chemical Physics}, 127(11):114106, 2007.
+
+\bibitem{Geng2013_Fully}
+W.~Geng and S.~Zhao.
+\newblock {Fully implicit ADI schemes for solving the nonlinear
+  Poisson-Boltzmann equation}.
+\newblock {\em Molecular Based Mathematical Biology}, 1:109--123, 2013.
+
+\bibitem{Geng2017a}
+W.~Geng and S.~Zhao.
+\newblock {A two-component Matched Interface and Boundary ( MIB )
+  regularization for charge singularity in implicit solvation}.
+\newblock {\em Journal of Computational Physics}, 351:25--39, 2017.
+
+\bibitem{Holst2010}
+M.~Holst, J.~A. McCammon, Z.~Yu, Y.~Zhou, and Y.~Zhu.
+\newblock {Adaptive Finite Element Modeling Techniques for the
+  Poisson-Boltzmann Equation}.
+\newblock {\em Communications in computational physics}, m(1):28, 2010.
+
+\bibitem{Holst1995}
+M.~J. Holst and F.~Saied.
+\newblock {Numerical solution of the nonlinear Poisson--Boltzmann equation:
+  Developing more robust and efficient methods}.
+\newblock {\em Journal of Computational Chemistry}, 16(3):337--364, 1995.
+
+\bibitem{Im1998}
+W.~Im, D.~Beglov, and B.~Roux.
+\newblock Continuum solvation model: Computation of electrostatic forces from
+  numerical solutions to the poisson-boltzmann equation.
+\newblock {\em Computer Physics Communication}, 11(1-3):59--75, 1998.
+
+\bibitem{Li2017}
+C.~Li and S.~Zhao.
+\newblock {A matched Peaceman--Rachford ADI method for solving parabolic
+  interface problems}.
+\newblock {\em Applied Mathematics and Computation}, 299:28--44, 2017.
+
+\bibitem{Mayo1993}
+Z.~Li and A.~Mayo.
+\newblock {\em ADI Methods for Heat Equations with Discontinuities Along an
+  Arbitrary Interface}.
+\newblock IBM Thomas J. Watson Research Division, 1993.
+
+\bibitem{Liu2013}
+J.~Liu and Z.~Zheng.
+\newblock {IIM-based ADI finite difference scheme for nonlinear
+  convection-diffusion equations with interfaces}.
+\newblock {\em Applied Mathematical Modelling}, 37(3):1196--1207, 2013.
+
+\bibitem{Luty1992}
+B.~A. Luty, M.~E. Davis, and J.~A. McCammon.
+\newblock {Solving the finite‐difference non‐linear Poisson--Boltzmann
+  equation}.
+\newblock {\em Journal of Computational Chemistry}, 13(9):1114--1118, 1992.
+
+\bibitem{Rocchia2001}
+W.~Rocchia, E.~Alexov, and B.~Honig.
+\newblock {Extending the applicability of the nonlinear Poisson-Boltzmann
+  equation: Multiple dielectric constants and multivalent ions}.
+\newblock {\em Journal of Physical Chemistry B}, 105(28):6507--6514, 2001.
+
+\bibitem{Sayyed-Ahmad2004}
+A.~Sayyed-Ahmad, K.~Tuncay, and P.~J. Ortoleva.
+\newblock {Efficient solution technique for solving the Poisson-Boltzmann
+  equation}.
+\newblock {\em Journal of Computational Chemistry}, 25(8):1068--1074, 2004.
+
+\bibitem{Shestakov2002}
+A.~I. Shestakov, J.~L. Milovich, and A.~Noy.
+\newblock {Solution of the nonlinear Poisson-Boltzmann equation using
+  pseudo-transient continuation and the finite element method}.
+\newblock {\em Journal of Colloid and Interface Science}, 247(1):62--79, 2002.
+
+\bibitem{FD_PDE}
+J.~Strikwerda.
+\newblock {\em Finite Difference Schemes and Partial Differential Equations}.
+\newblock SIAM, 2004.
+
+\bibitem{Wilson2016}
+L.~Wilson and S.~Zhao.
+\newblock {Unconditionally stable time splitting methods for the electrostatic
+  analysis of solvated biomolecules}.
+\newblock {\em International Journal of Numerical Analysis and Modeling},
+  13(6):852--878, 2016.
+
+\bibitem{XIE2014}
+D.~Xie.
+\newblock New solution decomposition and minimization schemes for
+  poisson--boltzmann equation in calculation of biomolecular electrostatics.
+\newblock {\em Journal of Computational Physics}, 275:294 -- 309, 2014.
+
+\bibitem{Zhao2011}
+S.~Zhao.
+\newblock {Pseudo-time-coupled nonlinear models for biomolecular surface
+  representation and solvation analysis}.
+\newblock {\em International Journal for Numerical Methods in Biomedical
+  Engineering}, 27(12):1964--1981, 2011.
+
+\bibitem{Zhao2015}
+S.~Zhao.
+\newblock {A Matched Alternating Direction Implicit (ADI) Method for Solving
+  the Heat Equation with Interfaces}.
+\newblock {\em Journal of Scientific Computing}, 2015.
+
+\bibitem{Zhou_1996}
+Z.~Zhou, P.~Payne, M.~Vasquez, N.~Kuhn, and M.~Levitt.
+\newblock Finite-difference solution of the poisson--boltzmann equation:
+  Complete elimination of self-energy.
+\newblock {\em Journal of Computational Chemistry}, 17(11):1344--1351, 1996.
+
+\end{thebibliography}

@@ -1,0 +1,12 @@
+\babel@toc {english}{}
+\contentsline {chapter}{ABSTRACT}{ii}
+\contentsline {chapter}{DEDICATION}{iii}
+\contentsline {chapter}{LIST OF ABBREVIATIONS AND SYMBOLS}{iii}
+\contentsline {chapter}{ACKNOWLEDGMENTS}{iv}
+\contentsline {chapter}{LIST OF FIGURES}{vi}
+\contentsline {chapter}{\numberline {1}INTRODUCTION}{1}
+\contentsline {chapter}{\numberline {2}\MakeUppercase {Governing equations and boundary conditions for a bilayer coating a compliant tube}}{5}
+\contentsline {chapter}{\numberline {3}THEORY AND ALGORITHM}{8}
+\contentsline {chapter}{\numberline {4}CONCLUSIONS}{9}
+\contentsline {chapter}{REFERENCES}{9}
+\contentsline {chapter}{APPENDIX}{12}

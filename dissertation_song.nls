@@ -1,0 +1,14 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{$\Ma$}]\begingroup a measure of the ability of surfactant to lower the surface tension at the mucus-gas interface\nomeqref {2.0}
+		\nompageref{6}
+  \item [{$g$}]\begingroup the wall damping coefficient\nomeqref {2.0}
+		\nompageref{6}
+  \item [{$k_c$}]\begingroup the critical wavenumber where infinite growth rate occurs\nomeqref {2.0}
+		\nompageref{6}
+  \item [{$Pe$}]\begingroup \textit{P$\acute{e}$clet number}\nomeqref {2.0}
+		\nompageref{6}
+
+\end{thenomenclature}
