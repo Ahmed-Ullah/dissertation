@@ -1,7 +1,8 @@
 To validate our proposed algorithm we are providing numerical simulations in this chapter. At first we have solved the nonlinear PB equation on a krikwood sphere and compared the numerical results with the analytical solution. Then we have considered a hypothetical protein molecule with just one atom for the PB equation and solved it to compare with the analytical result. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Krikwood Sphere with analytical solution}
+\section{Krikwood Sphere with analytical solution}
 \label{krik}
 
 The analytical solutions of the PB equation are available only for simple geometries such as spheres. So we choose the case where we have a charge at the center of a sphere known as the krikwood sphere  with the analytical solution based on the reference \cite{Geng2013_Fully}. 
@@ -20,10 +21,24 @@ $$L_\infty=\max\limits_{i,j,k}|\phi_{\rm exact}-\phi_{\rm num}|, L_2 = \sqrt{\fr
 Where $\phi_{\rm true}$ is the analytical solution and $\phi_{\rm num}$ is the numerical solution representing the electrostatic potential for the non-linear PB equation. For the $L_2$ error we have used $N= N_x \times N_y \times N_z$ as the total number of unknowns on the grid points. 
 
 
+\begin{figure}
+	\centering
+	\includegraphics[width = 3in]{stab_adi.jpg}
+	\includegraphics[width = 3in]{stab_gfmadi.jpg}\\
+	(a)ADI\hspace*{2.5in} (b)GFM-ADI\\ 	
+	\includegraphics[width = 3in]{stab_gfmlodcn.jpg}
+	\includegraphics[width = 3in]{stab_gfmlodie.jpg}\\
+	(c)GFM-LODCN \hspace*{2in} (d)GFM-LODIE
+	\caption{Stability test for the Krikwood Sphere with $x,y,z = [-7,7]$, Radius $=2$, TEND $=\Delta t * 10^4$, $I_s=0.01$ and $\bar \kappa = 1$}	
+\end{figure}
 
  
  
-\textbf{Stability test:} At first for the stability for the non-linear PB equation to calculate the potential $\phi(\bf r)$ for the krikwood sphere we considered the domain to be $[-3,3]$ for $x, y$and $z$ direction with the spherical radius to be $R = 1$ for the interface. In this study we used finer grid as $h = 0.125$ to avoid the difficulty due to the larger grid spacing and focused on the effect on the stability due to the changes in time increment $\Delta t$ at each time step. We have found all three of our methods to be stable for $\Delta t  =[0.001,5]$. To illustrate this we considered the sampling for $\Delta t $ as $\Delta t =\{0.001, 0.002, 0.005,0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1,2,5\}$ and the stopping time $T$ as $T =100$  so that enough accumulations are experienced. We observed both $L_2$ and $L_\infty$ error to be finite. For larger values of $\Delta t$ as $\Delta t =5$ the numerical errors might feel meaningless but as long as this errors remains to be finite, this demonstrates the stability of the underlying time integration. 
+\textbf{Stability test:} At first for the stability of the non-linear PB equation to calculate the potential $\phi(\bf r)$ for the krikwood sphere we considered the domain to be $[-3,3]$ for $x, y$and $z$ direction with the spherical radius to be $R = 1$ for the interface. In this study we used finer grid as $h = 0.125$ to avoid the difficulty due to the larger grid spacing and focused on the effect on the stability due to the changes in time increment $\Delta t$ at each time step. We have found all three of our methods to be stable for $\Delta t  =[0.001,5]$. To illustrate this we considered the sampling for $\Delta t $ as $\Delta t =\{0.001, 0.002, 0.005,0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1,2,5\}$ and the stopping time $T$ as $T =100$  so that enough accumulations are experienced. We observed both $L_2$ and $L_\infty$ error to be finite. For larger values of $\Delta t$ as $\Delta t =5$ the numerical errors might feel meaningless but as long as this errors remains to be finite, this demonstrates the stability of the underlying time integration. 
+
+
+
+
 \begin{table}[!ht]
 \centering
 %\begin{tabular}{|c|c|c|c|c|c|}
@@ -61,9 +76,10 @@ $h$ & $L_2$ & Order & $L_\infty$& Order & $E_{\rm sol}$ \\ \hline
 1/4 & 1.18E-05 & 1.27  & 2.18E-04 & 0.83  & -82.043011 \\ %\hline
 1/8 & 9.40E-06 & 0.33  & 1.48E-04 & 0.56  & -82.046402 \\ \hline
 \end{tabular}
-\caption{Solving the nonlinear PB equation for the krikwood sphere with $\epsilon^+=80$, $\epsilon^-=1$, $\Delta t = 0.001$, $T=10$, $I_s=0.01$ and $\kappa = 1$. The centered charge of unit $1e_c $ is located at (0, 0, 0).}
+\caption{Spatial convergence test for the krikwood sphere with $\epsilon^+=80$, $\epsilon^-=1$, $\Delta t = 0.001$, TEND $=10$, $I_s=0.01$ and $\kappa = 1$. The centered charge of unit $1e_c $ is located at (0, 0, 0).}
 \label{tab-krikwood}
 \end{table}
+GFM-ADI is much more stable than ADI. This makes GFM-ADI a very practical method, while the ADI method is impractical by requiring too small dt values. In some sense, the GFM-ADI method is even better than LOD methods. Although LOD methods are unconditionally stable, energies are inaccurate for large dt values. For GFM-ADI, the critical dt value for stability tells us a safe zone, within this safe zone, the GFM-ADI is both accurate and efficient. 
 
 \textbf{Spacial Convergence:}  In this study, we investigated the order of  accuracy for the spacial convergence in Table \ref{tab-krikwood} for the krikwood sphere. The time increment $\Delta t$ has been kept fixed to $0.001$ while reducing the grid spacing $h$ from $2$ to $1/8$ in this process. Within this range of $h$ we have noticed the accuracy of GFM-ADI to be nearly 2nd order while gradually reducing for GFM-LODCN and GFM-LODIE. Then we have computed the solvation energy $E_{\rm sol}$ using the non-linear PB equation in (\ref{pbe}) with the source term defined in (\ref{rho}) for the similar setup for the krikwood sphere in \ref{tab-krikwood}. The solvation energy for this setup can also be computed analytically as $-81.97820845$. For all three of our proposed methods the solvation energies $E_{\rm sol}$ found to be very close to this analytical value as reported in Table \ref{tab-krikwood}. 
 
@@ -71,16 +87,28 @@ $h$ & $L_2$ & Order & $L_\infty$& Order & $E_{\rm sol}$ \\ \hline
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=4in]{temp.png}
-	\caption{Temporal convergence}
-% TODO Have to add ADI methods result 	
+	\includegraphics[width=4in]{temp.jpg}
+	\caption{Temporal convergence test for the krikwood sphere with $h=0.125$}
+
 \end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    
 \section{Biological applications}
 
-In this section, we focus on exploring the stability and accuracy of GFM-ADI, GFM-LODCN and GFM-LODIE schemes by considering the solvation analysis of real proteins. Even though all of our proposed schemes were found to be stable for the one atom case (Krikwood sphere) for $\Delta t =[0.001,5]$, it is of great interest to see if these schemes are stable for real protein systems. We will compare all three methods in detail for a particular protein system and try to identify the best choice for the time increment $\Delta t $ and the grid spacing $h$ to get the most accurate result within a reasonable amount of time. The optimum $\Delta t$ and $h$ has been used later to calculate the solvation energy of 24 proteins.      
+In this section, we focus on exploring the stability and accuracy of GFM-ADI, GFM-LODCN and GFM-LODIE schemes by considering the solvation analysis of proteins. Even though all of our proposed schemes were found to be stable for the one atom case (Krikwood sphere) for $\Delta t =[0.001,5]$, it is of great interest to see if these schemes are stable for real protein systems. We will compare all three methods in detail for a particular protein system and try to identify the best choice for the time increment $\Delta t $ and the grid spacing $h$ to get the most accurate result within a reasonable amount of time. The optimum $\Delta t$ and $h$ has been used later to calculate the solvation energy of 24 proteins.      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Protein Crambin } To validate our proposed schemes with a real protein we have studied the hydrophobic protein Crambin (PDB ID : 1cbn). It is a 46 residue protein homologous to a membrane-active plant toxins \cite{1cbn_paper}. It is found in the seeds of \textit{Crambe abyssinicia} and have local anesthetic activity in a lobster walking leg axon (J. Marquis \cite{1cbn_paper}). We used the MSMS package to generate the molecular surface for this protein using the crystallographic data recored at $130 K$ as reported in \cite{1cbn_paper}. At this step we used the probe radius as $1.4$ the density as $10$ for the MSMS package.
+\subsection{Protein Crambin } To validate our proposed schemes with a real protein we have studied the hydrophobic protein Crambin (PDB ID : 1cbn). It is a 46 residue protein homologous to a membrane-active plant toxins \cite{1cbn_paper}. It is found in the seeds of \textit{Crambe abyssinicia} and have local anesthetic activity in a lobster walking leg axon (J. Marquis \cite{1cbn_paper}). We used the MSMS package to generate the molecular surface for this protein using the crystallographic data recored at $130 K$ as reported in \cite{1cbn_paper}. At this step we used the probe radius as $1.4$ the density as $10$ for the MSMS package calculate the molecular surface.
+
+  For this study at first we reported the solvation energy of 1cbn calculated by all three of our proposed schemes in Table \ref{tab-1cbn}. After calculating electrostatic potential $\phi$, equation (\ref{eq_solvation}) has been discretized further to calculate the solvation energy as, 
+ \begin{equation}
+ 	E_{\rm sol} = \sum_i \sum_j \sum_k Q({x_i,y_j,z_k}) \phi_{RF}(x_i,y_j,z_k)
+ \end{equation} 
+where $Q$ is the trilinear interpolation of the singular charges $q_i$ at the center of the atoms.  The potential values are obtained by scaling our calculated dimensionless potentials with the constant $0.596163438$ corresponding for the room temperature (300K). In all cases a uniform mesh size $h = 0.5$ and a large stopping time $TEND$ will be used to ensure that the steady state solution is reached. For the dielectric constant we have used $\epsilon^+=80$ for water as the solvent and $\epsilon ^-=1$ the region in side the protein. The ionic strength has been used as $I_s = 0.15$.
+
+Here we tried to identify the value of $\Delta t$ as large as possible without losing the adequate amount accuracy for a real protein like 1cbn. But in Table \ref{tab-1cbn} as we have observed  for $\Delta t > 0.5$, GFM-ADI diverges totally while other two schemes loses significant amount of accuracy. If we consider the solvation energy ($\approx $ -302 {\it kcal/mol}) for $\Delta t =0.005$ to be accurate enough and compare all other solvation energies in Table \ref{tab-1cbn}, it can be observed that with the increase of $\Delta t$ in all three proposed schemes looses accuracy but at a different rate. GFM-ADI scheme is usually more accurate while GFM-LODIE schemes more robust to the larger values of $\Delta t$. The performance of GFM-LODCN is roughly in between the other two schemes in terms of accuracy and stability. To be uniform  with the studies for the other proteins in this paper we have used the optimum value for $\Delta t =0.05$ and $h=0.5$. For GFM-ADI, the critical value of $\Delta$ (in this case $0.5$) for stability gives us a safe zone ($\Delta t < 0.5$), within this safe zone, the GFM-ADI is both accurate and efficient. In comparison for ADI method this critical value is $\Delta t = 0.005$ which results in taking unreasonably longer time to reach the steady state to produce any results. 
 % Table generated by Excel2LaTeX from sheet '1cbn'
 \begin{table}[!ht]
 \centering
@@ -109,9 +137,9 @@ $\Delta t$  & ADI  & GFM-ADI       & GFM-LODCN     & GFM-LODIE     \\ \hline
 %2     & NaN           & -251.54655749 & -248.89416804 \\ %\hline
 %%3     & NaN           & -237.49060662 & -240.78175990 \\ \hline
 %5     & NaN           & -218.29937773 & -230.91124478 \\\hline
-0.001 & -459.5742719854 & -303.00657886   & -303.00154088   & -302.80556740 \\
-0.002 & -458.1104685049 & -302.99808443   & -302.98279503   & -302.61375402 \\
-0.005 & -452.1116748705 & -302.90138868   & -302.83729044   & -302.03341621   \\
+0.001 & -459.5742719854 & -303.00657886  & -303.00154088   & -302.80556740 \\
+0.002 & -458.1104685049 & -302.99808443  & -302.98279503   & -302.61375402 \\
+0.005 & -452.1116748705 & -302.90138868  & -302.83729044   & -302.03341621   \\
 0.01  &    NaN         & -302.85075766   & -302.68957418   & -301.31096348   \\
 0.02  &    NaN         & -302.69227062   & -302.33466174   & -300.06953533   \\
 0.05  &    NaN          & -302.04538862   & -301.08386563   & -297.04896758   \\
@@ -126,14 +154,10 @@ $\Delta t$  & ADI  & GFM-ADI       & GFM-LODCN     & GFM-LODIE     \\ \hline
 \caption{Solvation Energy ({\it kcal/mol}) of 1cbn for $h=0.5$ and the ionic strength $I_s= 0.15$}
 \label{tab-1cbn}
 \end{table}
-
-  For this study at first we reported the solvation energy of 1cbn calculated by all three of our proposed schemes in Table \ref{tab-1cbn}. After calculating electrostatic potential $\phi$, equation (\ref{eq_solvation}) has been discretized further to calculate the solvation energy as, 
- \begin{equation}
- 	E_{\rm sol} = \sum_i \sum_j \sum_k Q({x_i,y_j,z_k}) \phi_{RF}(x_i,y_j,z_k)
- \end{equation} 
-where $Q$ is the trilinear interpolation of the singular charges $q_i$ at the center of the atoms.  The potential values are obtained by scaling our calculated dimensionless potentials with the constant $0.596163438$ corresponding for the room temperature (300K). In all cases a uniform mesh size $h = 0.5$ and a large stopping time $T$ will be used to ensure that the steady state solution is reached. For the dielectric constant we have used $\epsilon^+=80$ for water as the solvent and $\epsilon ^-=1$ the region in side the protein. The ionic strength has been used as $I_s = 0.15$.
  
-Here we tried to identify the value of $\Delta t$ as large as possible without losing the adequate amount accuracy for a real protein like 1cbn. But in Table \ref{tab-1cbn} as we have observed  for $\Delta t > 0.5$, GFM-ADI diverges totally while other two schemes loses significant amount of accuracy. If we consider the solvation energy (around -302 {\it kcal/mol}) for $\Delta t =0.005$ as the most accurate one and compare all other solvation energies in Table \ref{tab-1cbn}, it can be observed that with the increase of $\Delta t$ all three proposed schemes looses accuracy but at a different rate. GFM-ADI scheme is usually more accurate while GFM-LODIE schemes more robust to the larger values of $\Delta t$. The performance of GFM-LODCN is roughly in between the other two schemes in terms of accuracy and stability. To be uniform  with the studies for the other proteins in this paper we have used the optimum value for $\Delta t =0.05$ and $h=0.5$. 
+   
+
+In Figure \ref{fig_1cbn} we focus on the electrostatic potential on the surface of the protein 1cbn for all three of our prosed schemes.  The difference is not that much noticeable unless we focus in the black squared region of the front side. This shows that, even though there are some differences in solvation energies calculated by the proposed three methods there is no significant difference for the electrostatic potentials for our choice for the optimum values of the parameters.      
 \begin{figure}[!ht]
 \begin{center}	
 	\includegraphics[width=2.1in]{1cbn_gfmadi_front_sq.png}\includegraphics[width=2.1in]{1cbn_gfmlodcn_front_sq.png}\includegraphics[width=2.1in]{1cbn_gfmlodie_front_sq.png}\\
@@ -145,8 +169,7 @@ GFM-ADI front \hskip 0.7in GFM-LODCN front \hskip 0.7in GFM-LODIE front\\
 \end{center}
 \end{figure}
 
-In Figure \ref{fig_1cbn} we focus on the electrostatic potential on the surface of the protein 1cbn for all three of our prosed schemes.  The difference is not that much noticeable unless we focus in the black squared region of the front side. This shows that, even though there are some differences in solvation energies calculated by the proposed three methods there is no significant difference for the electrostatic potentials for our choice for the optimum values of the parameters.      
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \subsection{Solvation energy of 24 proteins}
@@ -192,6 +215,7 @@ Solvation energies for all three of our proposed schemes have been compared  wit
 	\includegraphics[width=3.2in]{24_energy}\includegraphics[width=3.2in]{CPU_time}
 \caption{Difference in solvation energy(left) and CPU time (right) in solving nonlinear PB eqation for 24 protein. }
 \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Binding energy of 2a9x}
 
@@ -234,7 +258,7 @@ $h$ & $E_{\rm sol}^{\rm complex}$ & $E_{\rm sol}^{\rm protein}$ & $E_{\rm sol}^{
 		\caption{Electrostatic potential for 2a9x using GFM-ADI for $\Delta t = 0.05$ and $h = 0.5$}
 	\end{center}
 \end{figure}
-%todo Have to include the table of binding enrgy
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Salt effect on the binding affinity}
 The nonlinear PB equation is often used to describe the salt effects on the binding of ligands, peptides, and proteins to nucleic acids, membranes, and proteins. In this investigation we have tested the the performance of the proposed GFM-ADI scheme for the evaluation of the salt effect in the protein-protein binding of the complex 1beb and 1emv. Physically, the binding affinity can be quantitatively represented based on the binding-free energies, which reflect the non-specific salt dependence of the formation of macro- molecular complexes. The binding affinity is then calculated as the slope ratio of the salt-dependent binding energy at certain salt strength $I_s$ against the natural logarithm of $I_s$.

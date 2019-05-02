@@ -1,32 +1,34 @@
 \babel@toc {english}{}
 \contentsline {chapter}{ABSTRACT}{ii}
 \contentsline {chapter}{DEDICATION}{iii}
-\contentsline {chapter}{LIST OF ABBREVIATIONS AND SYMBOLS}{iii}
-\contentsline {chapter}{ACKNOWLEDGMENTS}{vi}
-\contentsline {chapter}{LIST OF FIGURES}{x}
+\contentsline {chapter}{ACKNOWLEDGMENTS}{iv}
+\contentsline {chapter}{LIST OF TABLES}{vii}
+\contentsline {chapter}{LIST OF FIGURES}{viii}
 \contentsline {chapter}{\numberline {1}INTRODUCTION}{1}
 \contentsline {chapter}{\numberline {2}PROTEIN DATA FILE PREPARATION}{5}
-\contentsline {chapter}{\numberline {3}CLEANING THE OLD ADIMSMS CODING PACKAGE FOR THE NEW SIMULATIONS}{7}
-\contentsline {chapter}{\numberline {4}POISSON-BOLTZMANN EQUATION (PBE)}{8}
-\contentsline {section}{\numberline {4.1}Two-component regularization for singular sources}{9}
-\contentsline {section}{\numberline {4.2}Solvation energy from Electrostatic potential}{11}
-\contentsline {section}{\numberline {4.3}Pseudo-transient continuation approach for the PBE}{12}
-\contentsline {chapter}{\numberline {5}OPERATOR SPLITTING SCHEMES}{14}
-\contentsline {section}{\numberline {5.1}Implicit-Euler method with Alternating Direction Implicit scheme (GFM-ADI)}{14}
-\contentsline {section}{\numberline {5.2}Crank-Nicolson method with Locally One Dimensional Scheme(GFM-LODCN)}{16}
-\contentsline {section}{\numberline {5.3}Implicit-Euler method with Locally One Dimensional Scheme(GFM-LODIE)}{18}
-\contentsline {chapter}{\numberline {6}A NEW DERIVATION FOR GHOST FLUID METHOD}{19}
-\contentsline {section}{\numberline {6.1}One dimension}{19}
-\contentsline {section}{\numberline {6.2}Two dimensions}{21}
-\contentsline {section}{\numberline {6.3}Three dimensions}{23}
-\contentsline {section}{\numberline {6.4}Corner point for the new GFM method}{25}
-\contentsline {chapter}{\numberline {7}NUMERICAL VALIDATION}{27}
-\contentsline {subsection}{\numberline {7.0.1}Krikwood Sphere with analytical solution}{27}
-\contentsline {section}{\numberline {7.1}Biological applications}{30}
-\contentsline {subsection}{\numberline {7.1.1}Protein Crambin }{30}
-\contentsline {subsection}{\numberline {7.1.2}Solvation energy of 24 proteins}{33}
-\contentsline {subsection}{\numberline {7.1.3}Binding energy of 2a9x}{34}
-\contentsline {subsection}{\numberline {7.1.4}Salt effect on the binding affinity}{35}
-\contentsline {chapter}{\numberline {8}CONCLUSIONS}{39}
-\contentsline {chapter}{REFERENCES}{39}
-\contentsline {chapter}{APPENDIX}{43}
+\contentsline {chapter}{\numberline {3}POISSON-BOLTZMANN EQUATION AND ADI-MSMS}{7}
+\contentsline {section}{\numberline {3.1}Poisson-Boltzmann Equation}{7}
+\contentsline {section}{\numberline {3.2}ADI Method for pseudo transient PBE}{9}
+\contentsline {section}{\numberline {3.3}Cleaning ADI-MSMS package to develop REG-GFM-MSMS package}{10}
+\contentsline {chapter}{\numberline {4}PSEUDO-TIME SOLUTION OF REGULARIZED PBE}{13}
+\contentsline {section}{\numberline {4.1}Two-component regularization for singular sources}{13}
+\contentsline {section}{\numberline {4.2}Pseudo-transient continuation approach for the PBE}{15}
+\contentsline {section}{\numberline {4.3}ADI method with Implicit-Euler method (GFM-ADI)}{16}
+\contentsline {section}{\numberline {4.4}LOD with Crank-Nicolson method(GFM-LODCN)}{18}
+\contentsline {section}{\numberline {4.5}LOD with Implicit-Euler method (GFM-LODIE)}{20}
+\contentsline {chapter}{\numberline {5}A NEW DERIVATION FOR GHOST FLUID METHOD}{21}
+\contentsline {section}{\numberline {5.1}One dimension}{21}
+\contentsline {section}{\numberline {5.2}Two dimensions}{23}
+\contentsline {section}{\numberline {5.3}Three dimensions}{25}
+\contentsline {section}{\numberline {5.4}Corner point for the new GFM method}{27}
+\contentsline {section}{\numberline {5.5}Solvation energy from Electrostatic potential}{28}
+\contentsline {chapter}{\numberline {6}NUMERICAL VALIDATION}{30}
+\contentsline {section}{\numberline {6.1}Krikwood Sphere with analytical solution}{30}
+\contentsline {section}{\numberline {6.2}Biological applications}{34}
+\contentsline {subsection}{\numberline {6.2.1}Protein Crambin }{35}
+\contentsline {subsection}{\numberline {6.2.2}Solvation energy of 24 proteins}{37}
+\contentsline {subsection}{\numberline {6.2.3}Binding energy of 2a9x}{38}
+\contentsline {subsection}{\numberline {6.2.4}Salt effect on the binding affinity}{40}
+\contentsline {chapter}{\numberline {7}CONCLUSIONS}{43}
+\contentsline {chapter}{REFERENCES}{44}
+\contentsline {chapter}{APPENDIX}{48}

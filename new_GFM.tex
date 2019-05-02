@@ -1,14 +1,16 @@
 Ghost Fluid Method(GFM) is a sharpe interface technique introduced in  \cite{Fedkiw1999} to treat the two-face contact discontinuities in the Euler equations. It extends values across the interface into an artificial fluid (ghost fluid), inducing the jump conditions at the interface. This GFM method was later extended in \cite{Liu2000} to solve elliptic equations with variable coefficients. But in contrast to their method \cite{Liu2000} , the jump conditions are incorporated into the numerical discretization in such a way that the symmetry of the finite difference stencil is preserved. Which makes it compatible with most standard solvers. The flux jump has been decomposed in each axis direction treating the problem dimension by dimension. As a result this extended GFM becomes only first order accurate.   
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{One dimension}
 
- 
 In order to overcome the difficulty due to the jump-condition on the interface $\Gamma$, a modified version of Ghost Fluid Method(GFM) has been used. For a simple 1D model when we try to evaluate by the finite difference operator $\delta_{xx}$ at irregular points where the interface is at $x_\Gamma$ and between $x_i$ and $x_{i+1}$ as the following figure.  %$x_i \leq x_\Gamma\leq x_{i+1}$.   
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=1]{1dmib1.pdf}
+%\includegraphics[scale = .5]{PBE1_grid.pdf}
+\includegraphics[scale=1]{1dmib1.pdf}\hspace{10mm}
+
 \caption{1D GFM}
 \label{fig_1}
 \end{center}
@@ -75,7 +77,10 @@ a_1&= \epsilon^-,b_1=-\epsilon^-\left(1+\frac{\epsilon^+}{d}\right), c_1=\frac{\
 a_2&= \frac{\epsilon^+\epsilon^-}{d},b_2=-\epsilon^+\left(1+\frac{\epsilon^-}{d}\right), c_2=\epsilon^+, e_2=-\frac{\epsilon^+}{d},f_2=\frac{h(1-\lambda)}{d}
 \end{aligned}
 \end{eqnarray}
-Here the 2nd terms of the equations in (\ref{fnt-op-2}) are considered to be known. Only the coefficients in the 1st terms of (\ref{fnt-op-2})  contribute to the finite difference operator matrix to make it diagonally dominant(as $|b_1|-a_1-c_1=0\text{ and } |b_2|-a_2-c_2=0$) and symmetric (as $a_2=c_1$).    
+Here the 2nd terms of the equations in (\ref{fnt-op-2}) are considered to be known. Only the coefficients in the 1st terms of (\ref{fnt-op-2})  contribute to the finite difference operator matrix to make it diagonally dominant(as $|b_1|-a_1-c_1=0\text{ and } |b_2|-a_2-c_2=0$) and symmetric (as $a_2=c_1$).  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  
 \section{Two dimensions}
 For two dimensional PB model we need to evaluate $\delta_{xx}$ and $\delta_{yy}$, where the similar derivation of equations in (\ref{fnt-op-2}) can be used to calculate $\delta_{yy}$ in irregular points. But in this case,  $\left[ \epsilon \frac{\partial u}{\partial x} \right]$ and $\left[ \epsilon \frac{\partial u}{\partial y} \right]$ is not known, while $\left[ \epsilon \frac{\partial u}{\partial n} \right]$ is given. Now to get $\left[ \epsilon \frac{\partial u}{\partial x} \right]$ and $\left[ \epsilon \frac{\partial u}{\partial y} \right]$ in terms of $\left[ \epsilon \frac{\partial u}{\partial n} \right]$ and $\left[ \epsilon \frac{\partial u}{\partial \tau} \right]$ we have the following relations,  
 \begin{figure}[ht]
@@ -138,6 +143,10 @@ Similarly it can be shown that $\left[\epsilon \frac{\partial u}{\partial y}\rig
 %	\tilde{u}_{i+1}&= \frac{(\epsilon^--\epsilon^+)(1-\lambda)}{\epsilon^+\lambda+\epsilon^-(1-\lambda)} \textcolor{blue}{u_i} +\frac{\epsilon^+}{\epsilon^+\lambda+\epsilon^-(1-\lambda)} \textcolor{blue}{u_{i+1}}\\
 %	& -\frac{\epsilon^+}{\epsilon^+\lambda+\epsilon^-(1-\lambda)} \textcolor{blue}{G}-\frac{h(1-\lambda)}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}\textcolor{blue}{ \epsilon^-\frac{\partial G}{\partial x}}
 %\end{align*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Three dimensions}
 
 Consider that the interface $\Gamma$ intersects the grid line in the $x$ direction at a point $(i_\Gamma, j,k)$ which is located between $(i,j,k)$ and $(i+1,j,k)$, We therefore have two irregular grid points, $(i,j,k)$ and $(i+1,j,k)$. The fictitious values $\tilde{u}_{i,j,k}$ and $\tilde{u}_{i+1,j,k}$ are to be determined. To use one of the jump conditions which is defined in the normal direction of the interface point, it is convenient to introduce a local coordinates $(\xi,\eta,\zeta)$ such that $\xi$ is along the normal direction and $\eta $ is in the $xy$ plane. Then the coordinate transformation can be given as, 
@@ -216,19 +225,20 @@ Then from equation (\ref{eqtran1}) and (\ref{eqtran2}) we have,
     		 &-\sin\theta (\epsilon^+-\epsilon^-)\frac{\partial u}{\partial \eta}^+ -\cos{\phi} \cos \theta (\epsilon^+-\epsilon^-) \frac{\partial u^+}{\partial \zeta }\\
     		 &=\epsilon^- \frac{\partial G}{\partial x}-\sin\theta (\epsilon^+-\epsilon^-)\frac{\partial u}{\partial \eta}^+ -\cos{\phi} \cos \theta (\epsilon^+-\epsilon^-) \frac{\partial u^+}{\partial \zeta }\\
     		 &\approx \epsilon^- \frac{\partial G}{\partial x}\text{     considering } \frac{\partial u}{\partial \eta}^+ =0 \text{ and } \frac{\partial u^+}{\partial \zeta }=0.  
-    \end{aligned}		  	
+    \end{aligned}\label{eq:m-gfm1}		  	
     \end{eqnarray}
 
   Similarly along $x$ axis and $y$ axis we have, 
   Then from equation (\ref{3d_gfm1}), (\ref{3d_gfm2}) and (\ref{3d_gfm3})we have,
     \begin{eqnarray}
     \begin{aligned}  
-   \left[\epsilon \frac{\partial u}{\partial y}\right]\approx\epsilon^- \frac{\partial G}{\partial y}\text{ and } \left[\epsilon \frac{\partial u}{\partial z}\right]\approx\epsilon^- \frac{\partial G}{\partial z}
+   \left[\epsilon \frac{\partial u}{\partial y}\right]\approx\epsilon^- \frac{\partial G}{\partial y}\text{ and } \left[\epsilon \frac{\partial u}{\partial z}\right]\approx\epsilon^- \frac{\partial G}{\partial z}\label{eq:m-gfm2}
     \end{aligned}		  	
     \end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Corner point for the new GFM method}
-% TODO Maybe have to describe more
+% TODO Maybe have to describe more about Corner point
 We have a special situation for a corner point when the interface crosses the grid line for the same axis twice around $x_i$ where $x_{i-1}$ and $x_{i+1}$ are on the other side of the interface.   
 		
 \begin{center}
@@ -248,4 +258,28 @@ Which gives the following equations for the fictitious points $\tilde{u}_{i-1}$ 
 	$$F_1 = \beta^+_L \lambda_L+\beta^-_L(1-\lambda_L), F_2 = \beta^+_R \lambda_R+\beta^-_R(1-\lambda_R)$$
 	$$	A_1 = \frac{\beta^-_L}{F_1}, B_1  = \frac{\lambda_L(\beta^+_L-\beta^-_L)}{F_1}, C_1 = \frac{\beta^-_L}{F_1},D_1 = \frac{h \lambda_L}{F_1} $$ %, 
 	$$A_2 = \frac{\beta^+_R}{F_2}, B_2  = \frac{(1-\lambda_R)(\beta^-_R-\beta^+_R)}{F_2}, C_2 = \frac{\beta^+_R}{F_2},D_2 = \frac{h(1- \lambda_R)}{F_2}$$
-	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Solvation energy from Electrostatic potential}
+
+The solvation energy can be defined as the energy released when the solute in free space is dissolved in solvent and it can be expressed in terms of the electrostatic free energy $\Delta G_{\rm ele}$ and the coulomb energy $E_{\rm cou}$ as 
+
+\begin{eqnarray}
+	\Delta G_{\rm ele}&=& E_{\rm cou}+ E_{\rm sol}\label{eq_Gele}\\
+	E_{\rm cou} &=& \sum_{i=1}^{N_c}\sum_{j=1}^{N_c}\frac{q_iq_j}{\epsilon^-d_{i,j}}, i\neq j\label{eq_Ecou}
+\end{eqnarray}
+where $q_i$ and $q_j$ are the charges at the center of the atoms and $d_{i,j}$'s are the distance between the $i$-th and $j$-the atom. 
+  
+Then Sharp and Honig in \cite{Sharp_Honig}  described the calculation electrostatic free energy by, 
+\begin{equation}
+\Delta G_{\rm ele}=\int_{\mathbb{R}^3}\left(\phi\rho+\Delta\Pi-\frac{1}{2}\epsilon|{\bf E}|^2\right)d{\bf r}
+\end{equation}
+
+where $\phi$ is the electrostatic potential, $\rho$ is the fixed charge density represented as a smeared surface charge or as a collection of point charges, $\Delta\Pi$ is  the excess osmotic pressure of the mobile ion cloud, and $\frac{1}{2}\epsilon|{\bf E}|^2$ is the electrostatic stress.
+
+Now for the simplification of the numerical validations of our proposed schemes in the next chapter we omitted the energy components related to the mobile ion pressure and the electrostatic stress to report the solvation energy $E_{\rm sol}$ as,  
+
+\begin{eqnarray}
+	E_{\rm sol}=\Delta G_{\rm ele}-E_{\rm cou}\approx\sum\limits_{i=1}^{N_c}q_i\phi_{RF} ({\bf r}_i)\label{eq_solvation}
+\end{eqnarray}
+
+Here the contribution of the mobile ion pressure and the electrostatic stress to the whole calculation is really small and computationally more challenging. The readers can refer to \cite{GENG_WEI2011,Gilson,Sharp_Honig} for more details.	

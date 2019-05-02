@@ -52,6 +52,10 @@
 \ProcessOptions\relax
 \LoadClass[letter,12pt]{report} %or letter/a4paper
 
+\usepackage{lipsum}
+\usepackage{titling}
+\setlength{\droptitle}{-1in}
+
 % margins ,right=1in
 \usepackage[top=1in,bottom=1in,left=1in]{geometry}
 \usepackage{titlesec}
@@ -69,7 +73,7 @@
 \usepackage{setspace}
 \usepackage{amsthm}
 \usepackage{enumitem}
-\usepackage{appendix}
+%\usepackage{appendix}
 %\usepackage{hyperref}
 \usepackage{multirow}
 \usepackage{graphicx}
@@ -107,8 +111,10 @@
 %\vspace*{50\p@}
   \renewcommand\contentsname{\vspace*{50\p@}\centerline{CONTENTS}}%
   \renewcommand\listfigurename{\vspace*{50\p@}\centerline{LIST OF FIGURES}}%
+  \renewcommand\listtablename{\vspace*{0\p@}\centerline{LIST OF TABLES}\vspace*{-30\p@}}%
 } %centre 'Contents'
 
+\renewcommand\cftlottitlefont{}
 
 \setlength\cftaftertoctitleskip{-16pt} %change the distance between CONTENTS and chapters
 %\renewcommand{\cftbeforeloftitle}{200pt}
@@ -119,7 +125,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\renewcommand{\cftaftertoctitle}{\hfill}
+%\renewcommand{\cftaftertoctitle}{\hfill}
 \renewcommand{\cftchapfont}{ }
 \renewcommand{\cftdot}{.}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
@@ -131,6 +137,8 @@
 \setlength\cftafterloftitleskip{-16pt}
 \setlength{\cftbeforesecskip}{12pt}
 \setlength{\cftparskip}{12pt}
+
+
 %\renewcommand{\cftlottitlefont}{\pagebreak\hfill\MakeTextUppercase}
 %\renewcommand{\cftafterlottitle}{\hfill}
 
@@ -192,12 +200,14 @@
 %% Rename bibliography
 \renewcommand{\bibname}{References}
 %Try to centre 'Contents' \renewcommand*\contentsname{\hfill CONTENTS \hfill}
+%  \renewcommand\contentsname{\vspace*{50\p@}\centerline{CONTENTS}}%
 
 
 %% Do not add vspace between chapters
 %% Hack taken from:
 %% http://tex.stackexchange.com
 %% /questions/784/how-to-change-the-line-spacing-in-my-list-of-figures
+
 \newcommand*{\noaddvspace}{\renewcommand*{\addvspace}[1]{}}
 \addtocontents{lof}{\protect\noaddvspace}
 \addtocontents{lot}{\protect\noaddvspace}
@@ -252,14 +262,14 @@
 
     \@dedication
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %\chapter*{LIST OF ABBREVIATIONS AND SYMBOLS}
-    \addcontentsline{toc}{chapter}{LIST OF ABBREVIATIONS AND SYMBOLS}
+%    \chapter*{LIST OF ABBREVIATIONS AND SYMBOLS}
+%    \addcontentsline{toc}{chapter}{LIST OF ABBREVIATIONS AND SYMBOLS}
 
     %% Print everything in the glossary.
     \glsaddall
     %\printglossary
     \printnomenclature
-    \textit{The superscript ${}^\ast$ denotes dimensional variables.}
+%    \textit{The superscript ${}^\ast$ denotes dimensional variables.}
     \glsresetall
 
     \chapter*{ACKNOWLEDGMENTS}
@@ -269,17 +279,19 @@
     \begin{singlespace}
     \tableofcontents
     \end{singlespace}
-   % \cleardoublepage
-    %\listoftables
-    %\addcontentsline{toc}{chapter}{LIST OF TABLES}
-    %\vspace*{50\p@}
-    %\renewcommand\listfigurename{\vspace*{50\p@}Lista de Figuras}
-    %\chapter*{LIST OF FIGURES}
+    \cleardoublepage
+
+    \begin{singlespace}
+    \listoftables
+    \singlespacing
+    \addcontentsline{toc}{chapter}{LIST OF TABLES}
+	\vfill
+    \end{singlespace}
+    
     \begin{singlespace}
     \listoffigures
     \addcontentsline{toc}{chapter}{LIST OF FIGURES}
     \end{singlespace}
-
 
     \end{frontmatter}
 
@@ -305,13 +317,15 @@
   \setcounter{section}{1}
   \begin{doublespace}
   \renewcommand{\@makechapterhead}[1]
-  { \vspace*{50\p@}
+  { 
+  \vspace*{0\p@}
     \begin{center}
       \MakeTextUppercase{ ##1 }
     \end{center}
   }
   \renewcommand{\@makeschapterhead}[1]
-  {\vspace*{50\p@}
+  {
+  \vspace*{0\p@}
     \begin{center}
       \MakeTextUppercase{ ##1 }
     \end{center}
@@ -329,16 +343,17 @@
   \begin{doublespace}
   \renewcommand{\@makechapterhead}[2]
   {
-    \vspace*{50\p@}%
+    \vspace*{0.5in}%
     \begin{center}
-      \MakeTextUppercase{ \textbf{ \@chapapp\space \thechapter } }
+      \MakeTextUppercase{ { \@chapapp\space \thechapter } }
       %\linebreak
       \singlespacing{ \textbf{ ##1 } }
     \end{center}
   }
 
   \renewcommand{\@makeschapterhead}[1]
-  {  \vspace*{50\p@}%
+  {  
+%  \vspace*{50\p@}%
     \begin{center}
       \MakeTextUppercase{ \textbf{ ##1 } }
     \end{center}
@@ -349,12 +364,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \renewcommand{\section}
   {
-    \@startsection{section}{1}{0mm}{4ex}{2ex}{\normalsize\bfseries}
+    \@startsection{section}{1}{0mm}{1ex}{1ex}{\normalsize\bfseries}
   }
 
   \renewcommand{\subsection}
   {
-    \@startsection{subsection}{1}{0mm}{1mm}{1mm}{\normalsize\bfseries}
+    \@startsection{subsection}{1}{0mm}{1ex}{1ex}{\normalsize\bfseries}
   }
 }
 {

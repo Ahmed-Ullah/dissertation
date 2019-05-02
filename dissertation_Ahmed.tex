@@ -136,8 +136,11 @@
 \place{Tuscaloosa, Alabama}
 
 \begin{document}
-
-
+%These following three lines are from Kahns thesis
+%\raggedright % To make all lines right justified. 
+%\setlength{\parindent}{3em}
+%\setlength{\parskip}{0em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Makes the title, abstract, dedication, table of contents, etc.
 %% Must be before \begin{body}
 \makefrontmatter
@@ -158,16 +161,16 @@
 \label{chap: protein_data}
 \input{protein_data} 
 
-\chapter{CLEANING THE OLD ADIMSMS CODING PACKAGE FOR THE NEW SIMULATIONS}
-\label{chap: cleaning}
-\input{cleaning} 
+%\chapter{POISSON-BOLTZMANN EQUATION  }
+%\label{chap: cleaning}
+%\input{cleaning} 
 % --------------------------- Chapter 2 ----------------------------------------
-\chapter{POISSON-BOLTZMANN EQUATION (PBE)}
+\chapter{POISSON-BOLTZMANN EQUATION AND ADI-MSMS}
 \label{chap: PBE}
 \input{PBE.tex}
 
 % --------------------------- Chapter 3 ----------------------------------------
-\chapter{OPERATOR SPLITTING SCHEMES}
+\chapter{PSEUDO-TIME SOLUTION OF REGULARIZED PBE}
 \label{chap:opt_split}
 \input{opt_split}
 % --------------------------- Chapter 4 ----------------------------------------

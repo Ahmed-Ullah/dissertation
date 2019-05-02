@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.7.14)  25 APR 2019 11:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.7.14)  1 MAY 2019 22:17
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -28,6 +28,14 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count89
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/titling/titling.sty
+Package: titling 2009/09/04 v2.1d maketitle typesetting
+\thanksmarkwidth=\skip43
+\thanksmargin=\skip44
+\droptitle=\skip45
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/03/24 v5.7 Page Geometry
  (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
@@ -41,9 +49,9 @@ Package ifvtex Info: VTeX not detected.
 ) (/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count89
-\Gm@cntv=\count90
-\c@Gm@tempcnt=\count91
+\Gm@cnth=\count90
+\Gm@cntv=\count91
+\c@Gm@tempcnt=\count92
 \Gm@bindingoffset=\dimen103
 \Gm@wd@mp=\dimen104
 \Gm@odd@mp=\dimen105
@@ -56,8 +64,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \ttl@box=\box26
-\beforetitleunit=\skip43
-\aftertitleunit=\skip44
+\beforetitleunit=\skip46
+\aftertitleunit=\skip47
 \ttl@plus=\dimen111
 \ttl@minus=\dimen112
 \ttl@toksa=\toks16
@@ -71,45 +79,45 @@ Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
-\cftparskip=\skip45
-\cftbeforetoctitleskip=\skip46
-\cftaftertoctitleskip=\skip47
-\cftbeforepartskip=\skip48
-\cftpartnumwidth=\skip49
-\cftpartindent=\skip50
-\cftbeforechapskip=\skip51
-\cftchapindent=\skip52
-\cftchapnumwidth=\skip53
-\cftbeforesecskip=\skip54
-\cftsecindent=\skip55
-\cftsecnumwidth=\skip56
-\cftbeforesubsecskip=\skip57
-\cftsubsecindent=\skip58
-\cftsubsecnumwidth=\skip59
-\cftbeforesubsubsecskip=\skip60
-\cftsubsubsecindent=\skip61
-\cftsubsubsecnumwidth=\skip62
-\cftbeforeparaskip=\skip63
-\cftparaindent=\skip64
-\cftparanumwidth=\skip65
-\cftbeforesubparaskip=\skip66
-\cftsubparaindent=\skip67
-\cftsubparanumwidth=\skip68
-\cftbeforeloftitleskip=\skip69
-\cftafterloftitleskip=\skip70
-\cftbeforefigskip=\skip71
-\cftfigindent=\skip72
-\cftfignumwidth=\skip73
-\c@lofdepth=\count92
-\c@lotdepth=\count93
-\cftbeforelottitleskip=\skip74
-\cftafterlottitleskip=\skip75
-\cftbeforetabskip=\skip76
-\cfttabindent=\skip77
-\cfttabnumwidth=\skip78
+\cftparskip=\skip48
+\cftbeforetoctitleskip=\skip49
+\cftaftertoctitleskip=\skip50
+\cftbeforepartskip=\skip51
+\cftpartnumwidth=\skip52
+\cftpartindent=\skip53
+\cftbeforechapskip=\skip54
+\cftchapindent=\skip55
+\cftchapnumwidth=\skip56
+\cftbeforesecskip=\skip57
+\cftsecindent=\skip58
+\cftsecnumwidth=\skip59
+\cftbeforesubsecskip=\skip60
+\cftsubsecindent=\skip61
+\cftsubsecnumwidth=\skip62
+\cftbeforesubsubsecskip=\skip63
+\cftsubsubsecindent=\skip64
+\cftsubsubsecnumwidth=\skip65
+\cftbeforeparaskip=\skip66
+\cftparaindent=\skip67
+\cftparanumwidth=\skip68
+\cftbeforesubparaskip=\skip69
+\cftsubparaindent=\skip70
+\cftsubparanumwidth=\skip71
+\cftbeforeloftitleskip=\skip72
+\cftafterloftitleskip=\skip73
+\cftbeforefigskip=\skip74
+\cftfigindent=\skip75
+\cftfignumwidth=\skip76
+\c@lofdepth=\count93
+\c@lotdepth=\count94
+\cftbeforelottitleskip=\skip77
+\cftafterlottitleskip=\skip78
+\cftbeforetabskip=\skip79
+\cfttabindent=\skip80
+\cfttabnumwidth=\skip81
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count94
+\etb@tempcnta=\count95
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/glossaries/base/glossaries.sty
 Package: glossaries 2018/04/07 v4.37 (NLCT)
  (/usr/local/texlive/2018/texmf-dist/tex/latex/xkeyval/xkeyval.sty
@@ -118,7 +126,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks17
 \XKV@tempa@toks=\toks18
 )
-\XKV@depth=\count95
+\XKV@depth=\count96
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/local/texlive/2018/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
 Package: mfirstuc 2017/11/14 v2.06 (NLCT)
@@ -130,7 +138,7 @@ Package: xfor 2009/02/05 v1.05 (NLCT)
 Package: datatool-base 2017/11/12 v2.29 (NLCT)
  (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
-\@mathmargin=\skip79
+\@mathmargin=\skip82
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -145,13 +153,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count96
+\inf@bad=\count97
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count97
-\leftroot@=\count98
+\uproot@=\count98
+\leftroot@=\count99
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count99
-\DOTSCASE@=\count100
+\classnum@=\count100
+\DOTSCASE@=\count101
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
@@ -160,15 +168,15 @@ LaTeX Info: Redefining \cdots on input line 596.
 \big@size=\dimen118
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count101
-\c@MaxMatrixCols=\count102
+\macc@depth=\count102
+\c@MaxMatrixCols=\count103
 \dotsspace@=\muskip10
-\c@parentequation=\count103
-\dspbrk@lvl=\count104
+\c@parentequation=\count104
+\dspbrk@lvl=\count105
 \tag@help=\toks22
-\row@=\count105
-\column@=\count106
-\maxfields@=\count107
+\row@=\count106
+\column@=\count107
+\maxfields@=\count108
 \andhelp@=\toks23
 \eqnshift@=\dimen119
 \alignsep@=\dimen120
@@ -177,32 +185,32 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \totwidth@=\dimen123
 \lineht@=\dimen124
 \@envbody=\toks24
-\multlinegap=\skip80
-\multlinetaggap=\skip81
+\multlinegap=\skip83
+\multlinetaggap=\skip84
 \mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/substr/substr.sty
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count108
+\c@su@anzahl=\count109
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/datatool/datatool-fp.sty
 Package: datatool-fp 2017/11/12 v2.29 (NLCT)
  (/usr/local/texlive/2018/texmf-dist/tex/latex/fp/fp.sty
 Package: fp 1995/04/02
  `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich (/usr/local/texlive/2018/texmf-dist/tex/latex/fp/defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count109
+\actioncount=\count110
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/fp/fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count110
-\FP@xia=\count111
-\FP@xib=\count112
-\FP@xfa=\count113
-\FP@xfb=\count114
-\FP@rega=\count115
-\FP@regb=\count116
-\FP@regs=\count117
-\FP@times=\count118
+\FP@xs=\count111
+\FP@xia=\count112
+\FP@xib=\count113
+\FP@xfa=\count114
+\FP@xfb=\count115
+\FP@rega=\count116
+\FP@regb=\count117
+\FP@regs=\count118
+\FP@times=\count119
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/fp/fp-addons.sty
 Package: fp-addons 1995/03/15
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/fp/fp-snap.sty
@@ -215,7 +223,7 @@ Package: fp-trigo 1995/04/14
 Package: fp-pas 1994/08/29
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/fp/fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count119
+\FPseed=\count120
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/fp/fp-eqn.sty
 Package: fp-eqn 1995/04/03
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/fp/fp-upn.sty
@@ -224,20 +232,20 @@ Package: fp-upn 1996/10/21
 Package: fp-eval 1995/04/03
 )))
 \@dtl@toks=\toks26
-\@dtl@tmpcount=\count120
-\dtl@tmplength=\skip82
-\dtl@sortresult=\count121
-\@dtl@numgrpsepcount=\count122
-\@dtl@datatype=\count123
-\dtl@codeA=\count124
-\dtl@codeB=\count125
-\@dtl@foreach@level=\count126
+\@dtl@tmpcount=\count121
+\dtl@tmplength=\skip85
+\dtl@sortresult=\count122
+\@dtl@numgrpsepcount=\count123
+\@dtl@datatype=\count124
+\dtl@codeA=\count125
+\dtl@codeB=\count126
+\@dtl@foreach@level=\count127
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/glossaries/base/glossaries-compatible-307.sty
 Package: glossaries-compatible-307 2018/04/07 v4.37 (NLCT)
 )
-\gls@level=\count127
+\gls@level=\count128
 \@gls@tmpb=\toks27
-\gls@tmplen=\skip83
+\gls@tmplen=\skip86
 \glskeylisttok=\toks28
 \glslabeltok=\toks29
 \glsshorttok=\toks30
@@ -246,38 +254,38 @@ Package: glossaries-compatible-307 2018/04/07 v4.37 (NLCT)
 Package: glossary-hypernav 2018/04/07 v4.37 (NLCT)
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
 Package: glossary-list 2018/04/07 v4.37 (NLCT)
-\glslistdottedwidth=\skip84
+\glslistdottedwidth=\skip87
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
 Package: glossary-long 2018/04/07 v4.37 (NLCT)
  (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip85
-\LTright=\skip86
-\LTpre=\skip87
-\LTpost=\skip88
-\LTchunksize=\count128
+\LTleft=\skip88
+\LTright=\skip89
+\LTpre=\skip90
+\LTpost=\skip91
+\LTchunksize=\count129
 \LTcapwidth=\dimen125
 \LT@head=\box29
 \LT@firsthead=\box30
 \LT@foot=\box31
 \LT@lastfoot=\box32
-\LT@cols=\count129
-\LT@rows=\count130
-\c@LT@tables=\count131
-\c@LT@chunks=\count132
+\LT@cols=\count130
+\LT@rows=\count131
+\c@LT@tables=\count132
+\c@LT@chunks=\count133
 \LT@p@ftn=\toks32
 )
-\glsdescwidth=\skip89
-\glspagelistwidth=\skip90
+\glsdescwidth=\skip92
+\glspagelistwidth=\skip93
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
 Package: glossary-super 2018/04/07 v4.37 (NLCT)
  (/usr/local/texlive/2018/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
-\c@tracingst=\count133
+\c@tracingst=\count134
 \ST@wd=\dimen126
-\ST@rightskip=\skip91
-\ST@leftskip=\skip92
-\ST@parfillskip=\skip93
+\ST@rightskip=\skip94
+\ST@leftskip=\skip95
+\ST@parfillskip=\skip96
 \ST@pageleft=\dimen127
 \ST@headht=\dimen128
 \ST@tailht=\dimen129
@@ -291,7 +299,7 @@ Package: supertabular 2004/02/20 v4.1e the supertabular environment
 \ST@pbox=\box33
 )) (/usr/local/texlive/2018/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
 Package: glossary-tree 2018/04/07 v4.37 (NLCT)
-\glstreeindent=\skip94
+\glstreeindent=\skip97
 )) (/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2018/02/14 3.18 The Babel package
  (/usr/local/texlive/2018/texmf-dist/tex/generic/babel/switch.def
@@ -301,10 +309,10 @@ File: switch.def 2018/02/14 3.18 Babel switching mechanism
 Language: english 2017/06/06 v3.3r English support from the babel system
  (/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2018/02/14 3.18 Babel common definitions
-\babel@savecnt=\count134
+\babel@savecnt=\count135
 \U@D=\dimen137
  (/usr/local/texlive/2018/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count135
+\bbl@dirlevel=\count136
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -331,7 +339,7 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@width=\dimen139
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip95
+\OuterFrameSep=\skip98
 \fb@frw=\dimen140
 \fb@frh=\dimen141
 \FrameRule=\dimen142
@@ -360,45 +368,40 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@headfont=\toks37
 \thm@notefont=\toks38
 \thm@headpunct=\toks39
-\thm@preskip=\skip96
-\thm@postskip=\skip97
-\thm@headsep=\skip98
+\thm@preskip=\skip99
+\thm@postskip=\skip100
+\thm@headsep=\skip101
 \dth@everypar=\toks40
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip99
+\labelindent=\skip102
 \enit@outerparindent=\dimen146
 \enit@toks=\toks41
 \enit@inbox=\box34
-\enitdp@description=\count136
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/appendix/appendix.sty
-Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count137
-\c@@ppsavesec=\count138
-\c@@ppsaveapp=\count139
+\enitdp@description=\count137
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
-\multirow@colwidth=\skip100
-\multirow@cntb=\count140
-\multirow@dima=\skip101
+\multirow@colwidth=\skip103
+\multirow@cntb=\count138
+\multirow@dima=\skip104
 \bigstrutjot=\dimen147
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count141
+\lst@mode=\count139
 \lst@gtempboxa=\box35
 \lst@token=\toks42
-\lst@length=\count142
+\lst@length=\count140
 \lst@currlwidth=\dimen148
-\lst@column=\count143
-\lst@pos=\count144
+\lst@column=\count141
+\lst@pos=\count142
 \lst@lostspace=\dimen149
 \lst@width=\dimen150
-\lst@newlines=\count145
-\lst@lineno=\count146
+\lst@newlines=\count143
+\lst@lineno=\count144
 \lst@maxwidth=\dimen151
  (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count147
-\lst@skipnumbers=\count148
+\c@lstnumber=\count145
+\lst@skipnumbers=\count146
 \lst@framebox=\box36
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -408,7 +411,7 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomlabelwidth=\dimen152
 \nom@tempdim=\dimen153
-\nomitemsep=\skip102
+\nomitemsep=\skip105
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/base/fontenc.sty
@@ -436,31 +439,28 @@ Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/lipsum/lipsum.sty
-Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count149
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count150
-\calc@Bcount=\count151
+\calc@Acount=\count147
+\calc@Bcount=\count148
 \calc@Adimen=\dimen154
 \calc@Bdimen=\dimen155
-\calc@Askip=\skip103
-\calc@Bskip=\skip104
+\calc@Askip=\skip106
+\calc@Bskip=\skip107
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count152
-\calc@Cskip=\skip105
+\calc@Ccount=\count149
+\calc@Cskip=\skip108
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
 \col@sep=\dimen156
 \ar@mcellbox=\box37
 \extrarowheight=\dimen157
 \NC@list=\toks45
-\extratabsurround=\skip106
-\backup@length=\skip107
+\extratabsurround=\skip109
+\backup@length=\skip110
 \ar@cellbox=\box38
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
@@ -522,7 +522,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen163
 \caption@hangindent=\dimen164
 )
-\c@ContinuedFloat=\count153
+\c@ContinuedFloat=\count150
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/caption/ltcaption.sty
@@ -530,28 +530,38 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
 )
-\c@KVtest=\count154
-\sf@farskip=\skip108
+\c@KVtest=\count151
+\sf@farskip=\skip111
 \sf@captopadj=\dimen165
-\sf@capskip=\skip109
-\sf@nearskip=\skip110
-\c@subfigure=\count155
-\c@subfigure@save=\count156
-\c@subtable=\count157
-\c@subtable@save=\count158
-\sf@top=\skip111
-\sf@bottom=\skip112
+\sf@capskip=\skip112
+\sf@nearskip=\skip113
+\c@subfigure=\count152
+\c@subfigure@save=\count153
+\c@subtable=\count154
+\c@subtable@save=\count155
+\sf@top=\skip114
+\sf@bottom=\skip115
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/subfloat/subfloat.sty
 Package: subfloat 2003/08/21 version 2.14
  Package `subfloat', Version 2.14 of 2003/08/21.
-\c@subfloatfiguremax=\count159
-\c@subfloattablemax=\count160
+\c@subfloatfiguremax=\count156
+\c@subfloattablemax=\count157
 )
 
 LaTeX Warning: Unused global option(s):
     [letter].
 
-(/Users/Ahmed/Google_Drive/Thesis_PhD/dessertation/.texpadtmp/dissertation_Ahmed.aux)
+(/Users/Ahmed/Google_Drive/Thesis_PhD/dessertation/.texpadtmp/dissertation_Ahmed.aux
+
+LaTeX Warning: Label `imp-eu' multiply defined.
+
+
+LaTeX Warning: Label `GFM-ADI2' multiply defined.
+
+
+LaTeX Warning: Label `GFM-ADI3' multiply defined.
+
+)
 \openout1 = `dissertation_Ahmed.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
@@ -603,19 +613,19 @@ LaTeX Font Info:    ... okay on input line 138.
 
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count161
+\scratchcounter=\count158
 \scratchdimen=\dimen166
 \scratchbox=\box39
-\nofMPsegments=\count162
-\nofMParguments=\count163
+\nofMPsegments=\count159
+\nofMParguments=\count160
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count164
+\MPscratchCnt=\count161
 \MPscratchDim=\dimen167
-\MPnumerator=\count165
-\makeMPintoPDFobject=\count166
+\MPnumerator=\count162
+\makeMPintoPDFobject=\count163
 \everyMPtoPDFconversion=\toks47
 )
-\c@lstlisting=\count167
+\c@lstlisting=\count164
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -623,239 +633,290 @@ Package caption Info: End \AtBeginDocument code.
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./abstract.tex) [2
 
-] (./dedication.tex) (/Users/Ahmed/Google_Drive/Thesis_PhD/dessertation/.texpadtmp/dissertation_Ahmed.nls [3
+] (./dedication.tex)
+No file dissertation_Ahmed.nls.
+[3
 
-] [4
+] (./acknowledgments.tex) [4
 
-
-])
-LaTeX Font Info:    Try loading font information for U+lasy on input line 143.
+] (/Users/Ahmed/Google_Drive/Thesis_PhD/dessertation/.texpadtmp/dissertation_Ahmed.toc
+LaTeX Font Info:    Try loading font information for U+lasy on input line 2.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 143.
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 143.
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [5
-
-] (./acknowledgments.tex) [6
-
-] (/Users/Ahmed/Google_Drive/Thesis_PhD/dessertation/.texpadtmp/dissertation_Ahmed.toc [7]
-Overfull \hbox (12.40515pt too wide) in paragraph at lines 16--16
- [][] []\T1/cmr/m/n/12 Crank-Nicolson method with Lo-cally One Di-men-sional Scheme(GFM-LODCN) []  
- []
-
-)
+) [5])
 \tf@toc=\write4
 \openout4 = `dissertation_Ahmed.toc'.
 
- [8] [9] (/Users/Ahmed/Google_Drive/Thesis_PhD/dessertation/.texpadtmp/dissertation_Ahmed.lof)
-\tf@lof=\write5
-\openout5 = `dissertation_Ahmed.lof'.
+ [6] (/Users/Ahmed/Google_Drive/Thesis_PhD/dessertation/.texpadtmp/dissertation_Ahmed.lot)
+\tf@lot=\write5
+\openout5 = `dissertation_Ahmed.lot'.
 
- [10]
+ [7
+
+] (/Users/Ahmed/Google_Drive/Thesis_PhD/dessertation/.texpadtmp/dissertation_Ahmed.lof)
+\tf@lof=\write6
+\openout6 = `dissertation_Ahmed.lof'.
+
+ [8]
 Chapter 1.
 (./intro.tex [1
 
 ] [2]) [3] [4]
 Chapter 2.
 (./protein_data.tex
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 19.
+<figs/1bna_charge.jpg, id=53, 513.92pt x 513.92pt>
+File: figs/1bna_charge.jpg Graphic file (type jpg)
+<use figs/1bna_charge.jpg>
+Package pdftex.def Info: figs/1bna_charge.jpg  used on input line 37.
+(pdftex.def)             Requested size: 256.95937pt x 256.95937pt.
+ [5
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 45.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
-) [5
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
 
-] [6]
-Chapter 3.
-(./cleaning.tex) [7
-
-]
-Chapter 4.
-(./PBE.tex [8
-
-] [9] [10] [11] [12]) [13]
-Chapter 5.
-(./opt_split.tex
-Overfull \hbox (8.50668pt too wide) in paragraph at lines 3--3
-[]\T1/cmr/bx/n/12 Implicit-Euler method with Al-ter-nat-ing Di-rec-tion Im-plicit scheme (GFM-
+Overfull \hbox (17.79346pt too wide) in paragraph at lines 45--46
+\T1/cmr/m/n/12 and parse pro-tein data from the web from the web ad-dress 'https://files.rcsb.org/view/'
  []
 
-[14
+) [6 <./figs/1bna_charge.jpg>]
+Chapter 3.
+(./PBE.tex
+<figs/PBE_domain.pdf, id=60, 322.31136pt x 322.40549pt>
+File: figs/PBE_domain.pdf Graphic file (type pdf)
+<use figs/PBE_domain.pdf>
+Package pdftex.def Info: figs/PBE_domain.pdf  used on input line 6.
+(pdftex.def)             Requested size: 193.38829pt x 193.44478pt.
+ [7
 
-]
+ <./figs/PBE_domain.pdf>] [8] [9] [10]
+<figs/1ajj_surface_white.jpg, id=150, 1241.63875pt x 570.13pt>
+File: figs/1ajj_surface_white.jpg Graphic file (type jpg)
+<use figs/1ajj_surface_white.jpg>
+Package pdftex.def Info: figs/1ajj_surface_white.jpg  used on input line 90.
+(pdftex.def)             Requested size: 434.58008pt x 199.5485pt.
+ [11 <./figs/1ajj_surface_white.jpg>]) [12]
+Chapter 4.
+(./opt_split.tex [13
 
-LaTeX Warning: Reference `new_gfm' on page 15 undefined on input line 35.
+] [14] [15] [16]
 
-[15] [16] [17]) [18]
-Chapter 6.
+LaTeX Warning: Reference `new_gfm' on page 17 undefined on input line 124.
+
+<figs/PBE1_grid.pdf, id=170, 321.6015pt x 325.11462pt>
+File: figs/PBE1_grid.pdf Graphic file (type pdf)
+<use figs/PBE1_grid.pdf>
+Package pdftex.def Info: figs/PBE1_grid.pdf  used on input line 128.
+(pdftex.def)             Requested size: 225.1195pt x 227.57867pt.
+[17 <./figs/PBE1_grid.pdf>] [18]
+
+LaTeX Warning: Reference `GFM-ADI_sec' on page 19 undefined on input line 159.
+
+
+LaTeX Warning: Reference `GFM-ADI_sec' on page 19 undefined on input line 173.
+
+
+LaTeX Warning: Reference `GFM-ADI_sec' on page 19 undefined on input line 180.
+
+[19]) [20]
+Chapter 5.
 (./new_GFM.tex
-<figs/1dmib1.pdf, id=110, 263.18326pt x 152.9715pt>
+<figs/1dmib1.pdf, id=197, 263.18326pt x 152.9715pt>
 File: figs/1dmib1.pdf Graphic file (type pdf)
 <use figs/1dmib1.pdf>
-Package pdftex.def Info: figs/1dmib1.pdf  used on input line 11.
+Package pdftex.def Info: figs/1dmib1.pdf  used on input line 12.
 (pdftex.def)             Requested size: 263.18262pt x 152.9711pt.
 
-Overfull \hbox (10.11789pt too wide) in paragraph at lines 18--22
+Overfull \hbox (10.11789pt too wide) in paragraph at lines 20--24
 []\T1/cmr/m/n/12 Here $\OML/cmm/m/it/12 u$ \T1/cmr/m/n/12 is the un-known func-tion de-fined as so-lu-tion of the PBE as $\OML/cmm/m/it/12 u \OT1/cmr/m/n/12 = []$ 
  []
 
-[19
+[21
 
-] [20 <./figs/1dmib1.pdf>]
-<figs/GFM_2D.pdf, id=162, 322.67952pt x 259.76549pt>
+] [22 <./figs/1dmib1.pdf>]
+<figs/GFM_2D.pdf, id=250, 322.67952pt x 259.76549pt>
 File: figs/GFM_2D.pdf Graphic file (type pdf)
 <use figs/GFM_2D.pdf>
-Package pdftex.def Info: figs/GFM_2D.pdf  used on input line 83.
+Package pdftex.def Info: figs/GFM_2D.pdf  used on input line 88.
 (pdftex.def)             Requested size: 193.60919pt x 155.86049pt.
- [21] [22 <./figs/GFM_2D.pdf>] [23] [24]
-<figs/GFMcorner.pdf, id=209, 353.7215pt x 234.1829pt>
+ [23] [24 <./figs/GFM_2D.pdf>] [25] [26]
+<figs/GFMcorner.pdf, id=296, 353.7215pt x 234.1829pt>
 File: figs/GFMcorner.pdf Graphic file (type pdf)
 <use figs/GFMcorner.pdf>
-Package pdftex.def Info: figs/GFMcorner.pdf  used on input line 235.
+Package pdftex.def Info: figs/GFMcorner.pdf  used on input line 245.
 (pdftex.def)             Requested size: 247.60335pt x 163.92691pt.
- [25]) [26 <./figs/GFMcorner.pdf>]
-Chapter 7.
-(./num_vald.tex [27
+ [27 <./figs/GFMcorner.pdf>] [28]) [29]
+Chapter 6.
+(./num_vald.tex [30
 
-] [28]
-<figs/temp.png, id=271, 1124.2pt x 843.15pt>
-File: figs/temp.png Graphic file (type png)
-<use figs/temp.png>
-Package pdftex.def Info: figs/temp.png  used on input line 74.
+]
+<figs/stab_adi.jpg, id=358, 562.1pt x 421.575pt>
+File: figs/stab_adi.jpg Graphic file (type jpg)
+<use figs/stab_adi.jpg>
+Package pdftex.def Info: figs/stab_adi.jpg  used on input line 26.
+(pdftex.def)             Requested size: 216.81pt x 162.60599pt.
+<figs/stab_gfmadi.jpg, id=359, 562.1pt x 421.575pt>
+File: figs/stab_gfmadi.jpg Graphic file (type jpg)
+<use figs/stab_gfmadi.jpg>
+Package pdftex.def Info: figs/stab_gfmadi.jpg  used on input line 27.
+(pdftex.def)             Requested size: 216.81pt x 162.60599pt.
+<figs/stab_gfmlodcn.jpg, id=360, 562.1pt x 421.575pt>
+File: figs/stab_gfmlodcn.jpg Graphic file (type jpg)
+<use figs/stab_gfmlodcn.jpg>
+Package pdftex.def Info: figs/stab_gfmlodcn.jpg  used on input line 29.
+(pdftex.def)             Requested size: 216.81pt x 162.60599pt.
+<figs/stab_gfmlodie.jpg, id=361, 562.1pt x 421.575pt>
+File: figs/stab_gfmlodie.jpg Graphic file (type jpg)
+<use figs/stab_gfmlodie.jpg>
+Package pdftex.def Info: figs/stab_gfmlodie.jpg  used on input line 30.
+(pdftex.def)             Requested size: 216.81pt x 162.60599pt.
+ [31] [32 <./figs/stab_adi.jpg> <./figs/stab_gfmadi.jpg> <./figs/stab_gfmlodcn.jpg> <./figs/stab_gfmlodie.jpg>] [33]
+<figs/temp.jpg, id=371, 562.1pt x 421.575pt>
+File: figs/temp.jpg Graphic file (type jpg)
+<use figs/temp.jpg>
+Package pdftex.def Info: figs/temp.jpg  used on input line 90.
 (pdftex.def)             Requested size: 289.07999pt x 216.80798pt.
- [29] [30 <./figs/temp.png (PNG copy)>]
-<figs/1cbn_gfmadi_front_sq.png, id=278, 441.65pt x 441.65pt>
+ [34 <./figs/temp.jpg>] [35]
+<figs/1cbn_gfmadi_front_sq.png, id=379, 441.65pt x 441.65pt>
 File: figs/1cbn_gfmadi_front_sq.png Graphic file (type png)
 <use figs/1cbn_gfmadi_front_sq.png>
-Package pdftex.def Info: figs/1cbn_gfmadi_front_sq.png  used on input line 139.
+Package pdftex.def Info: figs/1cbn_gfmadi_front_sq.png  used on input line 163.
 (pdftex.def)             Requested size: 151.76744pt x 151.76964pt.
-<figs/1cbn_gfmlodcn_front_sq.png, id=280, 441.65pt x 441.65pt>
+<figs/1cbn_gfmlodcn_front_sq.png, id=381, 441.65pt x 441.65pt>
 File: figs/1cbn_gfmlodcn_front_sq.png Graphic file (type png)
 <use figs/1cbn_gfmlodcn_front_sq.png>
-Package pdftex.def Info: figs/1cbn_gfmlodcn_front_sq.png  used on input line 139.
+Package pdftex.def Info: figs/1cbn_gfmlodcn_front_sq.png  used on input line 163.
 (pdftex.def)             Requested size: 151.76744pt x 151.76964pt.
-<figs/1cbn_gfmlodie_front_sq.png, id=281, 441.65pt x 441.65pt>
+<figs/1cbn_gfmlodie_front_sq.png, id=382, 441.65pt x 441.65pt>
 File: figs/1cbn_gfmlodie_front_sq.png Graphic file (type png)
 <use figs/1cbn_gfmlodie_front_sq.png>
-Package pdftex.def Info: figs/1cbn_gfmlodie_front_sq.png  used on input line 139.
+Package pdftex.def Info: figs/1cbn_gfmlodie_front_sq.png  used on input line 163.
 (pdftex.def)             Requested size: 151.76744pt x 151.76964pt.
 
-Overfull \hbox (5.4225pt too wide) in paragraph at lines 139--139
+Overfull \hbox (5.4225pt too wide) in paragraph at lines 163--163
  [][][] 
  []
 
-<figs/1cbn_gfmlodcn_back.png, id=282, 441.65pt x 441.65pt>
+<figs/1cbn_gfmlodcn_back.png, id=383, 441.65pt x 441.65pt>
 File: figs/1cbn_gfmlodcn_back.png Graphic file (type png)
 <use figs/1cbn_gfmlodcn_back.png>
-Package pdftex.def Info: figs/1cbn_gfmlodcn_back.png  used on input line 141.
+Package pdftex.def Info: figs/1cbn_gfmlodcn_back.png  used on input line 165.
 (pdftex.def)             Requested size: 151.76744pt x 151.76964pt.
 File: figs/1cbn_gfmlodcn_back.png Graphic file (type png)
 <use figs/1cbn_gfmlodcn_back.png>
-Package pdftex.def Info: figs/1cbn_gfmlodcn_back.png  used on input line 141.
+Package pdftex.def Info: figs/1cbn_gfmlodcn_back.png  used on input line 165.
 (pdftex.def)             Requested size: 151.76744pt x 151.76964pt.
-<figs/1cbn_gfmlodie_back_scale_1.png, id=283, 441.65pt x 441.65pt>
+<figs/1cbn_gfmlodie_back_scale_1.png, id=384, 441.65pt x 441.65pt>
 File: figs/1cbn_gfmlodie_back_scale_1.png Graphic file (type png)
 <use figs/1cbn_gfmlodie_back_scale_1.png>
-Package pdftex.def Info: figs/1cbn_gfmlodie_back_scale_1.png  used on input line 141.
+Package pdftex.def Info: figs/1cbn_gfmlodie_back_scale_1.png  used on input line 165.
 (pdftex.def)             Requested size: 151.76744pt x 151.76964pt.
 
-Overfull \hbox (5.4225pt too wide) in paragraph at lines 141--141
+Overfull \hbox (5.4225pt too wide) in paragraph at lines 165--165
  [][][][] 
  []
 
-[31] [32 <./figs/1cbn_gfmadi_front_sq.png> <./figs/1cbn_gfmlodcn_front_sq.png> <./figs/1cbn_gfmlodie_front_sq.png> <./figs/1cbn_gfmlodcn_back.png> <./figs/1cbn_gfmlodie_back_scale_1.png>]
-<figs/24_energy.png, id=296, 1124.2pt x 843.15pt>
+[36]
+<figs/24_energy.png, id=388, 1124.2pt x 843.15pt>
 File: figs/24_energy.png Graphic file (type png)
 <use figs/24_energy.png>
-Package pdftex.def Info: figs/24_energy.png  used on input line 192.
+Package pdftex.def Info: figs/24_energy.png  used on input line 215.
 (pdftex.def)             Requested size: 231.26378pt x 173.43867pt.
-<figs/CPU_time.png, id=297, 1124.2pt x 843.15pt>
+<figs/CPU_time.png, id=389, 1124.2pt x 843.15pt>
 File: figs/CPU_time.png Graphic file (type png)
 <use figs/CPU_time.png>
-Package pdftex.def Info: figs/CPU_time.png  used on input line 192.
+Package pdftex.def Info: figs/CPU_time.png  used on input line 215.
 (pdftex.def)             Requested size: 231.26378pt x 173.43867pt.
 
-Overfull \hbox (12.64774pt too wide) in paragraph at lines 192--193
+Overfull \hbox (12.64774pt too wide) in paragraph at lines 215--216
  [][][] 
  []
 
-[33] [34 <./figs/24_energy.png (PNG copy)> <./figs/CPU_time.png (PNG copy)>]
-<figs/complex_front.png, id=305, 401.5pt x 401.5pt>
+[37 <./figs/1cbn_gfmadi_front_sq.png> <./figs/1cbn_gfmlodcn_front_sq.png> <./figs/1cbn_gfmlodie_front_sq.png> <./figs/1cbn_gfmlodcn_back.png> <./figs/1cbn_gfmlodie_back_scale_1.png>] [38]
+<figs/complex_front.png, id=402, 401.5pt x 401.5pt>
 File: figs/complex_front.png Graphic file (type png)
 <use figs/complex_front.png>
-Package pdftex.def Info: figs/complex_front.png  used on input line 230.
+Package pdftex.def Info: figs/complex_front.png  used on input line 254.
 (pdftex.def)             Requested size: 216.81pt x 216.81288pt.
-<figs/protein_back.png, id=306, 400.49625pt x 401.5pt>
+<figs/protein_back.png, id=403, 400.49625pt x 401.5pt>
 File: figs/protein_back.png Graphic file (type png)
 <use figs/protein_back.png>
-Package pdftex.def Info: figs/protein_back.png  used on input line 230.
+Package pdftex.def Info: figs/protein_back.png  used on input line 254.
 (pdftex.def)             Requested size: 216.81pt x 217.35814pt.
-<figs/rna_front.png, id=307, 400.49625pt x 402.50375pt>
+<figs/rna_front.png, id=404, 400.49625pt x 402.50375pt>
 File: figs/rna_front.png Graphic file (type png)
 <use figs/rna_front.png>
-Package pdftex.def Info: figs/rna_front.png  used on input line 232.
+Package pdftex.def Info: figs/rna_front.png  used on input line 256.
 (pdftex.def)             Requested size: 216.81pt x 217.90154pt.
-<figs/protein_front_scale_right.png, id=308, 401.5pt x 401.5pt>
+<figs/protein_front_scale_right.png, id=405, 401.5pt x 401.5pt>
 File: figs/protein_front_scale_right.png Graphic file (type png)
 <use figs/protein_front_scale_right.png>
-Package pdftex.def Info: figs/protein_front_scale_right.png  used on input line 232.
+Package pdftex.def Info: figs/protein_front_scale_right.png  used on input line 256.
 (pdftex.def)             Requested size: 216.81pt x 216.81288pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--242
+Underfull \hbox (badness 10000) in paragraph at lines 264--266
 
  []
 
-[35] [36 <./figs/complex_front.png> <./figs/protein_back.png> <./figs/rna_front.png> <./figs/protein_front_scale_right.png>]
-Overfull \hbox (25.6607pt too wide) in paragraph at lines 247--254
+[39 <./figs/24_energy.png (PNG copy)> <./figs/CPU_time.png (PNG copy)>] [40 <./figs/complex_front.png> <./figs/protein_back.png> <./figs/rna_front.png> <./figs/protein_front_scale_right.png>]
+Overfull \hbox (25.6607pt too wide) in paragraph at lines 271--278
 [][] 
  []
 
-<figs/1beb_Tend50_TTol_neg4.png, id=319, 1124.2pt x 843.15pt>
+<figs/1beb_Tend50_TTol_neg4.png, id=417, 1124.2pt x 843.15pt>
 File: figs/1beb_Tend50_TTol_neg4.png Graphic file (type png)
 <use figs/1beb_Tend50_TTol_neg4.png>
-Package pdftex.def Info: figs/1beb_Tend50_TTol_neg4.png  used on input line 262.
+Package pdftex.def Info: figs/1beb_Tend50_TTol_neg4.png  used on input line 286.
 (pdftex.def)             Requested size: 231.26378pt x 173.43867pt.
-<figs/1emv_Tend50_TTol_neg4.png, id=320, 1124.2pt x 843.15pt>
+<figs/1emv_Tend50_TTol_neg4.png, id=418, 1124.2pt x 843.15pt>
 File: figs/1emv_Tend50_TTol_neg4.png Graphic file (type png)
 <use figs/1emv_Tend50_TTol_neg4.png>
-Package pdftex.def Info: figs/1emv_Tend50_TTol_neg4.png  used on input line 262.
+Package pdftex.def Info: figs/1emv_Tend50_TTol_neg4.png  used on input line 286.
 (pdftex.def)             Requested size: 231.26378pt x 173.43867pt.
 
-Overfull \hbox (12.64774pt too wide) in paragraph at lines 262--262
+Overfull \hbox (12.64774pt too wide) in paragraph at lines 286--286
  [][] 
  []
 
-) [37] [38 <./figs/1beb_Tend50_TTol_neg4.png (PNG copy)> <./figs/1emv_Tend50_TTol_neg4.png (PNG copy)>]
-Chapter 8.
-(./conclusions.tex) (/Users/Ahmed/Google_Drive/Thesis_PhD/dessertation/.texpadtmp/dissertation_Ahmed.bbl [39
+) [41] [42 <./figs/1beb_Tend50_TTol_neg4.png (PNG copy)> <./figs/1emv_Tend50_TTol_neg4.png (PNG copy)>]
+Chapter 7.
+(./conclusions.tex [43
 
-] [40
+]) (/Users/Ahmed/Google_Drive/Thesis_PhD/dessertation/.texpadtmp/dissertation_Ahmed.bbl [44] [45
 
-] [41] [42]) (./appa.tex) [43] (/Users/Ahmed/Google_Drive/Thesis_PhD/dessertation/.texpadtmp/dissertation_Ahmed.aux)
+] [46] [47]) (./appa.tex) [48] (/Users/Ahmed/Google_Drive/Thesis_PhD/dessertation/.texpadtmp/dissertation_Ahmed.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 12188 strings out of 492649
- 181089 string characters out of 6129622
- 427071 words of memory out of 5000000
- 15717 multiletter control sequences out of 15000+600000
+ 12208 strings out of 492649
+ 181730 string characters out of 6129622
+ 427641 words of memory out of 5000000
+ 15729 multiletter control sequences out of 15000+600000
  14842 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,15n,96p,2033b,519s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,15n,96p,2033b,521s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on /Users/Ahmed/Google_Drive/Thesis_PhD/dessertation/.texpadtmp/dissertation_Ahmed.pdf (54 pages, 2529835 bytes).
+Output written on /Users/Ahmed/Google_Drive/Thesis_PhD/dessertation/.texpadtmp/dissertation_Ahmed.pdf (57 pages, 3758963 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 234 compressed objects within 3 object streams
+ 505 PDF objects out of 1000 (max. 8388607)
+ 264 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

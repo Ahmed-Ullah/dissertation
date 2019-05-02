@@ -1,13 +1,13 @@
-To generate the molecular surface as the interface in our computational domain we had to use the 3D structural data for proteins and nucleic acids available in the Protein Data Bank(PDB). PDB contains freely accessible data on the internet submitted by biologists and biochemists from around the world. These data are usually acquired by  X-ray crystallography, NMR spectroscopy, or, cryo-electron microscopy. Each molecule is represented by 4 letter  .Among several types of data file available from the PDB we focused on \textit{.pdb} type files available from the website of RCSB \cite{RCSB}, one of the member organization of the PDB. 
+To generate the molecular surface as the interface in our computational domain we had to use the 3D structural data for proteins and nucleic acids available in the Protein Data Bank(PDB). PDB contains freely accessible data on the internet submitted by biologists and biochemists from around the world. These data are usually acquired by  X-ray crystallography, NMR spectroscopy, or, cryo-electron microscopy. Each molecule is represented by 4 letter. Among several types of data file available from the PDB we focused on \textit{.pdb} type files available from the website of RCSB \cite{RCSB}, one of the member organization of the PDB.
 \begin{table}[!ht]
 \begin{tabular}{|l|l|l|l|l|}
 \hline
 Record Type             & Columns & Data                            & Justification & Data Type  \\ \hline
-\multirow{15}{*}{ATOM}  & 4-Jan   & “ATOM”                          &               & character  \\ \cline{2-5} 
+\multirow{15}{*}{ATOM}  & 1-4   & “ATOM”                          &               & character  \\ \cline{2-5} 
                         & 7-11  & Atom serial number              & right         & integer    \\ \cline{2-5} 
-                        & 13-16   & Atom name                       & left*         & character  \\ \cline{2-5} 
+                        & 13-16   & Atom name                       & left         & character  \\ \cline{2-5} 
                         & 17      & Alternate location indicator    &               & character  \\ \cline{2-5} 
-                        & 18-20§  & Residue name                    & right         & character  \\ \cline{2-5} 
+                        & 18-20  & Residue name                    & right         & character  \\ \cline{2-5} 
                         & 22      & Chain identifier                &               & character  \\ \cline{2-5} 
                         & 23-26   & Residue sequence number         & right         & integer    \\ \cline{2-5} 
                         & 27      & Code for insertions of residues &               & character  \\ \cline{2-5} 
@@ -16,19 +16,36 @@ Record Type             & Columns & Data                            & Justificat
                         & 47-54   & Z orthogonal Å coordinate       & right         & real (8.3) \\ \cline{2-5} 
                         & 55-60   & Occupancy                       & right         & real (6.2) \\ \cline{2-5} 
                         & 61-66   & Temperature factor              & right         & real (6.2) \\ \cline{2-5} 
-                        & 73-76   & Segment identifier¶             & left          & character  \\ \cline{2-5} 
+                        & 73-76   & Segment identifier              & left          & character  \\ \cline{2-5} 
                         & 77-78   & Element symbol                  & right         & character  \\ \hline
-79-80                   & Charge  &                                 & character     &            \\ \hline
-\multirow{2}{*}{HETATM} & 6-Jan   & “HETATM”                        &               & character  \\ \cline{2-5} 
-                        & Jul-80  & same as ATOM records            &               &            \\ \hline
-\multirow{6}{*}{TER}    & 3-Jan   & “TER”                           &               & character  \\ \cline{2-5} 
-                        & 7-11  & Serial number                   & right         & integer    \\ \cline{2-5} 
-                        & 18-20§  & Residue name                    & right         & character  \\ \cline{2-5} 
-                        & 22      & Chain identifier                &               & character  \\ \cline{2-5} 
-                        & 23-26   & Residue sequence number         & right         & integer    \\ \cline{2-5} 
-                        & 27      & Code for insertions of residues &               & character  \\ \hline
+%79-80                   & Charge  &                                 & character     &            \\ \hline
+%\multirow{2}{*}{HETATM} & 1-6   & “HETATM”                        &               & character  \\ \cline{2-5} 
+%                        & Jul-80  & same as ATOM records            &               &            \\ \hline
+%\multirow{6}{*}{TER}    & 3-Jan   & “TER”                           &               & character  \\ \cline{2-5} 
+%                        & 7-11  & Serial number                   & right         & integer    \\ \cline{2-5} 
+%                        & 18-20  & Residue name                    & right         & character  \\ \cline{2-5} 
+%                        & 22      & Chain identifier                &               & character  \\ \cline{2-5} 
+%                        & 23-26   & Residue sequence number         & right         & integer    \\ \cline{2-5} 
+%                        & 27      & Code for insertions of residues &               & character  \\ \hline
 \end{tabular}
 \caption{Protein Data file (\textit{.pdb} type) format}
 \label{tab:PDB_format}
 \end{table}
 %TODO have to describe the format of pdb file then apbs type the pqr type. 
+\begin{figure}
+	\centering
+	\includegraphics[scale = .5]{1bna_charge}
+	\caption{Structure of a DNA (\textit{1bna}) constructed from its {\it .pqr} file showing atomic charges in color for each atoms.} 
+\end{figure}
+
+ In a \textit{.pdb} file for a particular protein, ATOM record type (the rows starting with the word "ATOM") contains the information about each atom as shown in Table \ref{tab:PDB_format}. These raw information are not readily usable for our proposed solver. A Python script has been developed to follow the following steps,
+ 
+%\begin{enumerate}
+\begin{itemize}
+ 	\item Reading \textit{.pdb} file RCSB website: Python module \textit{"requests"} has been used to read and parse protein data from the web from the web address 'https://files.rcsb.org/view/' to write a local \textit{.pdb} file. 
+	\item Converting  local \textit{.pdb} file to \textit{.pqr} file: The PDB2PQR software \cite{PDB2PQR} has been used to calculate the {\it .pqr} file. These \textit{.pqr} files contains ATOM record type similar to \textit{.pdb} files where the occupancy columns (55-60) and Temperature factor columns (61-66) have been replaced by the charge and radius.     
+	%\item Parsing ATOM record types to collect $X,Y$ and $Z$ cor
+ \end{itemize}
+% \end{enumerate}
+
+Finally in \textit{.pqr} files we have the $X,Y$ and $Z$ co-ordinate, the charge of the atomic center and the radius for each individual atom.  

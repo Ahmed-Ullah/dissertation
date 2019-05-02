@@ -58,6 +58,12 @@ W.~Geng and S.~Zhao.
   Poisson-Boltzmann equation}.
 \newblock {\em Molecular Based Mathematical Biology}, 1:109--123, 2013.
 
+\bibitem{geng_fully_2013}
+W.~Geng and S.~Zhao.
+\newblock Fully implicit {ADI} schemes for solving the nonlinear
+  {Poisson}-{Boltzmann} equation.
+\newblock {\em Molecular Based Mathematical Biology}, 1, Jan. 2013.
+
 \bibitem{Geng2017a}
 W.~Geng and S.~Zhao.
 \newblock {A two-component Matched Interface and Boundary ( MIB )
@@ -94,6 +100,13 @@ W.~Im, D.~Beglov, and B.~Roux.
 \newblock Continuum solvation model: Computation of electrostatic forces from
   numerical solutions to the poisson-boltzmann equation.
 \newblock {\em Computer Physics Communication}, 11(1-3):59--75, 1998.
+
+\bibitem{PDB2PQR}
+G.~Klebe, H.~Li, J.~H. Jensen, J.~E. Nielsen, P.~Czodrowski, T.~J. Dolinsky,
+  and N.~A. Baker.
+\newblock Pdb2pqr: expanding and upgrading automated preparation of
+  biomolecular structures for molecular simulations.
+\newblock {\em Nucleic Acids Research}, 35(Suppl. 2):W522--W525, 07 2007.
 
 \bibitem{Leeper2005}
 T.~C. Leeper, Z.~Athanassiou, R.~L. Dias, J.~A. Robinson, and G.~Varani.
@@ -141,13 +154,18 @@ A.~Prlic, B.~Yukich, B.~Beran, C.~Zardecki, C.~Bi, D.~S. Goodsell,
   D.~Dimitropoulos, G.~B. Quinn, H.~M. Berman, J.~Young, J.~D. Westbrook,
   M.~Quesada, W.~F. Bluhm, P.~W. Rose, and P.~E. Bourne.
 \newblock The rcsb protein data bank: redesigned web site and web services.
-\newblock {\em Nucleic Acids Research}, 39(suppl1):D392--D401, 10 2010.
+\newblock {\em Nucleic Acids Research}, 39(Suppl. 1):D392--D401, 10 2010.
 
 \bibitem{Rocchia2001}
 W.~Rocchia, E.~Alexov, and B.~Honig.
 \newblock {Extending the applicability of the nonlinear Poisson-Boltzmann
   equation: Multiple dielectric constants and multivalent ions}.
 \newblock {\em Journal of Physical Chemistry B}, 105(28):6507--6514, 2001.
+
+\bibitem{MSMS}
+M.~F. Sanner, A.~J. Olson, and J.-C. Spehner.
+\newblock Reduced surface: An efficient way to compute molecular surfaces.
+\newblock {\em Biopolymers}, 38(3):305--320.
 
 \bibitem{Sayyed-Ahmad2004}
 A.~Sayyed-Ahmad, K.~Tuncay, and P.~J. Ortoleva.

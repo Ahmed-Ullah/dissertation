@@ -1,4 +1,14 @@
-We are considering the Poisson-Boltzmann Equation (PBE) as the governing equation for a solute macro molecule immersed in an aqueous solvent environment illustrated in Fig 1. Our computational domain $\Omega \in \mathbb{R}^3$ is separated into two regions $\Omega^-$ and $\Omega^+$ by the molecular surface $\Gamma$, which is an arbitrarily shaped dielectric interface. Here $\Omega^-$ is the molecule domain with dielectric constant $\epsilon^-$ and $\Omega^+$ is the solvent domain with dielectric constant $\epsilon^+$. The cubic shape boundary of $\Omega= \Omega^-\cup \Omega^+ $ is denoted by $\delta \Omega$. The charges inside $\Omega^-$ has been distributed as the partial charges to assign to the nearest grid points to the center of each atom inside the molecule. The charges outside in $\Omega^+$ are mobile ions which are described by the Boltzmann distribution. Then the electrostatic interaction of this solute-solvent system for $\textbf{r} \in \mathbb{R}^3$ is governed by the nonlinear Poisson-Boltzmann Equation (PBE) as, 
+\section{Poisson-Boltzmann Equation}
+We are considering the Poisson-Boltzmann Equation (PBE) as the governing equation for a solute macro molecule immersed in an aqueous solvent environment illustrated in Figure \ref{fig_PBmodel}. Our computational domain $\Omega \in \mathbb{R}^3$ is separated into two regions $\Omega^-$ and $\Omega^+$ by the molecular surface $\Gamma$, which is an arbitrarily shaped dielectric interface. Here $\Omega^-$ is the molecular region with dielectric constant $\epsilon^-$ and $\Omega^+$ is the solvent region with dielectric constant $\epsilon^+$. The cubic shape boundary of $\Omega= \Omega^-\cup \Omega^+ $ is denoted by $\partial \Omega$. The charges at the center of each atom. inside $\Gamma$, have been distributed as the partial charges to assign to the nearest grid points. The charges outside $\Gamma$ are actually mobile ions which are described by the Boltzmann distribution. 
+
+\begin{figure}[!ht]
+\centering
+	\includegraphics[scale = 0.6]{PBE_domain.pdf}
+	\caption{Poisson-Boltzmann Model}
+	\label{fig_PBmodel}
+\end{figure}
+
+The electrostatic interaction of this solute-solvent system for $\textbf{r} \in \mathbb{R}^3$ is governed by the nonlinear Poisson-Boltzmann Equation (PBE) as, 
 \begin{equation}
 			-\nabla.(\epsilon(\textbf{r})\nabla \phi(\textbf{r}))+\bar\kappa^2(\textbf{r}) \sinh (\phi(\textbf{r}))=\rho(\textbf{r})\label{pbe} %\\
 					%\left[\phi \right]_\Gamma = 0 \textnormal{ and } \left[\epsilon\phi_n\right]_\Gamma = 0 
@@ -15,114 +25,91 @@ There are two conditions on $\Gamma$ needed to be satisfied from the dielectric 
 \begin{equation}
 \left[\phi \right]_\Gamma = 0 \textnormal{ and } \left[\epsilon\phi_n\right]_\Gamma = 0 \label{ju_cond}
 \end{equation}
-Here $\textbf{n}=(n_x,n_y,n_z)$ is the outer normal direction on the interface $\Gamma$ and $\phi_\textbf{n}= \frac{\partial \phi}{\partial\textbf{n}} $ is the directional derivative in \textbf{n}. The notation $[f]_\Gamma = f^+-f^-$ represent the difference of the functional value across the interface $\Gamma$. 
+Here $\textbf{n}=(n_x,n_y,n_z)$ is the outer normal direction on the interface $\Gamma$ and $\phi_\textbf{n}= \frac{\partial \phi}{\partial\textbf{n}} $ is the directional derivative in \textbf{n}. The notation $[f]_\Gamma = f^+-f^-$ represent the difference of the functional value across the interface $\Gamma$.The dielectric constant $\epsilon$ is piecewise such that, $\epsilon(\textbf{r})=\epsilon^-$ for $\textbf{r} \in \Omega^-$ and $\epsilon(\textbf{r})=\epsilon^+$ for $\textbf{r} \in \Omega^+$. Here $N_c$ is the total number of atoms in the solute molecule, $k_B$ is the Boltzmann constant, $e_c$ is the fundamental charge and $q_i$, in the same unit as $e_c$ is the partial charge on the \textit{i}th atom of the solute molecule located at position $\textbf{r}_j$. The Debey-Huckel parameter $\bar\kappa^2 =\Big(\frac{2N_A e_c^2}{100 k_b T}\Big)I_s =  8.486902807$\AA$^{-2} I_s$ from \cite{Holst:1993} for $\textbf{r} \in \Omega^-$ and $\bar\kappa=0$ for $\textbf{r} \in \Omega^+$. Here $N_A$ is Avogadro’s Number and $I_s$ is the molar ionic strength. We have converted the dimensionless electrostatic potential $u$ to the units kcal/mol/$e_c$ at the room temperature $T$ by multiplying it by $0.592183$ as in \cite{Holst:1993}. 
 
-The dielectric constant $\epsilon$ is piecewise such that, $\epsilon(\textbf{r})=\epsilon^-$ for $\textbf{r} \in \Omega^-$ and $\epsilon(\textbf{r})=\epsilon^+$ for $\textbf{r} \in \Omega^+$. Here $N_c$ is the total number of atoms in the solute molecule, $k_B$ is the Boltzmann constant, $e_c$ is the fundamental charge and $q_i$, in the same unit as $e_c$ is the partial charge on the \textit{i}th atom of the solute molecule located at position $\textbf{r}_j$. The Debey-Huckel parameter $\bar\kappa^2 =\Big(\frac{2N_A e_c^2}{100 k_b T}\Big)I_s =  8.486902807$\AA$^{-2} I_s$ \cite{Holst:1993} for $\textbf{r} \in \Omega^-$ and $\bar\kappa=0$ for $\textbf{r} \in \Omega^+$. Here $N_A$ is Avogadro’s Number and $I_s$ is the molar ionic strength. The reader can refer to REF1 and REF2 for more details about definitions and units of these coefficients. 
-\section{Two-component regularization for singular sources}
-\label{2_comp_reg}
-To avoid the difficulty due to the source term and the work for solving the Laplace equation we consider a two component regularization proposed by Cai, Wang and Zhao \cite{Cai2009}. For this regularization the electrostatic potential $\phi$ has been considered as the addition of the coulmb component $\phi_c$ and the reaction field component $\phi_{RF}$ as $\phi= \phi_c +\phi_{RF}$. Here $\phi_c$ satisfies the following Poission's equation, 
+%The reader can refer to REF1 and REF2 for more details about definitions and units of these coefficients. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{ADI Method for pseudo transient PBE}
+
+Using pseudo transient PBE introducing a pseudo-transient variation has become popular approach for solving the nonlinear PB equation \cite{Sayyed-Ahmad2004, Shestakov2002, zhao_pseudo-time-coupled_2011, zhao_operator_2014}. In this approach equation (\ref{pbe}) is converted to the following time dependent PBE (TPBE),
+
 \begin{equation}
-	\begin{cases}
-		-\epsilon^- \Delta\phi_C(r) = \rho(r) \text{   in   }\mathbb{R}^3 \label{rho_eq} \\
-		\text{      }\phi_C(r)= 0. \text{   as  } |r| \rightarrow \infty
-	\end{cases}
+			\frac{\partial \phi}{\partial t}(\textbf{r},t)=\nabla.(\epsilon(\textbf{r})\nabla \phi(\textbf{r},t))-\bar\kappa^2(\textbf{r}) \sinh (\phi(\textbf{r},t))+\rho(\textbf{r})\label{tpbe} %\\
+					%\left[\phi \right]_\Gamma = 0 \textnormal{ and } \left[\epsilon\phi_n\right]_\Gamma = 0 
 \end{equation}
-which gives us the analytical solution as the Green's function $G$ for $\phi_C$ as,
-\begin{equation}
-	G(r) = \frac{e_c^2}{k_B T } \sum_{i=1}^{N_c} \frac{q_i }{\epsilon^{-}|r-r_i|} \label{Green} %\text{ where } C = \frac{e_c^2}{k_B T }
-\end{equation}
-	
-%	Now the non-linear PBE from (\ref{pbe}) can be rewritten as,
-%	
-%	  \begin{eqnarray}
-%				-\nabla.(\epsilon\nabla (\phi_C(\textbf{r})))-\nabla.(\epsilon\nabla (\phi_{RF}(\textbf{r})))+\bar\kappa^2(\textbf{r}) \sinh (\phi_C(\textbf{r})+\phi_{RF}(\textbf{r}))&=&\rho(\textbf{r}), \text{ in } \Omega \label{pbe_reg} %\\
-%						%\left[\phi \right]_\Gamma = 0 \textnormal{ and } \left[\epsilon\phi_n\right]_\Gamma = 0 
-%	\end{eqnarray}
-%	
-%	The reaction field components can be physically interpreted as the electrostatic field generated by the charges induced by changes of dielectric constant of the  solvent around the solute from $\epsilon^-$ to $\epsilon^+$ \cite{Cai2009}. Now substituting (\ref{rho}) into (\ref{pbe_reg}) we have,
-%	\begin{eqnarray}
-%	-\nabla(\epsilon^+ \phi_{RF}(\textbf{r})) +\bar\kappa^2 \sinh(\phi_C(\textbf{r})+\phi_{RF}(\textbf{r}))&=& 0 \text{ in } \Omega^- \cup \Omega^+	
-%	\end{eqnarray}
-%	More explicitly $\phi_{RF}$ satisfies the following elliptic interface problem \cite{Chen2007}, 
-%\begin{eqnarray}
-%		-\nabla.(\epsilon^- \nabla  \phi_{RF}) &=& 0 \text{ in } \Omega^-\\  
-%		-\nabla(\epsilon^+ \phi_{RF}) +\bar\kappa^2 \sinh(\phi_C+\phi_{RF})&=& 0 \text{ in } \Omega^+\\
-%		\left[\phi_{RF}\right] &=& 0 \text{ on } \Gamma \\
-%		\left[\epsilon\frac{\partial \phi_{RF}}{\partial n}\right]&=& (\epsilon^+-\epsilon^- ) \frac{\partial G}{\partial n} \text{ on } \Gamma\\
-%		\phi_{RF}&=& \phi_b-G \text{ on } \partial \Omega \label{rf_sys}
-%	\end{eqnarray} 
-%	
-%So now there is no singular term on the right hand side but we still have several numerical difficulties. In \cite{Holst2010} its been reported that $\phi_C$ and $\phi_{RF}$ have different signs and their magnitude is much larger than that of $\phi$. Here  a relatively small error in $\phi_{RF}$ will produce a relatively larger error in $\phi$ given that the $phi_C$ is analytically calculated. Sometimes this amplifying factor can be as large as $(\epsilon^+/\epsilon^- - 1 )$ \cite{Holst2010}. In our case this factor is about $79$ by taking $\epsilon^+=80$ and $\epsilon^-=1$. Another problem is, the calculation of $\phi_C$ is necessary for all N grid points in $\Omega^+$ at a computational cost $O(N^2)$ which is very expensive for large $N$. 
-%
-Then Luo and his collaborators \cite{Cai2009} proposed to solve for the original solution $\phi$ in $\Omega^+$ instead of the reaction component $\phi_{RF}$. Now to make the required adjustments to fit this regularization approach \cite{Cai2009} with finite difference and finite element method Zhao and Geng \cite{Geng2017a} proposed a new elliptic problem with discontinuous function flux jumps for the two-component regularization. In particular they defined the regularized potential as,  
-	
+%In \cite{geng_fully_2013} equation (\ref{tpbe}) has later been separated in two separate equation using a first order time splitting like equation (\ref{non_linear_ADI}) and (\ref{diffusion_ADI}) in section \ref{sec:GFM-ADI}. Then the nonlinear equation has been solved by an analytical solution and the Douglas-Rachford ADI scheme has been used for the other diffusion equation. But in terms of intrer
+In \cite{geng_fully_2013} equation (\ref{tpbe}) has later been separated in two separate equation using a first order time splitting like the following equations, 
 \begin{eqnarray}
-	\tilde{ \phi} &=& \begin{cases}
-	\phi_{RF} \text{ in } \Omega^-\\
-	\phi_C + \phi_{RF} \text{ in } \Omega^+\\
-	\end{cases}
-\end{eqnarray}
- 
-The jump conditions for $\tilde\phi $ were derived from $\phi$ and the definition $\phi=\phi_C+\phi_{RF}$ as,
+  \frac{\partial w}{\partial t}&=& -\bar\kappa^2 \sinh(w) \text{ with } W^n=\phi^n\text{ and } t \in \left[t_n,t_{n+1}\right]\label{eq_nonl_ADI1}\\
+ \frac{\partial v}{\partial t}&=&  \nabla . (\epsilon\nabla v) \text{ with } V^n=W^{n+1}\text{ and } t \in \left[t_n,t_{n+1}\right]	 \label{eq_diff_ADI1}
+\end{eqnarray}  
 
+Where $V^{n+1} = \phi^{n+1}$. After using an analytical solution for equation (\ref{eq_nonl_ADI1}) a Douglas-Rachford type ADI scheme has been introduced in \cite{geng_fully_2013}. The discretization of equation (\ref{eq_diff_ADI1}) using backward-Euler integration in time and central differencing in space results in, 
 \begin{eqnarray}
-\phi^+=\phi^-_{RF}+\phi^-_C,\text{  and  } \epsilon^+ \frac{\partial \phi^+}{\partial n}=\epsilon^- \frac{\partial \phi^-_{RF}}{\partial n}+\epsilon^- \frac{\partial \phi^-_C}{\partial n} \text{ on } \Gamma
+	v_{i,j,k}^{n+1} &=v_{i,j,k}^{n}+\Delta t \left(\delta_x^2+\delta_y^2+\delta_z^2\right)v_{i,j,k}^{n+1}+\Delta t \rho({\bf r}) \label{imp-eu}
 \end{eqnarray}
 
-Thus, the regularized PB equation of $\tilde \phi$ with corresponding interface and boundary conditions are given as. 
-\begin{eqnarray}
-	-\nabla.(\epsilon^- \nabla \tilde{ \phi}) &=& 0 \text{ in } \Omega^-\\ \label{phitilde1}
-	-\nabla.(\epsilon^+ \nabla \tilde{ \phi}) +\bar\kappa^2 \sinh(\tilde{ \phi})&=& 0 \text{ in } \Omega^+\\\label{phitilde2}
-	\left[\tilde{ \phi}\right] &=& G \text{ on } \Gamma \\ \label{phitilde3}
-	\left[\epsilon\frac{\partial \tilde{ \phi}}{\partial n}\right]&=& \epsilon^-  \frac{\partial G}{\partial n} \text{ on } \Gamma\\\label{phitilde4}
-	\tilde{\phi} &=& \phi_b \text{ on } \partial \Omega \label{phitilde5}
-\end{eqnarray}	
-	
-
-
-Now from (\ref{phitilde1}) and (\ref{phitilde5}) we can summarize that, 
-
-\begin{eqnarray}
-	-\nabla . (\epsilon \nabla \tilde{ \phi}) +\bar\kappa^2 \sinh(\tilde{ \phi})&=& 0 \text{ in } \Omega^-\cup\Omega^+\label{RPB}
+%{\color{red} Should I include the equations here?}
+Where $\delta_x,\delta_y$ and $\delta_z$ are the central finite difference operators in $x,y$ and $z$ directions as, 
+  \begin{eqnarray}
+ \begin{aligned}
+	\delta_x^2\left(v_{i,j,k}^n\right)&= \frac{1}{h^2} \left(\epsilon_{i+\frac{1}{2},j,k}(v_{i+1,j,k}^n-v_{i,j,k}^n)+\epsilon_{i-\frac{1}{2},j,k}(v_{i-1,j,k}^n-v_{i,j,k}^n)\right) \\ \label{dif_opx_adi1}
+	\delta_y^2\left(v_{i,j,k}^n\right)&= \frac{1}{h^2} \left(\epsilon_{i,j+\frac{1}{2},k}(v_{i,j+1,k}^n-v_{i,j,k}^n)+\epsilon_{i,j-\frac{1}{2},k}(v_{i,j-1,k}^n-v_{i,j,k}^n)\right) \\ %\label{dif_opy}
+	\delta_z^2\left(v_{i,j,k}^n\right)&=\frac{1}{h^2} \left(\epsilon_{i,j,k+\frac{1}{2}}(v_{i,j,k+1}^n-v_{i,j,k}^n)+\epsilon_{i,j,k-\frac{1}{2}}(v_{i,j,k-1}^n-v_{i,j,k}^n)\right)  
+	\end{aligned}
 \end{eqnarray}
-	 
-where $\tilde \phi$	 satisfies the PB equation without the source term. Then Zhao and Geng \cite{Geng2017a} proposed to numerically solve the regularized PB interface problem (RPB) given in (\ref{phitilde1})-(\ref{phitilde5}) and to finally recover the original solution as $\phi= \tilde\phi $ in $\Omega^+$ and $\phi = \tilde \phi + G $ in $\Omega^-$, Where the Green's function $G$ is analytically given.
-\section{Solvation energy from Electrostatic potential}
-
-The solvation energy can be defined as the energy released when the solute in free space is dissolved in solvent and it can be expressed in terms of the electrostatic free energy $\Delta G_{\rm ele}$ and the coulomb energy $E_{\rm cou}$ as 
-
+Here the $\epsilon$-halfs ($\epsilon_{i+\frac{1}{2},j,k},\epsilon_{i,j+\frac{1}{2},k}$ and $\epsilon_{i,j,k+\frac{1}{2}}$) are the average of the dielectric constants value at two adjacent grid point in $x,y$ and $z$ directions. Then the following Douglas-Rachford ADI scheme has been used in \cite{geng_fully_2013}
+   
 \begin{eqnarray}
-	\Delta G_{\rm ele}&=& E_{\rm cou}+ E_{\rm sol}\label{eq_Gele}\\
-	E_{\rm cou} &=& \sum_{i=1}^{N_c}\sum_{j=1}^{N_c}\frac{q_iq_j}{\epsilon^-d_{i,j}}, i\neq j\label{eq_Ecou}
-\end{eqnarray}
-where $q_i$ and $q_j$ are the charges at the center of the atoms and $d_{i,j}$'s are the distance between the $i$-th and $j$-the atom. 
-  
-Then Sharp and Honig in \cite{Sharp_Honig}  described the calculation electrostatic free energy by, 
-\begin{equation}
-\Delta G_{\rm ele}=\int_{\mathbb{R}^3}\left(\phi\rho+\Delta\Pi-\frac{1}{2}\epsilon|{\bf E}|^2\right)d{\bf r}
-\end{equation}
+%\begin{aligned}
+		\left(1- \Delta t \delta_x^2\right)v_{i,j,k}^{*}&=&\left[1+ \Delta t \left(\delta_y^2+\delta_z^2 \right)\right]v_{i,j,k}^{n}+\Delta t \rho({\bf r})\label{eq_ADI1}\nonumber \\ 
+		\left(1-\Delta t \delta_y^2\right)v_{i,j,k}^{**}&=&v_{i,j,k}^{*}- \Delta t \delta_y^2\left(v_{i,j,k}^{n}\right)\label{GFM-ADI2}\\
+		\left(1- \Delta t \delta_z^2\right)v_{i,j,k}^{n+1}&=&v_{i,j,k}^{**}- \Delta t \delta_z^2\left(v_{i,j,k}^{n}\right)\label{GFM-ADI3}\nonumber
+%\end{aligned}		\label{1dadi}
+\end{eqnarray} 
 
-where $\phi$ is the electrostatic potential, $\rho$ is the fixed charge density represented as a smeared surface charge or as a collection of point charges, $\Delta\Pi$ is  the excess osmotic pressure of the mobile ion cloud, and $\frac{1}{2}\epsilon|{\bf E}|^2$ is the electrostatic stress.
-
-Now for the simplification of the numerical validations of our proposed schemes in the next chapter we omitted the energy components related to the mobile ion pressure and the electrostatic stress to report the solvation energy $E_{\rm sol}$ as,  
-
-\begin{eqnarray}
-	E_{\rm sol}=\Delta G_{\rm ele}-E_{\rm cou}\approx\sum\limits_{i=1}^{N_c}q_i\phi_{RF} ({\bf r}_i)\label{eq_solvation}
-\end{eqnarray}
-
-Here the contribution of the mobile ion pressure and the electrostatic stress to the whole calculation is really small and computationally more challenging. The readers can refer to \cite{GENG_WEI2011,Gilson,Sharp_Honig} for more details.				
+The ADI methods discussed in \cite{geng_fully_2013} are promising tool to solve the nonlinear PBE but it is not focused on the issues due to the singularity at the source terms and the jump conditions on the interface. As we observed in the chapter \ref{chap:num_vald}, these two issues reduced the accuracy and stability of the ADI method significantly.  
+       
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Pseudo-transient continuation approach for the PBE}
+\section{Cleaning ADI-MSMS package to develop REG-GFM-MSMS package}	
+To simulate the ADI Methods in \cite{geng_fully_2013} and the LOD Methods in \cite{Wilson2016}, Professor Shan Zhao, Dr. Weihua Geng form the Southern Methodists University and Leighton Wilson developed a coding package named ADI-MSMS. This package uses two types of protein data files for a particular protein as inputs and calculated the electrostatic potential $\phi$ and the solvation energy as the outputs. The input files were generated from the {\it .pdb} and {\it .pqr } file. This package used the following two sub-packages developed by others,
 
-As the pseudo-transient continuation approach, an indirect method discussed in \cite{zhao_pseudo-time-coupled_2011} \cite{Sayyed-Ahmad2004} \cite{shestakov_solution_2002} introduced a pseudo-time derivative to solve the PB equation as,  
+\begin{itemize}
+	\item {\bf FISHPACK90:} This sub-package was originally developed by the NCAR (National Center for Atmospheric Research) back in the late 70's and revised later in 90's. It is a collection of FORTRAN programs and subroutines that solves second- and fourth-order finite difference approximations to  the elliptic Partial Differential Equations (PDEs). In ADI-MSMS package its been used to the solve the Poisson Equation for a special case of the PBE when the protein molecule is considered to be in vacuum instead of surrounded by the solvent.
+	\item {\bf MSMS:} It is a program \cite{MSMS} written in the programming language C to compute the molecular surface. It was developed by  Michel Sanner and his team  at the Molecular Graphics Laboratory (TSRI). It uses the input files for the ADI-MSMS package and produces two files with extensions {\it .vert} and {\it .face}. Later these output files from the MSMS package are used to decide whether a grid point is inside or outside or on the molecular interface. 
+\end{itemize} 
 
-\begin{eqnarray}
-	 	\frac{\partial u}{\partial t} &=& \nabla.(\epsilon \nabla u)-\bar\kappa^2 \sinh(u) \text{ in } \Omega^- \cup \Omega^+ \label{tdrpb} \\
-	 	  \left[u\right]&=& G,\text{ and } \left[\epsilon\frac{\partial u}{\partial n}\right]= \epsilon^-  \frac{\partial G}{\partial n} \text{ on } \Gamma\\ \label{jump}
-	 	  u&=&\phi_b \text{ on } \partial \Omega
-	\end{eqnarray}
+%	{\bf INPUT}: File Type 1 containing the    
 
-Here the time independent regularized PB equation in (\ref{RPB}) has been converted in to a time dependent regularized PB (TDRPB) in (\ref{tdrpb}). Our goal is to first specify the initial condition, which could be the electrostatic potential solved from a linearized PB \cite{zhao_pseudo-time-coupled_2011} equation or trivially $u = 0$ and then numerically integrate (\ref{tdrpb}) for a sufficiently long period to get the steady state solution as the solution of the original regularized PB (\ref{RPB}). Here the sign on the right hand side of eq. (\ref{tdrpb}) has been considered as the reverse of the eq.(\ref{RPB}) to ensure the numerical stability. 
 
-But, there are difficulties in the numerical integration of the TDRPB equation (\ref{tdrpb}) because of the requirement of long time integration, when explicit time stepping methods are usually not efficient \cite{Sayyed-Ahmad2004},\cite{shestakov_solution_2002},\cite{zhao_pseudo-time-coupled_2011}, \cite{zhao_operator_2014}. Hence we are employing a semi-implicit time splitting method \cite{Sayyed-Ahmad2004},\cite{shestakov_solution_2002} which have been commonly used to solve the TDPB in the literature. 
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale  = .35]{1ajj_surface_white.jpg}	
+	\caption{Molecular Surface of the protein \textit{1ajj} generated by MSMS}
+\end{figure}
+
+%Then this ADI-MSMS package followed the following steps.
+%\begin{enumerate}
+%	\item Reading $x,y,z$ coordinates, radius and atomic charges from the input files.
+%	\item Distributing the atomic charges to the nearest grid points as partial charges. 
+%	\item   
+%\end{enumerate}
+Though this ADI-MSMS package served well for the previous works for the ADI and LOD methods, it was time to do a major revision. When we started with this ADI-MSMS package we had to fix the following issues to prepare it to replace the Numerical methods by our proposed methods to solve the PBE,
+
+\begin{itemize}
+	\item FISHPACK90 got updated a long time ago and it was failing to comply with the new FORTRAN compilers. Also the subsidiary FFT(Fast Fourier Transform) routines were passing arguments of one type and using them as another. So we made the following adjustments.
+		\begin{enumerate}
+			\item In the subroutine {\it POISOLVE3D} the variables {\it BDXS, BDXF, BDYS, BDYF, BDZS, BDZF} were declared as real variables but used later as two dimensional arrays. We fixed this issues by declaring them in proper dimension and size.
+			\item The variable {\it IFAC} was declared as integer but it was meant to be a real variable.
+			\item In the module {\it fish} the arrays {\it rew} and {\it cxw} were declared as pointers but this type of declarations became obsolete for the new FORTRAN compilers. We updated them to be declared as allocatable.  
+		\end{enumerate}
+	\item Using two different type of files as inputs for the ADI-MSMS package was requiring an extra manual step outside the package to prepare the protein data to be usable. We updated the subroutine {\it readin} to read the necessary data directly from the {\it .pqr} file. It was a more user friendly process and better in terms of data management for the whole package.
+	\item Unlike the ADI or LOD methods we needed the exact location of the points where the molecular surface was intersecting with the gridlines. We had to add extra features in the package to extract that information from the output files produced by the MSMS package.     
+\end{itemize}  
+
+After cleaning the bugs form ADI-MSMS and adding the new features we developed a new coding package REG-GFM-MSMS to incorporate all three of our proposed numerical methods to solve the PBE. 
+
+

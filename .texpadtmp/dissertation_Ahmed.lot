@@ -1,0 +1,15 @@
+\noaddvspace 
+\babel@toc {english}{}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Protein Data file (\textit {.pdb} type) format\relax }}{5}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Spatial convergence test for the krikwood sphere with $\epsilon ^+=80$, $\epsilon ^-=1$, $\Delta t = 0.001$, TEND $=10$, $I_s=0.01$ and $\kappa = 1$. The centered charge of unit $1e_c $ is located at (0, 0, 0).\relax }}{33}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Solvation Energy ({\it kcal/mol}) of 1cbn for $h=0.5$ and the ionic strength $I_s= 0.15$\relax }}{36}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Solvation energies ({\it kcal/mol}) of 24 Proteins considering $\Delta t = 0.001$ for ADI and $\Delta t =0.05$ for GFM-ADI, GFM-LODCN, GFM-LODIE\relax }}{38}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Binding energy of 2a9x\relax }}{39}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Comparison of binding affinities of the protein complexes 1emv and 1beb\relax }}{42}
+\addvspace {10\p@ }
