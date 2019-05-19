@@ -1,7 +1,189 @@
-%% This BibTeX bibliography file was created using BibDesk.
-%% https://bibdesk.sourceforge.io/
+@Article{Hazra2019,
+author="Hazra, Tania
+and Ahmed Ullah, Sheik
+and Wang, Siwen
+and Alexov, Emil
+and Zhao, Shan",
+title="A super-Gaussian Poisson--Boltzmann model for electrostatic free energy calculation: smooth dielectric distribution for protein cavities and in both water and vacuum states",
+journal="Journal of Mathematical Biology",
+year="2019",
+month="Apr",
+day="27",
+abstract="Calculations of electrostatic potential and solvation free energy of macromolecules are essential for understanding the mechanism of many biological processes. In the classical implicit solvent Poisson--Boltzmann (PB) model, the macromolecule and water are modeled as two-dielectric media with a sharp border. However, the dielectric property of interior cavities and ion-channels is difficult to model realistically in a two-dielectric setting. In fact, the detection of water molecules in a protein cavity remains to be an experimental challenge. This introduces an uncertainty, which affects the subsequent solvation free energy calculation. In order to compensate this uncertainty, a novel super-Gaussian dielectric PB model is introduced in this work, which devices an inhomogeneous dielectric distribution to represent the compactness of atoms and characterizes empty cavities via a gap dielectric value. Moreover, the minimal molecular surface level set function is adopted so that the dielectric profile remains to be smooth when the protein is transferred from water phase to vacuum. An important feature of this new model is that as the order of super-Gaussian function approaches the infinity, the dielectric distribution reduces to a piecewise constant of the two-dielectric model. Mathematically, an effective dielectric constant analysis is introduced in this work to benchmark the dielectric model and select optimal parameter values. Computationally, a pseudo-time alternative direction implicit (ADI) algorithm is utilized for solving the super-Gaussian PB equation, which is found to be unconditionally stable in a smooth dielectric setting. Solvation free energy calculation of a Kirkwood sphere and various proteins is carried out to validate the super-Gaussian model and ADI algorithm. One macromolecule with both water filled and empty cavities is employed to demonstrate how the cavity uncertainty in protein structure can be bypassed through dielectric modeling in biomolecular electrostatic analysis.",
+issn="1432-1416",
+doi="10.1007/s00285-019-01372-1",
+url="https://doi.org/10.1007/s00285-019-01372-1"
+}
 
-%% Created for Sheik Ahmed Ullah at 2019-04-24 16:12:23 -0500 
+@article{DENG2018,
+title = "On developing stable finite element methods for pseudo-time simulation of biomolecular electrostatics",
+journal = "Journal of Computational and Applied Mathematics",
+volume = "330",
+pages = "456 - 474",
+year = "2018",
+issn = "0377-0427",
+doi = "https://doi.org/10.1016/j.cam.2017.09.004",
+author = "Weishan Deng and Jin Xu and Shan Zhao",
+keywords = "Poisson–Boltzmann equation, Regularized Poisson–Boltzmann equation, Pseudo-time approach, Finite element method, Molecular surface, Electrostatic free energy"
+}
+@book{drug2012,
+author ="Lewis, Richard A.",
+title  ="Chapter 4 The Development of Molecular Modelling Programs: The Use and Limitations of Physical Models",
+booktitle  ="Drug Design Strategies: Quantitative Approaches",
+year  ="2012",
+pages  ="88-107",
+publisher  ="The Royal Society of Chemistry",
+isbn  ="978-1-84973-166-9",
+doi  ="10.1039/9781849733410-00088",
+url  ="http://dx.doi.org/10.1039/9781849733410-00088",
+}
+@article{Connolly1983,
+author = "Connolly, M. L.",
+title = "{Analytical molecular surface calculation}",
+journal = "Journal of Applied Crystallography",
+year = "1983",
+volume = "16",
+number = "5",
+pages = "548--558",
+month = "Oct",
+doi = {10.1107/S0021889883010985},
+url = {https://doi.org/10.1107/S0021889883010985},
+abstract = {A computer algorithm is presented for calculating the part of the van der Waals surface of molecule that is accessible to solvent. The solvent molecule is modeled by a sphere. This sphere is, in effect, rolled over the molecule to generate a smooth outer-surface contour. This surface contour is made up of pieces of spheres and tori that join at circular arcs. The spheres, tori and arcs are defined by analytical expressions in terms of the atomic coordinates, van der Waals radii and the probe radius. The area of each surface piece may be calculated analytically and the surface may be displayed on either vector or raster computer-graphics systems. These methods are useful for studying the structure and interactions of proteins and nucleic acids.},
+}
+
+@article{Tomasi2005,
+  title={Quantum mechanical continuum solvation models.},
+  author={Jacopo Tomasi and Benedetta Mennucci and Roberto Cammi},
+  journal={Chemical reviews},
+  year={2005},
+  volume={105 8},
+  pages={
+          2999-3093
+        }
+}
+@article{Fred1977,
+author = {Richards, Frederic M.},
+title = {AREAS, VOLUMES, PACKING, AND PROTEIN STRUCTURE},
+journal = {Annual Review of Biophysics and Bioengineering},
+volume = {6},
+number = {1},
+pages = {151-176},
+year = {1977},
+doi = {10.1146/annurev.bb.06.060177.001055},
+    note ={PMID: 326146},
+
+URL = { 
+        https://doi.org/10.1146/annurev.bb.06.060177.001055
+    
+},
+eprint = { 
+        https://doi.org/10.1146/annurev.bb.06.060177.001055
+    
+}
+
+}
+
+@article{LEE1971379,
+title = "The interpretation of protein structures: Estimation of static accessibility",
+journal = "Journal of Molecular Biology",
+volume = "55",
+number = "3",
+pages = "379 - IN4",
+year = "1971",
+issn = "0022-2836",
+doi = "https://doi.org/10.1016/0022-2836(71)90324-X",
+url = "http://www.sciencedirect.com/science/article/pii/002228367190324X",
+author = "B. Lee and F.M. Richards",
+abstract = "A program is described for drawing the van der Waal's surface of a protein molecule. An extension of the program permits the accessibility of atoms, or groups of atoms, to solvent or solute molecules of specified size to be quantitatively assessed. As defined in this study, the accessibility is proportional to surface area. The accessibility of all atoms in the twenty common amino acids in model tripeptides of the type Ala-X-Ala are given for defined conformation. The accessibilities are also given for all atoms in ribonuclease-S, lysozyme and myogoblin. Internal cavities are defined and discussed. Various summaries of these data are provided. Forty to fifty per cent of the surface area of each protein is occupied by non-polar atoms. The actual numerical results are sensitive to the values chosen for the van der Waal's radii of the various groups. Since there is uncertainty over the correct values for these radii, the derived numbers should only be used as a qualitative guide at this stage. The average change in accessibility for the atoms of all three proteins in going from a hypothetical extended chain to the folded conformation of the native protein is about a factor of 3. This number applies to both polar (nitrogen and oxygen) and non-polar (carbon and sulfur) atoms considered separately. The larger non-polar amino acids tend to be more “buried” in the native form of all three proteins. However, for all classes and for residues within a given class the accessibility changes on folding tend to be highly variable."
+}
+@phdthesis{Quan2018,
+author = {Quan, Chaoyu},
+title = {{Mathematical methods for implicit solvation models in quantum chemistry}},
+year = {2018}
+}
+
+
+@article{YU2007_3D,
+title = "Three-dimensional matched interface and boundary (MIB) method for treating geometric singularities",
+journal = "Journal of Computational Physics",
+volume = "227",
+number = "1",
+pages = "602 - 632",
+year = "2007",
+issn = "0021-9991",
+doi = "https://doi.org/10.1016/j.jcp.2007.08.003",
+url = "http://www.sciencedirect.com/science/article/pii/S002199910700349X",
+author = "Sining Yu and G.W. Wei",
+keywords = "Elliptic equations, Discontinuous coefficients, Material interface, Geometric singularity, Immersed boundary method, Immersed interface method",
+}
+@article{ZHOU2006_high,
+title = "High order matched interface and boundary method for elliptic equations with discontinuous coefficients and singular sources",
+journal = "Journal of Computational Physics",
+volume = "213",
+number = "1",
+pages = "1 - 30",
+year = "2006",
+issn = "0021-9991",
+doi = "https://doi.org/10.1016/j.jcp.2005.07.022",
+url = "http://www.sciencedirect.com/science/article/pii/S0021999105003578",
+author = "Y.C. Zhou and Shan Zhao and Michael Feig and G.W. Wei",
+keywords = "Immersed boundary method, Immersed interface method, Ghost fluid method, Matched interface and boundary, Elliptic equations, High order method",
+}
+@article{ZHOU2006,
+title = "On the fictitious-domain and interpolation formulations of the matched interface and boundary (MIB) method",
+journal = "Journal of Computational Physics",
+volume = "219",
+number = "1",
+pages = "228 - 246",
+year = "2006",
+issn = "0021-9991",
+doi = "https://doi.org/10.1016/j.jcp.2006.03.027",
+url = "http://www.sciencedirect.com/science/article/pii/S0021999106001495",
+author = "Y.C. Zhou and G.W. Wei",
+keywords = "Elliptic interface problems, Immersed interface method, Immersed boundary method, Ghost fluid method, High order method",
+}
+@article{ZHAO2004,
+title = "High-order FDTD methods via derivative matching for Maxwell's equations with material interfaces",
+journal = "Journal of Computational Physics",
+volume = "200",
+number = "1",
+pages = "60 - 103",
+year = "2004",
+issn = "0021-9991",
+doi = "https://doi.org/10.1016/j.jcp.2004.03.008",
+url = "http://www.sciencedirect.com/science/article/pii/S0021999104001330",
+author = "Shan Zhao and G.W. Wei",
+keywords = "Maxwell's equations, Finite-difference, Time-domain methods, Staggered grids, Material interfaces, High-order methods, Stability analysis",
+}
+@article{Yu2007,
+author = {Yu,Sining  and Geng,Weihua  and Wei,G. W. },
+title = {Treatment of geometric singularities in implicit solvent models},
+journal = {The Journal of Chemical Physics},
+volume = {126},
+number = {24},
+pages = {244108},
+year = {2007},
+doi = {10.1063/1.2743020},
+}
+
+
+
+
+
+@article{Chen2011,
+abstract = {The Poisson-Boltzmann equation (PBE) is an established model for the electrostatic analysis of biomolecules. The development of advanced computational techniques for the solution of the PBE has been an important topic in the past two decades. This article presents a matched interface and boundary (MIB)-based PBE software package, the MIBPB solver, for electrostatic analysis. The MIBPB has a unique feature that it is the first interface technique-based PBE solver that rigorously enforces the solution and flux continuity conditions at the dielectric interface between the biomolecule and the solvent. For protein molecular surfaces, which may possess troublesome geometrical singularities, the MIB scheme makes the MIBPB by far the only existing PBE solver that is able to deliver the second-order convergence, that is, the accuracy increases four times when the mesh size is halved. The MIBPB method is also equipped with a Dirichlet-to-Neumann mapping technique that builds a Green's function approach to analytically resolve the singular charge distribution in biomolecules in order to obtain reliable solutions at meshes as coarse as 1 {\AA}--whereas it usually takes other traditional PBE solvers 0.25 {\AA} to reach similar level of reliability. This work further accelerates the rate of convergence of linear equation systems resulting from the MIBPB by using the Krylov subspace (KS) techniques. Condition numbers of the MIBPB matrices are significantly reduced by using appropriate KS solver and preconditioner combinations. Both linear and nonlinear PBE solvers in the MIBPB package are tested by protein-solvent solvation energy calculations and analysis of salt effects on protein-protein binding energies, respectively.},
+author = {Chen, Duan and Chen, Zhan and Chen, Changjun and Geng, Weihua and Wei, Guo Wei},
+doi = {10.1002/jcc.21646},
+file = {:Users/Ahmed/Downloads/nihms-215330.pdf:pdf},
+issn = {01928651},
+journal = {Journal of Computational Chemistry},
+keywords = {MIBPB,Poisson {\^{a}} Bottzmann equation,electrostatics,interface method,proteins},
+number = {4},
+pages = {756--770},
+title = {{MIBPB: A software package for electrostatic analysis}},
+volume = {32},
+year = {2011}
+}
 
 @article{MSMS,
 author = {Sanner, Michel F. and Olson, Arthur J. and Spehner, Jean-Claude},
@@ -52,7 +234,7 @@ year = {1996}
 
 
 @article{Zhao2011,
-	Abstract = {SUMMARY This paper presents an improved mathematical model for biomolecular surface representation and solvation analysis. Based on the Eulerian formulation, the polar and nonpolar contributions to the solvation process can be equally accounted for via a unified free energy functional. Using the variational analysis, two nonlinear partial differential equations, that is, one Poisson--Boltzmann (PB) type equation for electrostatic potential and one geometric flow type equation defining the solute--solvent interface, can be derived. To achieve a more efficient and stable coupling, we propose a time-dependent PB equation by introducing a pseudo-time. The system of nonlinear partial differential equations can then be coupled via the standard time integration. Furthermore, the numerical treatment of nonlinear terms becomes easier in the present model. Based on a hypersurface function, the biomolecular surface is represented as a smooth interface. However, for the nonlinear PB equation, such a smooth interface may cause unphysical blowup because of the existence of nonvanishing values within the solute domain. A filtering process is proposed to circumvent this problem. Example solvation analysis of various compounds and proteins was carried out to validate the proposed model. The contributions of electrostatic interactions to the protein--protein binding affinity are studied for selected protein complexes. Copyright {\{}$\backslash$copyright{\}}2011 John Wiley {\{}$\backslash${\}}{\&} Sons, Ltd. },
+	Abstract = {SUMMARY This paper presents an improved mathematical model for biomolecular surface representation and solvation analysis. Based on the Eulerian formulation, the polar and nonpolar contributions to the solvation process can be equally accounted for via a unified free energy functional. Using the variational analysis, two nonlinear partial differential equations, that is, one Poisson--Boltzmann (PB) type equation for electrostatic potential and one geometric flow type equation defining the solute--solvent interface, can be derived. To achieve a more efficient and stable coupling, we propose a time-dependent PB equation by introducing a pseudo-time. The system of nonlinear partial differential equations can then be coupled via the standard time integration. Furthermore, the numerical treatment of nonlinear terms becomes easier in the present model. Based on a hypersurface function, the biomolecular surface is represented as a smooth interface. However, for the nonlinear PBE, such a smooth interface may cause unphysical blowup because of the existence of nonvanishing values within the solute domain. A filtering process is proposed to circumvent this problem. Example solvation analysis of various compounds and proteins was carried out to validate the proposed model. The contributions of electrostatic interactions to the protein--protein binding affinity are studied for selected protein complexes. Copyright {\{}$\backslash$copyright{\}}2011 John Wiley {\{}$\backslash${\}}{\&} Sons, Ltd. },
 	Author = {Zhao, Shan},
 	Isbn = {20407939},
 	Issn = {20407939},
@@ -84,7 +266,7 @@ year = {1996}
 	Year = {2017}}
 
 @article{Lu2007,
-	Abstract = {In this paper, we present an efficient and accurate numerical algorithm for calculating the electrostatic interactions in biomolecular systems. In our scheme, a boundary integral equation (BIE) approach is applied to discretize the linearized Poisson-Boltzmann (PB) equation. The resulting integral formulas are well conditioned for single molecule cases as well as for systems with more than one macromolecule, and are solved efficiently using Krylov subspace based iterative methods such as generalized minimal residual (GMRES) or biconjugate gradient stabilized (BiCGStab) methods. In each iteration, the convolution type matrix-vector multiplications are accelerated by a new version of the fast multipole method (FMM). The implemented algorithm is asymptotically optimal O(N) both in CPU time and memory usage with optimized prefactors. Our approach enhances the present computational ability to treat electrostatics of large scale systems in protein-protein interactions and nano particle assembly processes. Applications including calculating the electrostatics of the nicotinic acetylcholine receptor (nAChR) and interactions between protein Sso7d and DNA are presented. Crown Copyright {\textcopyright} 2007.},
+	Abstract = {In this paper, we present an efficient and accurate numerical algorithm for calculating the electrostatic interactions in biomolecular systems. In our scheme, a boundary integral equation (BIE) approach is applied to discretize the linearized Poisson-Boltzmann Equation (LPBE) . The resulting integral formulas are well conditioned for single molecule cases as well as for systems with more than one macromolecule, and are solved efficiently using Krylov subspace based iterative methods such as generalized minimal residual (GMRES) or biconjugate gradient stabilized (BiCGStab) methods. In each iteration, the convolution type matrix-vector multiplications are accelerated by a new version of the fast multipole method (FMM). The implemented algorithm is asymptotically optimal O(N) both in CPU time and memory usage with optimized prefactors. Our approach enhances the present computational ability to treat electrostatics of large scale systems in protein-protein interactions and nano particle assembly processes. Applications including calculating the electrostatics of the nicotinic acetylcholine receptor (nAChR) and interactions between protein Sso7d and DNA are presented. Crown Copyright {\textcopyright} 2007.},
 	Author = {Lu, Benzhuo and Cheng, Xiaolin and {Andrew McCammon}, J.},
 	Isbn = {00219991},
 	Issn = {00219991},
@@ -160,7 +342,7 @@ year = {1996}
 	Year = {2001}}
 
 @article{Luty1992,
-	Abstract = {Abstract The Poisson-Boltzmann equation can be used to calculate the electrostatic potential field of a molecule surrounded by a solvent containing mobile ions. The Poisson-Boltzmann equation is a non-linear partial differential equation. Finite-difference methods of solving this equation have been restricted to the linearized form of the equation or a finite number of non-linear terms. Here we introduce a method based on a variational formulation of the electrostatic potential and standard multi-dimensional maximization methods that can be used to solve the full non-linear equation.},
+	Abstract = {Abstract The Poisson-Boltzmann equation can be used to calculate the electrostatic potential field of a molecule surrounded by a solvent containing mobile ions. The Poisson-Boltzmann equation is a nonlinear partial differential equation. Finite-difference methods of solving this equation have been restricted to the linearized form of the equation or a finite number of nonlinear terms. Here we introduce a method based on a variational formulation of the electrostatic potential and standard multi-dimensional maximization methods that can be used to solve the full nonlinear equation.},
 	Author = {Luty, Brock A. and Davis, Malcolm E. and McCammon, J. Andrew},
 	Isbn = {0192-8651},
 	Issn = {1096987X},
@@ -185,8 +367,8 @@ year = {1996}
 	Year = {1995}}
 
 @article{Shestakov2002,
-	Abstract = {The nonlinear Poisson-Boltzmann (PB) equation is solved using Newton-Krylov iterations coupled with pseudo-transient continuation. The PB potential is used to compute the electrostatic energy and evaluate the force on a user-specified contour. The PB solver is embedded in a existing, 3D, massively parallel, unstructured-grid, finite element code. Either Dirichlet or mixed boundary conditions are allowed. The latter specifies surface charges, approximates far-field conditions, or linearizes conditions "regulating" the surface charge. Stability and robustness are proved using results for backward Euler differencing of diffusion equations. Potentials and energies of charged spheres and plates are computed and results compared to analysis. An approximation to the potential of the nonlinear, spherical charge is derived by combining two analytic formul{\ae}. The potential and force due to a conical probe interacting with a flat plate are computed for two types of boundary conditions: constant potential and constant charge. The second case is compared with direct force measurements by chemical force microscopy. The problem is highly nonlinear - surface potentials of the linear and nonlinear PB equations differ by over an order of magnitude. Comparison of the simulated and experimentally measured forces shows that approximately half of the surface carboxylic acid groups, of density 1/(0.2 nm2), ionize in the electrolyte implying surface charges of 0.4 C/m2, surface potentials of 0.27 V, and a force of 0.6 nN when the probe and plate are 8.7 nm apart. {\textcopyright} 2002 Elsevier Science (USA).},
-	Author = {Shestakov, A. I. and Milovich, J. L. and Noy, A.},
+	Abstract = {},
+	Author = {Shestakov, A.I. and Milovich, J.L. and Noy, A.},
 	Issn = {00219797},
 	Journal = {Journal of Colloid and Interface Science},
 	Keywords = {Chemical force microscopy,Finite elements,Massively parallel,Nonlinear Poisson-Boltzmann,Pseudo-transient continuation,Unstructured grids},
@@ -252,21 +434,6 @@ year = {1996}
 	Volume = {m},
 	Year = {2010}}
 
-@article{zhao_pseudo-time-coupled_2011,
-	Abstract = {This paper presents an improved mathematical model for biomolecular surface representation and solvation analysis. Based on the Eulerian formulation, the polar and nonpolar contributions to the solvation process can be equally accounted for via a unified free energy functional. Using the variational analysis, two nonlinear partial differential equations, that is, one Poisson--Boltzmann (PB) type equation for electrostatic potential and one geometric flow type equation defining the solute--solvent interface, can be derived. To achieve a more efficient and stable coupling, we propose a time-dependent PB equation by introducing a pseudo-time. The system of nonlinear partial differential equations can then be coupled via the standard time integration. Furthermore, the numerical treatment of nonlinear terms becomes easier in the present model. Based on a hypersurface function, the biomolecular surface is represented as a smooth interface. However, for the nonlinear PB equation, such a smooth interface may cause unphysical blowup because of the existence of nonvanishing values within the solute domain. A filtering process is proposed to circumvent this problem. Example solvation analysis of various compounds and proteins was carried out to validate the proposed model. The contributions of electrostatic interactions to the protein--protein binding affinity are studied for selected protein complexes. Copyright {\copyright} 2011 John Wiley \& Sons, Ltd.},
-	Author = {Zhao, Shan},
-	File = {Zhao - 2011 - Pseudo-time-coupled nonlinear models for biomolecu.pdf:files/420/Zhao - 2011 - Pseudo-time-coupled nonlinear models for biomolecu.pdf:application/pdf},
-	Issn = {20407939},
-	Journal = {International Journal for Numerical Methods in Biomedical Engineering},
-	Language = {en},
-	Month = dec,
-	Number = {12},
-	Pages = {1964--1981},
-	Shorttitle = {Pseudo-time-coupled nonlinear models for biomolecular surface representation and solvation analysis},
-	Title = {Pseudo-time-coupled nonlinear models for biomolecular surface representation and solvation analysis},
-	Urldate = {2018-06-30},
-	Volume = {27},
-	Year = {2011}}
 
 @article{sayyed-ahmad_efficient_2004,
 	Abstract = {The Poisson--Boltzmann (PB) equation has been extensively used to analyze the energetics and structure of proteins and other significant biomolecules immersed in electrolyte media. A new highly efficient approach for solving PB-type equations that allows for the modeling of many-atoms structures such as encountered in cell biology, virology, and nanotechnology is presented. We accomplish these efficiencies by reformulating the elliptic PB equation as the long-time solution of an advection-diffusion equation. An efficient modified, memory optimized, alternating direction implicit scheme is used to integrate the reformulated PB equation. Our approach is demonstrated on protein composites (a polio virus capsid protomer and a pentamer). The approach has great potential for the analysis of supramillion atoms immersed in a host electrolyte.},
@@ -283,19 +450,6 @@ year = {1996}
 	Volume = {25},
 	Year = {2004}}
 
-@article{shestakov_solution_2002,
-	Author = {Shestakov, A.I. and Milovich, J.L. and Noy, A.},
-	Date-Modified = {2019-04-24 16:12:02 -0500},
-	Issn = {00219797},
-	Journal = {Journal of Colloid and Interface Science},
-	Language = {en},
-	Month = mar,
-	Number = {1},
-	Pages = {62--79},
-	Title = {Solution of the {Nonlinear} {Poisson}--{Boltzmann} {Equation} {Using} {Pseudo}-transient {Continuation} and the {Finite} {Element} {Method}},
-	Urldate = {2018-06-30},
-	Volume = {247},
-	Year = {2002}}
 
 @article{zhao_operator_2014,
 	Abstract = {This work introduces novel operator splitting alternating direction implicit (ADI) schemes to overcome numerical difficulties in solving pseudo-time coupled nonlinear partial differential equations (PDEs) for biomolecular solvation analysis. Based on the variational formulation, a pseudo-transient continuation model has been previously formulated to couple a nonlinear Poisson--Boltzmann (NPB) equation for the electrostatic potential with a generalized Laplace--Beltrami equation defining the biomolecular surface. However, the standard numerical integration of the time dependent NPB equation is known to be very inefficient. Moreover, it encounters instability issues for smoothly varying solute--solvent interfaces so that a filtering process has to be conducted. In the present work, we propose to solve the unsteady NPB equation in an operator splitting framework so that the nonlinear instability can be completely avoided through an analytical integration. Central finite differences are employed to discretize the nonhomogeneous diffusion term of the generalized NPB equation to form tridiagonal matrices in the Douglas and Douglas--Rachford type ADI schemes. The proposed time splitting ADI schemes are found to be unconditionally stable for solving the NPB equation in benchmark examples with analytical solutions. For the solvation analysis involving two pseudo-time coupled nonlinear PDEs, the time stability of the NPB equation can be maintained by using very large time increments, so that without sacrificing the accuracy, the present biomolecular simulation becomes over ten times faster.},
@@ -307,19 +461,6 @@ year = {1996}
 	Title = {Operator splitting ADI schemes for pseudo-time coupled nonlinear solvation simulations},
 	Volume = {257},
 	Year = {2014}}
-
-@article{geng_fully_2013,
-	Abstract = {The Poisson-Boltzmann (PB) model is an e ective approach for the electrostatics analysis of solvated biomolecules. The nonlinearity associated with the PB equation is critical when the underlying electrostatic potential is strong, but is extremely di cult to solve numerically. In this paper, we construct two operator splitting alternating direction implicit (ADI) schemes to e ciently and stably solve the nonlinear PB equation in a pseudo-transient continuation approach. The operator splitting framework enables an analytical integration of the nonlinear term that suppresses the nonlinear instability. A standard finite di erence scheme weighted by piecewise dielectric constants varying across the molecular surface is employed to discretize the nonhomogeneous di usion term of the nonlinear PB equation, and yields tridiagonal matrices in the Douglas and Douglas-Rachford type ADI schemes. The proposed time splitting ADI schemes are di erent from all existing pseudo-transient continuation approaches for solving the classical nonlinear PB equation in the sense that they are fully implicit. In a numerical benchmark example, the steady state solutions of the fully-implicit ADI schemes based on different initial values all converge to the time invariant analytical solution, while those of the explicit Euler and semi-implicit ADI schemes blow up when the magnitude of the initial solution is large. For the solvation analysis in applications to real biomolecules with various sizes, the time stability of the proposed ADI schemes can be maintained even using very large time increments, demonstrating the e ciency and stability of the present methods for biomolecular simulation.},
-	Author = {Geng, Weihua and Zhao, Shan},
-	File = {Geng and Zhao - 2013 - Fully implicit ADI schemes for solving the nonline.pdf:/Users/Ahmed/Zotero/storage/CLV7H8L3/Geng and Zhao - 2013 - Fully implicit ADI schemes for solving the nonline.pdf:application/pdf},
-	Issn = {2299-3266},
-	Journal = {Molecular Based Mathematical Biology},
-	Language = {en},
-	Month = jan,
-	Title = {Fully implicit {ADI} schemes for solving the nonlinear {Poisson}-{Boltzmann} equation},
-	Urldate = {2018-05-24},
-	Volume = {1},
-	Year = {2013}}
 
 @article{Thomas1,
 	Author = {P. W. Bates · Zhan Chen · Yuhui Sun · Guo-Wei Wei · Shan Zhao},
@@ -431,7 +572,7 @@ For our Paper We should compare GFM her and 1D MIB},
 	Year = {2002}}
 
 @article{Geng2015,
-	Abstract = {{\textless}p{\textgreater}Numerically solving the Poisson-Boltzmann equation is a challenging task due to the existence of the dielectric interface, singular partial charges representing the biomolecule, discontinuity of the electrostatic field, infinite simulation domains, etc. Boundary integral formulation of the Poisson-Boltzmann equation can circumvent these numerical challenges and meanwhile conveniently use the fast numerical algorithms and the latest high performance computers to achieve combined improvement on both efficiency and accuracy. In the past a few years, we developed several boundary integral Poisson-Boltzmann solvers in pursuing accuracy, efficiency, and the combination of both. In this paper, we summarize the features and functions of these solvers, and give instructions and references for potential users. Meanwhile, we quantitatively report the solvation free energy computation of these boundary integral PB solvers benchmarked with Matched Interface Boundary Poisson-Boltzmann solver (MIBPB), a current 2nd order accurate finite difference Poisson-Boltzmann solver.{\textless}/p{\textgreater}},
+	Abstract = {Numerically solving the Poisson-Boltzmann equation is a challenging task due to the existence of the dielectric interface, singular partial charges representing the biomolecule, discontinuity of the electrostatic field, infinite simulation domains, etc. Boundary integral formulation of the Poisson-Boltzmann equation can circumvent these numerical challenges and meanwhile conveniently use the fast numerical algorithms and the latest high performance computers to achieve combined improvement on both efficiency and accuracy. In the past a few years, we developed several boundary integral Poisson-Boltzmann solvers in pursuing accuracy, efficiency, and the combination of both. In this paper, we summarize the features and functions of these solvers, and give instructions and references for potential users. Meanwhile, we quantitatively report the solvation free energy computation of these boundary integral PB solvers benchmarked with Matched Interface Boundary Poisson-Boltzmann solver (MIBPB), a current 2nd order accurate finite difference Poisson-Boltzmann solver.},
 	Author = {Geng, Weihua},
 	Issn = {2544-7297},
 	Journal = {Computational and Mathematical Biophysics},
@@ -457,7 +598,7 @@ For our Paper We should compare GFM her and 1D MIB},
 	Year = {2013}}
 
 @article{Geng2013_Fully,
-	Abstract = {AbstractThe Poisson-Boltzmann (PB) model is an effective approach for the electrostatics analysis of solvated biomolecules. The nonlinearity associated with the PB equation is critical when the underlying electrostatic potential is strong, but is extremely difficult to solve numerically. In this paper, we construct two operator splitting alternating direction implicit (ADI) schemes to efficiently and stably solve the nonlinear PB equation in a pseudo-transient continuation approach. The operator splitting framework enables an analytical integration of the nonlinear term that suppresses the nonlinear instability. A standard finite difference scheme weighted by piecewise dielectric constants varying across the molecular surface is employed to discretize the nonhomogeneous diffusion term of the nonlinear PB equation, and yields tridiagonal matrices in the Douglas and Douglas-Rachford type ADI schemes. The proposed time splitting ADI schemes are different from all existing pseudo-transient continuation approaches for solving the classical nonlinear PB equation in the sense that they are fully implicit. In a numerical benchmark example, the steady state solutions of the fully-implicit ADI schemes based on different initial values all converge to the time invariant analytical solution, while those of the explicit Euler and semi-implicit ADI schemes blow up when the magnitude of the initial solution is large. For the solvation analysis in applications to real biomolecules with various sizes, the time stability of the proposed ADI schemes can be maintained even using very large time increments, demonstrating the efficiency and stability of the present methods for biomolecular simulation. },
+	Abstract = {The Poisson-Boltzmann (PB) model is an effective approach for the electrostatics analysis of solvated biomolecules. The nonlinearity associated with the PB equation is critical when the underlying electrostatic potential is strong, but is extremely difficult to solve numerically. In this paper, we construct two operator splitting alternating direction implicit (ADI) schemes to efficiently and stably solve the nonlinear PB equation in a pseudo-transient continuation approach. The operator splitting framework enables an analytical integration of the nonlinear term that suppresses the nonlinear instability. A standard finite difference scheme weighted by piecewise dielectric constants varying across the molecular surface is employed to discretize the nonhomogeneous diffusion term of the nonlinear PB equation, and yields tridiagonal matrices in the Douglas and Douglas-Rachford type ADI schemes. The proposed time splitting ADI schemes are different from all existing pseudo-transient continuation approaches for solving the classical nonlinear PB equation in the sense that they are fully implicit. In a numerical benchmark example, the steady state solutions of the fully-implicit ADI schemes based on different initial values all converge to the time invariant analytical solution, while those of the explicit Euler and semi-implicit ADI schemes blow up when the magnitude of the initial solution is large. For the solvation analysis in applications to real biomolecules with various sizes, the time stability of the proposed ADI schemes can be maintained even using very large time increments, demonstrating the efficiency and stability of the present methods for biomolecular simulation. },
 	Author = {Geng, Weihua and Zhao, Shan},
 	Issn = {2299-3266},
 	Journal = {Molecular Based Mathematical Biology},
@@ -610,8 +751,8 @@ abstract = "To enhance the already high quality of diffraction data for crystals
 	Volume = {44},
 	Year = {2005}}
 
-@article{Zhan_2011,
-	Author = {Zhan and Baker and Wei GW},
+@article{Zhan2011,
+	Author = {Z. Chen and N. Baker, and G.W. Wei},
 	File = {:Users/Ahmed/Downloads/nihms215331.pdf:pdf},
 	Journal = {Journal of mathematical biology},
 	Number = {6},

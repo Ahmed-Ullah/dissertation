@@ -5,11 +5,34 @@ Q.~Cai, J.~Wang, H.~K. Zhao, and R.~Luo.
 \newblock On removal of charge singularity in poisson-boltzmann equation.
 \newblock {\em Journal of Chemical Physics}, 130(14), 2009.
 
+\bibitem{Chen2011}
+D.~Chen, Z.~Chen, C.~Chen, W.~Geng, and G.~W. Wei.
+\newblock {MIBPB: A software package for electrostatic analysis}.
+\newblock {\em Journal of Computational Chemistry}, 32(4):756--770, 2011.
+
 \bibitem{Chen2007}
 L.~Chen, M.~Holst, and J.~Xu.
 \newblock {The Finite Element Approximation of the Nonlinear Poisson-Boltzmann
   Equation}.
 \newblock {\em SIAM Journal on Numerical Analysis}, 45(6):2298--2320, 2007.
+
+\bibitem{Zhan2011}
+Z.~Chen, N.~Baker, and G.~Wei.
+\newblock Differential geometry based solvation model ii: Lagrangian
+  formulation.
+\newblock {\em Journal of mathematical biology}, 63(6):1139--1200, 2011.
+
+\bibitem{Connolly1983}
+M.~L. Connolly.
+\newblock {Analytical molecular surface calculation}.
+\newblock {\em Journal of Applied Crystallography}, 16(5):548--558, Oct 1983.
+
+\bibitem{DENG2018}
+W.~Deng, J.~Xu, and S.~Zhao.
+\newblock On developing stable finite element methods for pseudo-time
+  simulation of biomolecular electrostatics.
+\newblock {\em Journal of Computational and Applied Mathematics}, 330:456 --
+  474, 2018.
 
 \bibitem{Yakonov_1963}
 E.~D'Yakonov.
@@ -22,18 +45,6 @@ R.~P. Fedkiw, T.~Aslam, B.~Merriman, and S.~Osher.
 \newblock {A Non-oscillatory Eulerian Approach to Interfaces in Multimaterial
   Flows (the Ghost Fluid Method)}.
 \newblock {\em Journal of Computational Physics}, 152(2):457--492, 1999.
-
-\bibitem{Fogolari2002}
-F.~Fogolari, A.~Brigo, and H.~Molinari.
-\newblock {The Poisson-Boltzmann equation for biomolecular electrostatics: A
-  tool for structural biology}.
-\newblock {\em Journal of Molecular Recognition}, 15(6):377--392, 2002.
-
-\bibitem{Geng2015}
-W.~Geng.
-\newblock {A boundary integral Poisson-Boltzmann solvers package for solvated
-  bimolecular simulations}.
-\newblock {\em Computational and Mathematical Biophysics}, 3(1):54--69, 2015.
 
 \bibitem{Geng2013_tree}
 W.~Geng and R.~Krasny.
@@ -58,12 +69,6 @@ W.~Geng and S.~Zhao.
   Poisson-Boltzmann equation}.
 \newblock {\em Molecular Based Mathematical Biology}, 1:109--123, 2013.
 
-\bibitem{geng_fully_2013}
-W.~Geng and S.~Zhao.
-\newblock Fully implicit {ADI} schemes for solving the nonlinear
-  {Poisson}-{Boltzmann} equation.
-\newblock {\em Molecular Based Mathematical Biology}, 1, Jan. 2013.
-
 \bibitem{Geng2017a}
 W.~Geng and S.~Zhao.
 \newblock {A two-component Matched Interface and Boundary ( MIB )
@@ -75,6 +80,13 @@ M.~K. Gilson, M.~E. Davis, B.~A. Luty, and J.~A. McCammon.
 \newblock Computation of electrostatic forces on solvated molecules using the
   poisson-boltzmann equation.
 \newblock {\em The Journal of Physical Chemistry}, 97(14):3591--3600, 1993.
+
+\bibitem{Hazra2019}
+T.~Hazra, S.~Ahmed~Ullah, S.~Wang, E.~Alexov, and S.~Zhao.
+\newblock A super-gaussian poisson--boltzmann model for electrostatic free
+  energy calculation: smooth dielectric distribution for protein cavities and
+  in both water and vacuum states.
+\newblock {\em Journal of Mathematical Biology}, Apr 2019.
 
 \bibitem{Holst2010}
 M.~Holst, J.~A. McCammon, Z.~Yu, Y.~Zhou, and Y.~Zhu.
@@ -108,22 +120,28 @@ G.~Klebe, H.~Li, J.~H. Jensen, J.~E. Nielsen, P.~Czodrowski, T.~J. Dolinsky,
   biomolecular structures for molecular simulations.
 \newblock {\em Nucleic Acids Research}, 35(Suppl. 2):W522--W525, 07 2007.
 
+\bibitem{LEE1971379}
+B.~Lee and F.~Richards.
+\newblock The interpretation of protein structures: Estimation of static
+  accessibility.
+\newblock {\em Journal of Molecular Biology}, 55(3):379 -- IN4, 1971.
+
 \bibitem{Leeper2005}
 T.~C. Leeper, Z.~Athanassiou, R.~L. Dias, J.~A. Robinson, and G.~Varani.
 \newblock {TAR RNA recognition by a cyclic peptidomimetic of Tat protein}.
 \newblock {\em Biochemistry}, 44(37):12362--12372, 2005.
+
+\bibitem{drug2012}
+R.~A. Lewis.
+\newblock {\em Chapter 4 The Development of Molecular Modelling Programs: The
+  Use and Limitations of Physical Models}.
+\newblock The Royal Society of Chemistry, 2012.
 
 \bibitem{Li2017}
 C.~Li and S.~Zhao.
 \newblock {A matched Peaceman--Rachford ADI method for solving parabolic
   interface problems}.
 \newblock {\em Applied Mathematics and Computation}, 299:28--44, 2017.
-
-\bibitem{Mayo1993}
-Z.~Li and A.~Mayo.
-\newblock {\em ADI Methods for Heat Equations with Discontinuities Along an
-  Arbitrary Interface}.
-\newblock IBM Thomas J. Watson Research Division, 1993.
 
 \bibitem{Li1999}
 Z.~Li and Y.-Q. Shen.
@@ -156,6 +174,19 @@ A.~Prlic, B.~Yukich, B.~Beran, C.~Zardecki, C.~Bi, D.~S. Goodsell,
 \newblock The rcsb protein data bank: redesigned web site and web services.
 \newblock {\em Nucleic Acids Research}, 39(Suppl. 1):D392--D401, 10 2010.
 
+\bibitem{Quan2018}
+C.~Quan.
+\newblock {\em {Mathematical methods for implicit solvation models in quantum
+  chemistry}}.
+\newblock PhD thesis, 2018.
+
+\bibitem{Fred1977}
+F.~M. Richards.
+\newblock Areas, volumes, packing, and protein structure.
+\newblock {\em Annual Review of Biophysics and Bioengineering}, 6(1):151--176,
+  1977.
+\newblock PMID: 326146.
+
 \bibitem{Rocchia2001}
 W.~Rocchia, E.~Alexov, and B.~Honig.
 \newblock {Extending the applicability of the nonlinear Poisson-Boltzmann
@@ -179,15 +210,8 @@ K.~A. Sharp and B.~Honig.
   poisson-boltzmann equation.
 \newblock {\em The Journal of Physical Chemistry}, 94(19):7684--7692, 1990.
 
-\bibitem{shestakov_solution_2002}
-A.~Shestakov, J.~Milovich, and A.~Noy.
-\newblock Solution of the {Nonlinear} {Poisson}--{Boltzmann} {Equation} {Using}
-  {Pseudo}-transient {Continuation} and the {Finite} {Element} {Method}.
-\newblock {\em Journal of Colloid and Interface Science}, 247(1):62--79, Mar.
-  2002.
-
 \bibitem{Shestakov2002}
-A.~I. Shestakov, J.~L. Milovich, and A.~Noy.
+A.~Shestakov, J.~Milovich, and A.~Noy.
 \newblock {Solution of the nonlinear Poisson-Boltzmann equation using
   pseudo-transient continuation and the finite element method}.
 \newblock {\em Journal of Colloid and Interface Science}, 247(1):62--79, 2002.
@@ -202,6 +226,17 @@ M.~M. Teeter, S.~Roe, and N.~H. Heo.
 \newblock Atomic resolution (0·83 Å) crystal structure of the hydrophobic
   protein crambin at 130 k.
 \newblock {\em Journal of Molecular Biology}, 230(1):292 -- 311, 1993.
+
+\bibitem{Tomasi2005}
+J.~Tomasi, B.~Mennucci, and R.~Cammi.
+\newblock Quantum mechanical continuum solvation models.
+\newblock {\em Chemical reviews}, 105 8:2999--3093, 2005.
+
+\bibitem{Zhihan2017}
+Z.~Wei, C.~Li, and S.~Zhao.
+\newblock {A spatially second order alternating direction implicit (ADI) method
+  for solving three dimensional parabolic interface problems}.
+\newblock {\em Computers and Mathematics with Applications}, 2017.
 
 \bibitem{Wilson2016}
 L.~Wilson and S.~Zhao.
@@ -228,17 +263,22 @@ N.~Yanenko.
   published in Russian)}.
 \newblock Springer-Verlag, Berlin, Heidelberg, and New York, 1967.
 
+\bibitem{Yu2007}
+S.~Yu, W.~Geng, and G.~W. Wei.
+\newblock Treatment of geometric singularities in implicit solvent models.
+\newblock {\em The Journal of Chemical Physics}, 126(24):244108, 2007.
+
+\bibitem{YU2007_3D}
+S.~Yu and G.~Wei.
+\newblock Three-dimensional matched interface and boundary (mib) method for
+  treating geometric singularities.
+\newblock {\em Journal of Computational Physics}, 227(1):602 -- 632, 2007.
+
 \bibitem{Yu2005}
 S.~Yu, S.~Zhao, and G.~W. Wei.
 \newblock {Local spectral time splitting method for first- and second-order
   partial differential equations}.
 \newblock {\em Journal of Computational Physics}, 206(2):727--780, 2005.
-
-\bibitem{Zhan_2011}
-Zhan, Baker, and W.~GW.
-\newblock Differential geometry based solvation model ii: Lagrangian
-  formulation.
-\newblock {\em Journal of mathematical biology}, 63(6):1139--1200, 2011.
 
 \bibitem{Zhao2011}
 S.~Zhao.
@@ -246,13 +286,6 @@ S.~Zhao.
   representation and solvation analysis}.
 \newblock {\em International Journal for Numerical Methods in Biomedical
   Engineering}, 27(12):1964--1981, 2011.
-
-\bibitem{zhao_pseudo-time-coupled_2011}
-S.~Zhao.
-\newblock Pseudo-time-coupled nonlinear models for biomolecular surface
-  representation and solvation analysis.
-\newblock {\em International Journal for Numerical Methods in Biomedical
-  Engineering}, 27(12):1964--1981, Dec. 2011.
 
 \bibitem{zhao_operator_2014}
 S.~Zhao.
@@ -265,6 +298,24 @@ S.~Zhao.
 \newblock {A Matched Alternating Direction Implicit (ADI) Method for Solving
   the Heat Equation with Interfaces}.
 \newblock {\em Journal of Scientific Computing}, 2015.
+
+\bibitem{ZHAO2004}
+S.~Zhao and G.~Wei.
+\newblock High-order fdtd methods via derivative matching for maxwell's
+  equations with material interfaces.
+\newblock {\em Journal of Computational Physics}, 200(1):60 -- 103, 2004.
+
+\bibitem{ZHOU2006}
+Y.~Zhou and G.~Wei.
+\newblock On the fictitious-domain and interpolation formulations of the
+  matched interface and boundary (mib) method.
+\newblock {\em Journal of Computational Physics}, 219(1):228 -- 246, 2006.
+
+\bibitem{ZHOU2006_high}
+Y.~Zhou, S.~Zhao, M.~Feig, and G.~Wei.
+\newblock High order matched interface and boundary method for elliptic
+  equations with discontinuous coefficients and singular sources.
+\newblock {\em Journal of Computational Physics}, 213(1):1 -- 30, 2006.
 
 \bibitem{Zhou_1996}
 Z.~Zhou, P.~Payne, M.~Vasquez, N.~Kuhn, and M.~Levitt.

@@ -25,6 +25,10 @@
 \usepackage[countmax]{subfloat}
 %\usepackage[]{mcode}                 %% For including programming code
 \usepackage{setspace}
+\usepackage{float}
+\restylefloat{table}
+
+
 %\usepackage{breqn}
 %% Includes
 %\input{inc/glossary.tex} %nomenclature
@@ -110,8 +114,8 @@
 %% Note the use of \and to create line breaks and the
 %% inverted pyramid style requested by the graduate school.
 
-\title{A new ADI method for the Poisson-Boltzmann equation with \protect\\ a two-component regularization}
-
+%\title{A new ADI method for the Poisson-Boltzmann equation with \protect\\ a two-component regularization}
+\title{Pseudo-transient ghost fluid methods for\protect\\ the Poisson-Boltzmann equation with \protect\\a two-component regularization}
 \degree{Doctor of Philosophy}   %% Change to suit your degree.
 \department{Mathematics}        %% Change to suit your department.
 
@@ -156,7 +160,7 @@
 \chapter{INTRODUCTION}
 \label{chap: introduction}
 \input{intro}
-%---------------------------- Chapter 1 ----------------------------------------
+%---------------------------- Chapter 2 ----------------------------------------
 \chapter{PROTEIN DATA FILE PREPARATION}
 \label{chap: protein_data}
 \input{protein_data} 
@@ -164,21 +168,22 @@
 %\chapter{POISSON-BOLTZMANN EQUATION  }
 %\label{chap: cleaning}
 %\input{cleaning} 
-% --------------------------- Chapter 2 ----------------------------------------
+% --------------------------- Chapter 3 ----------------------------------------
 \chapter{POISSON-BOLTZMANN EQUATION AND ADI-MSMS}
 \label{chap: PBE}
 \input{PBE.tex}
 
-% --------------------------- Chapter 3 ----------------------------------------
-\chapter{PSEUDO-TIME SOLUTION OF REGULARIZED PBE}
+% --------------------------- Chapter 4 ----------------------------------------
+\chapter{REGULARIZED TIME DEPENDENT PBE }
+%\chapter{PSEUDO-TIME SOLUTION OF REGULARIZED PBE}
 \label{chap:opt_split}
 \input{opt_split}
-% --------------------------- Chapter 4 ----------------------------------------
+% --------------------------- Chapter 5 ----------------------------------------
 \chapter{A NEW DERIVATION FOR GHOST FLUID METHOD}
 \label{chap:new_GFM}
 \input{new_GFM}
 
-% --------------------------- Chapter 5 ----------------------------------------
+% --------------------------- Chapter 6 ----------------------------------------
 \chapter{NUMERICAL VALIDATION}
 \label{chap:num_vald}
 \input{num_vald} 
@@ -195,6 +200,9 @@
 \begin{singlespace}
 \bibliography{bibl}
 \bibliographystyle{abbrv}
+%\bibliographystyle{siam}
+%\bibliographystyle{plain}
+%\printbibliography
 \label{bib}
 \end{singlespace}
 

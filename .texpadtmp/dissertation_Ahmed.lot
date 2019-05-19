@@ -2,14 +2,15 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Protein Data file (\textit {.pdb} type) format\relax }}{5}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Protein Data file (\textit {.pdb} type) format\relax }}{8}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Spatial convergence test for the krikwood sphere with $\epsilon ^+=80$, $\epsilon ^-=1$, $\Delta t = 0.001$, TEND $=10$, $I_s=0.01$ and $\kappa = 1$. The centered charge of unit $1e_c $ is located at (0, 0, 0).\relax }}{33}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Solvation Energy ({\it kcal/mol}) of 1cbn for $h=0.5$ and the ionic strength $I_s= 0.15$\relax }}{36}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Solvation energies ({\it kcal/mol}) of 24 Proteins considering $\Delta t = 0.001$ for ADI and $\Delta t =0.05$ for GFM-ADI, GFM-LODCN, GFM-LODIE\relax }}{38}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Binding energy of 2a9x\relax }}{39}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Comparison of binding affinities of the protein complexes 1emv and 1beb\relax }}{42}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Spatial Convergence test for the krikwood sphere with $\Delta t = 0.001$ and $T_{end}=10$. Comparable analytical value of the Solvation Energy is $E_{sol} = -81.97820845$.\relax }}{39}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Stability test by the Solvation Energy ({\it kcal/mol}) of 1cbn for $h=0.5$, $T_{end} = 10^4*\Delta t$.\relax }}{42}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Impact of domain size to the solvation energy of $1cbn$ calculated by the GFM-ADI method.\relax }}{45}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Solvation energies ({\it kcal/mol}) of 24 Proteins considering $\Delta t = 0.001$ for ADI and $\Delta t =0.05$ for GFM-ADI, GFM-LODCN, GFM-LODIE. Stopping condition is set tobe either $T_{end}=50$ or $\Delta E^n_{sol}<10^{-4}$.\relax }}{47}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Binding energy of 2a9x\relax }}{50}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Comparison of binding affinities of the protein complexes\relax }}{52}
 \addvspace {10\p@ }

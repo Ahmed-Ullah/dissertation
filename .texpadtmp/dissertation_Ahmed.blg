@@ -3,50 +3,55 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: /Users/Ahmed/Google_Drive/Thesis_PhD/dessertation/.texpadtmp/dissertation_Ahmed.aux
 The style file: abbrv.bst
 Database file #1: ../bibl.bib
-You're missing a field name---line 16 of file ../bibl.bib
+You're missing a field name---line 208 of file ../bibl.bib
  : abstract = {Abstract Because of their wide use in molecular modeling, methods to compute molecular surfaces have received a lot of interest in recent years. However, most of the proposed algorithms compute the analytical representation of only the solvent-accessible surface. There are a few programs that compute the analytical representation of the solvent-excluded surface, but they often have problems handling singular cases of self-intersecting surfaces and tend to fail on large molecules (more than 10,000 atoms). We describe here a program called MSMS, which is shown to be fast and reliable in computing molecular surfaces. It relies on the use of the reduced surface that is briefly defined here and from which the solvent-accessible and solvent-excluded surfaces are computed. The four algorithms composing MSMS are described and their complexity is analyzed. Special attention is given to the handling of self-intersecting parts of the solvent-excluded surface called singularities. The program has been compared with Connolly's program PQMS [M. L. Connolly (1993) Journal of Molecular Graphics, Vol. 11, pp. 139–141] on a set of 709 molecules taken from the Brookhaven Data Base. MSMS was able to compute topologically correct surfaces for each molecule in the set. Moreover, the actual time spent to compute surfaces is in agreement with the theoretical complexity of the program, which is shown to be O[n log(n)] for n atoms. On a Hewlett-Packard 9000/735 workstation, MSMS takes 0.73 s to produce a triangulated solvent-excluded surface for crambin (1crn, 46 residues, 327 atoms, 4772 triangles), 4.6 s for thermolysin (3tln, 316 residues, 2437 atoms, 26462 triangles), and 104.53 s for glutamine synthetase (2gls, 5676 residues, 43632 atoms, 476665 triangles). © 1996 John Wiley \& Sons, Inc.},
  :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ,
 I'm skipping whatever remains of this entry
+Name 2 in "Z. Chen and N. Baker, and G.W. Wei" has a comma at the end for entry Zhan2011
+while executing---line 1049 of file abbrv.bst
+Name 2 in "Z. Chen and N. Baker, and G.W. Wei" has a comma at the end for entry Zhan2011
+while executing---line 1090 of file abbrv.bst
+Warning--empty school in Quan2018
 Warning--empty year in MSMS
-You've used 45 entries,
+You've used 54 entries,
             2118 wiz_defined-function locations,
-            799 strings with 12247 characters,
-and the built_in function-call counts, 15627 in all, are:
-= -- 1545
-> -- 754
+            874 strings with 13889 characters,
+and the built_in function-call counts, 18673 in all, are:
+= -- 1834
+> -- 909
 < -- 2
-+ -- 300
-- -- 252
-* -- 1244
-:= -- 2649
-add.period$ -- 136
-call.type$ -- 45
-change.case$ -- 257
++ -- 363
+- -- 304
+* -- 1483
+:= -- 3175
+add.period$ -- 164
+call.type$ -- 54
+change.case$ -- 309
 chr.to.int$ -- 0
-cite$ -- 46
-duplicate$ -- 505
-empty$ -- 1187
-format.name$ -- 252
-if$ -- 3168
+cite$ -- 56
+duplicate$ -- 601
+empty$ -- 1416
+format.name$ -- 304
+if$ -- 3791
 int.to.chr$ -- 0
-int.to.str$ -- 45
-missing$ -- 47
-newline$ -- 229
-num.names$ -- 90
-pop$ -- 196
+int.to.str$ -- 54
+missing$ -- 55
+newline$ -- 275
+num.names$ -- 108
+pop$ -- 236
 preamble$ -- 1
-purify$ -- 216
+purify$ -- 260
 quote$ -- 0
-skip$ -- 337
+skip$ -- 400
 stack$ -- 0
-substring$ -- 1195
-swap$ -- 56
+substring$ -- 1414
+swap$ -- 65
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 174
-warning$ -- 1
-while$ -- 153
-width$ -- 47
-write$ -- 496
-(There was 1 error message)
+type$ -- 210
+warning$ -- 2
+while$ -- 176
+width$ -- 56
+write$ -- 594
+(There were 3 error messages)

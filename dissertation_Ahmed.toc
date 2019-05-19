@@ -1,0 +1,37 @@
+\babel@toc {english}{}
+\contentsline {chapter}{ABSTRACT}{ii}
+\contentsline {chapter}{DEDICATION}{iii}
+\contentsline {chapter}{ACKNOWLEDGMENTS}{iv}
+\contentsline {chapter}{LIST OF TABLES}{ix}
+\contentsline {chapter}{LIST OF FIGURES}{x}
+\contentsline {chapter}{\numberline {1}INTRODUCTION}{1}
+\contentsline {section}{\numberline {1.1}Outlines of this dissertation}{4}
+\contentsline {chapter}{\numberline {2}PROTEIN DATA FILE PREPARATION}{7}
+\contentsline {chapter}{\numberline {3}POISSON-BOLTZMANN EQUATION AND ADI-MSMS}{10}
+\contentsline {section}{\numberline {3.1}Poisson-Boltzmann Equation}{10}
+\contentsline {section}{\numberline {3.2}Molecular surfaces}{12}
+\contentsline {section}{\numberline {3.3}ADI Method for pseudo transient PBE}{13}
+\contentsline {section}{\numberline {3.4}Cleaning ADI-MSMS package to develop REG-GFM-MSMS package}{15}
+\contentsline {chapter}{\numberline {4}REGULARIZED TIME DEPENDENT PBE }{18}
+\contentsline {section}{\numberline {4.1}Two-component regularization for singular sources}{18}
+\contentsline {section}{\numberline {4.2}Pseudo-transient approach for the RPBE}{20}
+\contentsline {section}{\numberline {4.3}Operator Splitting for the GFM-ADI method}{21}
+\contentsline {section}{\numberline {4.4}Operator Splitting for the GFM-LODCN method}{23}
+\contentsline {section}{\numberline {4.5}Operator Splitting for the GFM-LODIE method}{25}
+\contentsline {section}{\numberline {4.6}Solvation energy from Electrostatic potential}{25}
+\contentsline {chapter}{\numberline {5}A NEW DERIVATION FOR GHOST FLUID METHOD}{27}
+\contentsline {section}{\numberline {5.1}One dimension}{28}
+\contentsline {section}{\numberline {5.2}Two dimensions}{30}
+\contentsline {section}{\numberline {5.3}Three dimensions}{32}
+\contentsline {section}{\numberline {5.4}Corner point for the modified GFM method}{34}
+\contentsline {section}{\numberline {5.5}Simplicity of the modified GFM}{35}
+\contentsline {chapter}{\numberline {6}NUMERICAL VALIDATION}{36}
+\contentsline {section}{\numberline {6.1}Krikwood Sphere with analytical solution}{36}
+\contentsline {section}{\numberline {6.2}Biological applications}{41}
+\contentsline {subsection}{\numberline {6.2.1}Protein Crambin }{41}
+\contentsline {subsection}{\numberline {6.2.2}Solvation energy of 24 proteins}{46}
+\contentsline {subsection}{\numberline {6.2.3}Binding energy of 2a9x}{50}
+\contentsline {subsection}{\numberline {6.2.4}Salt effect on the binding affinity}{52}
+\contentsline {chapter}{\numberline {7}CONCLUSIONS}{54}
+\contentsline {chapter}{REFERENCES}{55}
+\contentsline {chapter}{APPENDIX}{55}
