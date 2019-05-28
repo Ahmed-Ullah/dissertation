@@ -1,5 +1,11 @@
-In order to calculate electrostatic potential and solvation free energy of real proteins,  we have to use the 3D structural data for proteins and nucleic acids available in the Protein Data Bank(PDB). PDB contains freely accessible data on the internet submitted by biologists and biochemists from around the world. These data are usually acquired by  X-ray crystallography, NMR spectroscopy, or, cryo-electron microscopy. Each molecule is represented by a unique name with four symbols, while each symbol could be either a letter or a number. Among several types of data file available from the PDB we focused on \textit{.pdb} type files available from the website of RCSB \cite{RCSB}, one of the member organization of the PDB. Our goal here is to identify all atomic details of proteins, including coordinate (x,y,z) of all atom centers, their van-der Walls radii, and partial charges assigned to each atom. 
-\begin{table}[!ht]
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = .5]{1bna_charge}
+	\caption{Structure of a DNA (\textit{1bna}) constructed from its {\it .pqr} file showing atomic charges in color for each atoms.} 
+\end{figure}
+In order to calculate electrostatic potential and solvation free energy of real proteins,  we have to use the 3D structural data for proteins and nucleic acids available in the Protein Data Bank (PDB). PDB contains freely accessible data on the internet submitted by biologists and biochemists from around the world. These data are usually acquired by  X-ray crystallography, NMR spectroscopy, or, cryo-electron microscopy. Each molecule is represented by a unique name with four symbols, while each symbol could be either a letter or a number. Among several types of data file available from the PDB we focused on \textit{.pdb} type files available from the website of RCSB \cite{RCSB}, one of the member organizations of the PDB. Our goal here is to identify all atomic details of proteins, including the coordinates (x,y,z) of all atom centers, their van-der Walls radii, and partial charges assigned to each atom. 
+
+\begin{table}[!t]
 \begin{tabular}{|l|l|l|l|l|}
 \hline
 Record Type             & Columns & Data                            & Justification & Data Type  \\ \hline
@@ -32,14 +38,10 @@ Record Type             & Columns & Data                            & Justificat
 \label{tab:PDB_format}
 \end{table}
 %TODO have to describe the format of pdb file then apbs type the pqr type. 
-\begin{figure}
-	\centering
-	\includegraphics[scale = .5]{1bna_charge}
-	\caption{Structure of a DNA (\textit{1bna}) constructed from its {\it .pqr} file showing atomic charges in color for each atoms.} 
-\end{figure}
 
- In a \textit{.pdb} file for a particular protein, ATOM record type (the rows starting with the word "ATOM") contains the information about each atom as shown in Table \ref{tab:PDB_format}. These raw information are not readily usable for our proposed solver. A Python script has been developed to follow the following steps,
- 
+ In a \textit{.pdb} file for a particular protein, ATOM record type (the rows starting with the word "ATOM") contains the information about each atom as shown in Table \ref{tab:PDB_format}. This raw information is not readily usable for our proposed solver. A Python script has been developed to follow the following steps,
+
+
 %\begin{enumerate}
 \begin{itemize}
  	\item Reading \textit{.pdb} file RCSB website: The Python module \textit{"requests"} has been used to read and parse protein data from the web from the web address 'https://files.rcsb.org/view/' to write a local \textit{.pdb} file. 
@@ -48,4 +50,4 @@ Record Type             & Columns & Data                            & Justificat
  \end{itemize}
 % \end{enumerate}
 
-Finally in \textit{.pqr} files we have the $X,Y$ and $Z$ co-ordinate, the charge of the atomic center and the radius for each individual atom.  
+Finally in \textit{.pqr} files we have the $X,Y$ and $Z$ co-ordinates, the charge of the atomic center and the radius for each individual atom.  

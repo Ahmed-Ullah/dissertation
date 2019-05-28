@@ -1,5 +1,7 @@
 %on the points far away from the interface $\Gamma$ which are defined as regulars nodes.
-At the points adjacent to the interface $\Gamma$, the central difference operators defined in (\ref{dif_opx})-(\ref{dif_opz}) is not applicable. These points are defined as the irregular points where at-least one of its adjacent points is on the other side of the interface $\Gamma$. On the irregular points at least one of the three point stencils for $\delta_x^2,\delta_y^2$ and $\delta_z^2$ is across the interface. Here the information about the function $v$ is not available for the side point which is on the other side of the interface. A non-standard finite difference formula is necessary on the irregular points to discretize $\delta_x^2,\delta_y^2$ and $\delta_z^2$.  In this regard a modified version of the Ghost Fluid Method has been proposed in this chapter using the fictitious points (or ghost points) and the jump conditions in (\ref{phitilde3}) and (\ref{phitilde4}).
+At the points adjacent to the interface $\Gamma$, the central difference operators defined in (\ref{dif_opx})-(\ref{dif_opz}) are not used since these points are defined as irregular points where at-least one of its adjacent points is on the other side of the interface $\Gamma$. 
+%On the irregular points at least one of the three point stencils for $\delta_x^2,\delta_y^2$ and $\delta_z^2$ is across the interface. 
+Here the information about the function $v$ is not available for the point which is on the other side of the interface. A non-standard finite difference formula is necessary on the irregular points to discretize $\delta_x^2,\delta_y^2$ and $\delta_z^2$.  In this regard a modified version of the Ghost Fluid Method is proposed in this chapter using fictitious points (or ghost points) and the jump conditions given by (\ref{phitilde3}) and (\ref{phitilde4}).
 
 \begin{figure}[!ht]
 	\centering
@@ -9,13 +11,13 @@ At the points adjacent to the interface $\Gamma$, the central difference operato
 \end{figure}
 
 
-Ghost Fluid Method(GFM) is a sharpe interface technique introduced in  \cite{Fedkiw1999} to treat the two-face contact discontinuities in the Euler equations. It extends values across the interface into an artificial fluid (ghost fluid), inducing the jump conditions at the interface. This GFM method was later extended in \cite{Liu2000} to solve elliptic equations with variable coefficients. But in contrast to their method \cite{Liu2000}, the jump conditions are incorporated into the numerical discretization in such a way that the symmetry of the finite difference stencil is preserved. Which makes it compatible with most standard solvers. The flux jump has been decomposed in each axis direction treating the problem dimension by dimension. As a result this extended GFM becomes only first order accurate.   
+The Ghost Fluid Method(GFM) is a sharpe interface technique introduced in  \cite{Fedkiw1999} to treat the two-face contact discontinuities in the Euler equations. It extends values across the interface into an artificial fluid (ghost fluid), inducing the jump conditions at the interface. This GFM method was later extended in \cite{Liu2000} to solve elliptic equations with variable coefficients. But in contrast to their method \cite{Liu2000}, the jump conditions are incorporated into the numerical discretization in such a way that the symmetry of the finite difference stencil is preserved. Which makes it compatible with most standard solvers. The flux jump has been decomposed in each axis direction treating the problem dimension by dimension. As a result this extended GFM becomes only first order accurate.   
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{One dimension}
 
-For an one dimensional representation of the proposed GFM schemes we try to evaluate the finite difference operator $\delta_{xx}$ at the irregular points where the interface is at $x_\Gamma$ between $x_i$ and $x_{i+1}$ as the following figure.  %$x_i \leq x_\Gamma\leq x_{i+1}$.   
+For a one dimensional representation of the proposed GFM schemes we try to evaluate the finite difference operator $\delta_{xx}$ at the irregular points where the interface is at $x_\Gamma$ between $x_i$ and $x_{i+1}$ as shown in Figure \ref{fig_1}.  %$x_i \leq x_\Gamma\leq x_{i+1}$.   
 \begin{figure}[ht]
 \begin{center}
 %\includegraphics[scale = .5]{PBE1_grid.pdf}
@@ -31,84 +33,87 @@ u_{out}\text{ in }\Omega^+\\
 \end{cases}$ and we define $u^+ = u_{out}(x_\Gamma),u^- = u_{in}(x_\Gamma),h=x_{i+1}-x_i$ and  $\lambda =\frac{x_\Gamma-x_i}{h}$ to get following equations,
 \begin{eqnarray}
 \begin{aligned}
-x_\Gamma &= x_i + \lambda h  \\
-u^- &= u_i(1-\lambda )+ \tilde{u}_{i+1} \lambda \text{ and }u^+ = \tilde{u}_i(1-\lambda )+ u_{i+1} \lambda\\
-\left[u\right]  & = u^+-u^- \text{ and }\left[ \epsilon \frac{\partial u}{\partial x} \right] =  \epsilon^+ u^+_x-\epsilon^- u^-_x
+x_\Gamma &= x_i + \lambda h,  \\
+u^- &= u_i(1-\lambda )+ \tilde{u}_{i+1} \lambda \text{ and }u^+ = \tilde{u}_i(1-\lambda )+ u_{i+1}\lambda,x\\
+\left[u\right]  & = u^+-u^- \text{ and }\left[ \epsilon \frac{\partial u}{\partial x} \right] =  \epsilon^+ u^+_x-\epsilon^- u^-_x,
 \end{aligned}\label{1d_GFM}
 \end{eqnarray}
 	
-Where $\tilde{u_i}$ and $\tilde{u_{i+1}}$ are the fictitious values(or ghost values) of $u$ at the irregular points extending $u_{in}$ or $u_{out}$ on the other side of the interface. In particular for figure \ref{fig_1},  we have $\tilde{u}_i \approx u_{out}(x_i)$ and $\tilde{u}_{i+1}\approx u_{in}(x_{i+1})$. Here $u_{out}$ has been extended to the point $x_i$ for $\tilde{u_i}$ and $u_{in}$ has been extended to the point $x_{i+1}$ for $\tilde{u_i}$. 
+where $\tilde{u_i}$ and $\tilde{u_{i+1}}$ are the fictitious values(or ghost values) of $u$ at the irregular points extending $u_{in}$ or $u_{out}$ on the other side of the interface. In particular as shown in Figure \ref{fig_1},  we have $\tilde{u}_i \approx u_{out}(x_i)$ and $\tilde{u}_{i+1}\approx u_{in}(x_{i+1})$. Here $u_{out}$ has been extended to the point $x_i$ for $\tilde{u_i}$ and $u_{in}$ has been extended to the point $x_{i+1}$ for $\tilde{u_i}$. 
 
-Our purpose here is to apply the non-standard finite difference operator $\delta_x^2$ at $x_i$ and $x_{i+1}$ to get, 
+Our purpose here is to apply the non-standard finite difference operator $\delta_x^2$ at $x_i$ and $x_{i+1}$ to get: 
 \begin{equation}
-\delta_x^2\left(u_{i}\right)= \frac{\epsilon^-}{h^2} \left(u_{i-1}-2u_{i}+\tilde{u}_{i+1}\right)\text{ and }\delta_x^2\left(u_{i+1}\right)= \frac{\epsilon^+}{h^2} \left(\tilde{u}_{i}-2u_{i+1}+u_{i+2}\right)	\label{fnt-op}
+\delta_x^2\left(u_{i}\right)= \frac{\epsilon^-}{h^2} \left(u_{i-1}-2u_{i}+\tilde{u}_{i+1}\right)\text{ and }\delta_x^2\left(u_{i+1}\right)= \frac{\epsilon^+}{h^2} \left(\tilde{u}_{i}-2u_{i+1}+u_{i+2}\right).	\label{fnt-op}
 \end{equation}
-Now solving above equations in (\ref{1d_GFM})  for $\tilde{u}_i $ and $\tilde{u}_{i+1}$ we get, 
+Now solving the above equations in (\ref{1d_GFM})  for $\tilde{u}_i $ and $\tilde{u}_{i+1}$ we get, 
+\begin{eqnarray}	\tilde{u}_i&=& \frac{\epsilon^-}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}u_i +\frac{\lambda(\epsilon^+-\epsilon^-)}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}u_{i+1}\nonumber\\ &+&\frac{\epsilon^-}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}\left[u\right] -\frac{h \lambda}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}\left[ \epsilon \frac{\partial u}{\partial x} \right]
+\end{eqnarray}
+and 
+\begin{eqnarray}		
+	\tilde{u}_{i+1}&=& \frac{(\epsilon^--\epsilon^+)(1-\lambda)}{\epsilon^+\lambda+\epsilon^-(1-\lambda)} u_i +\frac{\epsilon^+}{\epsilon^+\lambda+\epsilon^-(1-\lambda)} u_{i+1}\nonumber \\
+	&-&\frac{\epsilon^+}{\epsilon^+\lambda+\epsilon^-(1-\lambda)} \left[u\right] -\frac{h(1-\lambda)}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}\left[ \epsilon \frac{\partial u}{\partial x} \right].\label{u_fact}
+\end{eqnarray}
+Then substituting equation (\ref{u_fact}) into equation (\ref{fnt-op}) we get
+\begin{equation}
+		\delta_x^2\left(u_{i}\right)= \frac{1}{h^2} \left(a_1u_{i-1}+b_1 u_{i}+c_1u_{i+1}\right)+\frac{\epsilon^-}{h^2}\left(e_1.[u]+f_1.\left[ \epsilon \frac{\partial u}{\partial x} \right]\right)\label{fnt-op-1}
+\end{equation}
+and 
+\begin{equation}		
+		\delta_x^2\left(u_{i+1}\right)= \frac{1}{h^2} \left(a_2u_{i}-b_2u_{i+1}+c_2u_{i+2}\right)+\frac{\epsilon^+}{h^2}\left(e_2.[u]+f_2.\left[ \epsilon \frac{\partial u}{\partial x} \right]\right)\label{fnt-op-2}
+\end{equation}
+where,
 \begin{eqnarray}
 \begin{aligned}
-	\tilde{u}_i&= \frac{\epsilon^-}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}u_i +\frac{\lambda(\epsilon^+-\epsilon^-)}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}u_{i+1}\\ &+\frac{\epsilon^-}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}\left[u\right] -\frac{h \lambda}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}\left[ \epsilon \frac{\partial u}{\partial x} \right]\\
-	\tilde{u}_{i+1}&= \frac{(\epsilon^--\epsilon^+)(1-\lambda)}{\epsilon^+\lambda+\epsilon^-(1-\lambda)} u_i +\frac{\epsilon^+}{\epsilon^+\lambda+\epsilon^-(1-\lambda)} u_{i+1} \\
-	& -\frac{\epsilon^+}{\epsilon^+\lambda+\epsilon^-(1-\lambda)} \left[u\right] -\frac{h(1-\lambda)}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}\left[ \epsilon \frac{\partial u}{\partial x} \right]\label{u_fact}
+d&=\epsilon^+\lambda+\epsilon^-(1-\lambda),\\
+a_1&= \epsilon^-,b_1=-\epsilon^-\left(1+\frac{\epsilon^+}{d}\right), c_1=\frac{\epsilon^-\epsilon^+}{d}, e_1=\frac{\epsilon^-}{d},f_1=\frac{h\lambda}{d},\\
+a_2&= \frac{\epsilon^+\epsilon^-}{d},b_2=-\epsilon^+\left(1+\frac{\epsilon^-}{d}\right), c_2=\epsilon^+, e_2=-\frac{\epsilon^+}{d},f_2=\frac{h(1-\lambda)}{d}.
 \end{aligned}
 \end{eqnarray}
-Then substituting equation (\ref{u_fact}) into equation (\ref{fnt-op}) we get, 
-\begin{eqnarray}
-	\begin{aligned}
-		\delta_x^2\left(u_{i}\right)&= \frac{1}{h^2} \left(a_1u_{i-1}+b_1 u_{i}+c_1u_{i+1}\right)+\frac{\epsilon^-}{h^2}\left(e_1.[u]+f_1.\left[ \epsilon \frac{\partial u}{\partial x} \right]\right)\\
-		\delta_x^2\left(u_{i+1}\right)&= \frac{1}{h^2} \left(a_2u_{i}-b_2u_{i+1}+c_2u_{i+2}\right)+\frac{\epsilon^+}{h^2}\left(e_2.[u]+f_2.\left[ \epsilon \frac{\partial u}{\partial x} \right]\right)
-	\end{aligned}\label{fnt-op-2}
-\end{eqnarray}
- 
-Where,
-\begin{eqnarray}
-\begin{aligned}
-d&=\epsilon^+\lambda+\epsilon^-(1-\lambda)\\
-a_1&= \epsilon^-,b_1=-\epsilon^-\left(1+\frac{\epsilon^+}{d}\right), c_1=\frac{\epsilon^-\epsilon^+}{d}, e_1=\frac{\epsilon^-}{d},f_1=\frac{h\lambda}{d}\\
-a_2&= \frac{\epsilon^+\epsilon^-}{d},b_2=-\epsilon^+\left(1+\frac{\epsilon^-}{d}\right), c_2=\epsilon^+, e_2=-\frac{\epsilon^+}{d},f_2=\frac{h(1-\lambda)}{d}
-\end{aligned}
-\end{eqnarray}
-
-Here the second terms of the equations in (\ref{fnt-op-2}) are considered to be known. Only the coefficients in the 1st terms of (\ref{fnt-op-2}) contribute to the finite difference operator matrix keeping it tridiagonal to make it diagonally dominant(as $|b_1|-a_1-c_1=0\text{ and } |b_2|-a_2-c_2=0$) and symmetric (as $a_2=c_1$).  
+Here, the second terms of the equations in (\ref{fnt-op-2}) are known. Only the coefficients in the 1st terms of (\ref{fnt-op-2}) contribute to the finite difference operator matrix keeping it tridiagonal to make it diagonally dominant(as $|b_1|-a_1-c_1=0\text{ and } |b_2|-a_2-c_2=0$) and symmetric (as $a_2=c_1$).  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
   
 \section{Two dimensions}
-For the two dimensional PB model we need to evaluate $\delta_{xx}$ and $\delta_{yy}$, where the similar derivation of the equations in (\ref{fnt-op-2}) can be used to calculate $\delta_{yy}$ in irregular points. But in this case,  $\left[ \epsilon \frac{\partial u}{\partial x} \right]$ and $\left[ \epsilon \frac{\partial u}{\partial y} \right]$ is not known, while $\left[ \epsilon \frac{\partial u}{\partial n} \right]$ is given. Now to get $\left[ \epsilon \frac{\partial u}{\partial x} \right]$ and $\left[ \epsilon \frac{\partial u}{\partial y} \right]$ in terms of $\left[ \epsilon \frac{\partial u}{\partial n} \right]$ and $\left[ \epsilon \frac{\partial u}{\partial \tau} \right]$ we have the following relations,  
+For the two dimensional PB model, we need to evaluate $\delta_{xx}$ and $\delta_{yy}$, 
+where $\delta_{yy}$ can be calculated at irregular points in a manner similar to (\ref{fnt-op-2}) 
+%where the similar derivation of the equations in (\ref{fnt-op-2}) can be used to calculate $\delta_{yy}$ at irregular points. 
+In this case,  $\left[ \epsilon \frac{\partial u}{\partial x} \right]$ and $\left[ \epsilon \frac{\partial u}{\partial y} \right]$ are not known, while $\left[ \epsilon \frac{\partial u}{\partial n} \right]$ is given. Now to get $\left[ \epsilon \frac{\partial u}{\partial x} \right]$ and $\left[ \epsilon \frac{\partial u}{\partial y} \right]$ in terms of $\left[ \epsilon \frac{\partial u}{\partial n} \right]$ and $\left[ \epsilon \frac{\partial u}{\partial \tau} \right]$ we have the following relations,  
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.6]{GFM_2D.pdf}
-\caption{2D GFM}
+\includegraphics[width = 0.7\textwidth ]{GFM_2D.pdf}
+\caption{2D GFM with the interface $\Gamma$ and the normal direction $\vec{n}$.}
 \label{fig_gfm_2D}
 \end{center}
 \end{figure}
 
 \begin{eqnarray}
 \begin{aligned}
-			\left[\epsilon \frac{\partial u}{\partial n}\right] &=& \cos \theta \left[\epsilon \frac{\partial u}{\partial x}\right] + sin \theta \left[\epsilon \frac{\partial u}{\partial y}\right]\label{epun} \\
-			\left[\epsilon \frac{\partial u}{\partial \tau}\right] &=& sin \theta \left[\epsilon \frac{\partial u}{\partial x}\right] - \cos \theta\left[\epsilon \frac{\partial u}{\partial y}\right]\label{eput}	
+			\left[\epsilon \frac{\partial u}{\partial n}\right] &=& \cos \theta \left[\epsilon \frac{\partial u}{\partial x}\right] + sin \theta \left[\epsilon \frac{\partial u}{\partial y}\right],\label{epun} \\
+			\left[\epsilon \frac{\partial u}{\partial \tau}\right] &=& sin \theta \left[\epsilon \frac{\partial u}{\partial x}\right] - \cos \theta\left[\epsilon \frac{\partial u}{\partial y}\right],\label{eput}	
 \end{aligned}		
 \end{eqnarray}
-where $\theta$ is the angle between the normal direction and positive x direction, see Figure \ref{fig_gfm_2D}. 
-Then equations in \ref{eput} can be solved for $ \left[\epsilon \frac{\partial u}{\partial x}\right]$ and $\left[\epsilon \frac{\partial u}{\partial y}\right]$ as,
+where $\theta$ is the angle between the normal direction and positive $x$ direction, as shown in Figure \ref{fig_gfm_2D}. 
+Equation \ref{eput} can be solved for $ \left[\epsilon \frac{\partial u}{\partial x}\right]$ and $\left[\epsilon \frac{\partial u}{\partial y}\right]$:
 \begin{eqnarray}
 \begin{aligned}
-	\left[\epsilon \frac{\partial u}{\partial x}\right] &=& \cos \theta \left[\epsilon \frac{\partial u}{\partial n}\right] +sin \theta \left[\epsilon \frac{\partial u}{\partial \tau}\right]\label{epux1} \\
-	\left[\epsilon \frac{\partial u}{\partial y}\right] &=& sin \theta \left[\epsilon \frac{\partial u}{\partial n}\right] -\cos \theta \left[\epsilon \frac{\partial u}{\partial \tau}\right]\label{epuy1}
+	\left[\epsilon \frac{\partial u}{\partial x}\right] &=& \cos \theta \left[\epsilon \frac{\partial u}{\partial n}\right] +sin \theta \left[\epsilon \frac{\partial u}{\partial \tau}\right],\label{epux1} \\
+	\left[\epsilon \frac{\partial u}{\partial y}\right] &=& sin \theta \left[\epsilon \frac{\partial u}{\partial n}\right] -\cos \theta \left[\epsilon \frac{\partial u}{\partial \tau}\right].\label{epuy1}
 \end{aligned}	
 \end{eqnarray}
-
-To simplify the jump-conditions Liu, Fedkiw and Kang \cite{Liu2000}  smeared out the tangential derivative considering $\left[\epsilon \frac{\partial u}{\partial \tau}\right]=0$ to get the following equations, 
+To simplify the jump-conditions Liu, Fedkiw and Kang \cite{Liu2000}  smeared out the tangential derivative by considering $\left[\epsilon \frac{\partial u}{\partial \tau}\right]=0$ to get the following equations, 
 %		\begin{eqnarray}
 %			\left[\epsilon u_x\right] &=& \cos \theta \left[\epsilon u_n\right] \label{epux2}  \\
 %			\left[\epsilon u_y\right] &=& sin \theta \left[\epsilon u_n\right] \label{epuy2}
 %		\end{eqnarray}
 \begin{eqnarray}
 \begin{aligned}
-	\left[\epsilon \frac{\partial u}{\partial x}\right] &\approx& \cos \theta \left[\epsilon \frac{\partial u}{\partial n}\right]\label{epux2}   \\
-	\left[\epsilon \frac{\partial u}{\partial y}\right] &\approx& \sin \theta \left[\epsilon \frac{\partial u}{\partial n}\right] \label{epuy2}
+	\left[\epsilon \frac{\partial u}{\partial x}\right] &\approx& \cos \theta \left[\epsilon \frac{\partial u}{\partial n}\right],\label{epux2}   \\
+	\left[\epsilon \frac{\partial u}{\partial y}\right] &\approx& \sin \theta \left[\epsilon \frac{\partial u}{\partial n}\right], \label{epuy2}
 \end{aligned}	
 \end{eqnarray}
-Which are in general not true but $\left[\epsilon \frac{\partial u}{\partial x}\right]$ and $\left[\epsilon \frac{\partial u}{\partial y}\right]$ in (\ref{epux2}) satisfies (\ref{epun}) for $\left[\epsilon \frac{\partial u}{\partial n}\right]$. It allows us to replace the unknown quantities as  $\left[\epsilon \frac{\partial u}{\partial x}\right]$ and $\left[\epsilon \frac{\partial u}{\partial y}\right]$ by the known quantities $\left[\epsilon \frac{\partial u}{\partial n}\right]$ and $\left[\epsilon \frac{\partial u}{\partial \tau}\right]$   . This process used to simplify the jump condition in \cite{Liu2000} still requires the normal direction $\theta$. In our proposed GFM scheme  we have considered $\frac{\partial u^+}{\partial \tau}=0$ to get the following derivation for $ \left[\epsilon \frac{\partial u}{\partial x}\right] $ as, 
+which are in general not true.
+% but $\left[\epsilon \frac{\partial u}{\partial x}\right]$ and $\left[\epsilon \frac{\partial u}{\partial y}\right]$ in (\ref{epux2}) satisfies (\ref{epun}) for $\left[\epsilon \frac{\partial u}{\partial n}\right]$. 
+It allows us to replace the unknown quantities as  $\left[\epsilon \frac{\partial u}{\partial x}\right]$ and $\left[\epsilon \frac{\partial u}{\partial y}\right]$ by the known quantities $\left[\epsilon \frac{\partial u}{\partial n}\right]$ and $\left[\epsilon \frac{\partial u}{\partial \tau}\right]$. This process used to simplify the jump condition in \cite{Liu2000} still requires the normal direction $\theta$. In our proposed GFM scheme  we have considered $\frac{\partial u^+}{\partial \tau}=0$ to get the following derivation for $ \left[\epsilon \frac{\partial u}{\partial x}\right] $:
 \begin{eqnarray*}
 \left[\epsilon \frac{\partial u}{\partial x}\right] &=& \cos \theta \left[\epsilon \frac{\partial u}{\partial n}\right] +\sin \theta \left[\epsilon \frac{\partial u}{\partial \tau}\right]\\
 &=& \cos \theta \left[\epsilon \frac{\partial u}{\partial n}\right] +\sin \theta \left(\epsilon^+\frac{\partial u^+}{\partial \tau}-\epsilon^-\frac{\partial u^-}{\partial \tau}\right)\\
@@ -119,11 +124,10 @@ Which are in general not true but $\left[\epsilon \frac{\partial u}{\partial x}\
 Now by the jump conditions we have $ \left[\epsilon \frac{\partial u}{\partial n}\right] =\epsilon^- \frac{\partial G}{\partial n}$ and $\left[\frac{\partial u}{\partial \tau}\right]= \frac{\partial G}{\partial \tau}.$
 \begin{eqnarray*}
 \text{Thus } \left[\epsilon \frac{\partial u}{\partial x}\right] &=& \cos \theta (\epsilon^- \frac{\partial G}{\partial n})+\sin \theta .\epsilon^- \frac{\partial G}{\partial \tau} +\sin \theta (\epsilon^+ -\epsilon^- ) \frac{\partial u^+}{\partial \tau}\\
-&\approx & \epsilon^-(\cos \theta  \frac{\partial G}{\partial n}+\sin \theta\frac{\partial G}{\partial \tau}) = \epsilon^- \frac{\partial G}{\partial x}\text{, if }\frac{\partial u^+}{\partial \tau}=0\\
-\therefore\left[\epsilon \frac{\partial u}{\partial x}\right]&\approx &  \epsilon^- \frac{\partial G}{\partial x}
+&\approx & \epsilon^-(\cos \theta  \frac{\partial G}{\partial n}+\sin \theta\frac{\partial G}{\partial \tau}) = \epsilon^- \frac{\partial G}{\partial x}\text{, if }\frac{\partial u^+}{\partial \tau}=0.\\
+\text{Therefore, }\left[\epsilon \frac{\partial u}{\partial x}\right]&\approx &  \epsilon^- \frac{\partial G}{\partial x}.
 \end{eqnarray*}
-
-Similarly it can be shown that $\left[\epsilon \frac{\partial u}{\partial y}\right] \approx   \epsilon^- \frac{\partial G}{\partial y}$. Like the original GFM, our new GFM also omits some tangential information. Thus, two methods will have a local first order of truncation error. Nevertheless, in our new method, the normal direction of the complicated molecular surface is not required, so that the implementation of modified GFM is much simpler than the standard GFM. 
+Similarly it can be shown that $\left[\epsilon \frac{\partial u}{\partial y}\right] \approx   \epsilon^- \frac{\partial G}{\partial y}$. Like the original GFM, our new GFM also omits some tangential information. Thus, two methods will have a local first order of truncation error. Nevertheless, in our new method, the normal direction of the complicated molecular surface is not required, so that the implementation of the modified GFM is much simpler than the standard GFM. 
 
 %Now using  $\left[ u\right]= G$ from (\ref{phitilde3}) and $\left[\epsilon\frac{\partial u}{\partial x}\right]= \epsilon^-\frac{\partial G}{\partial x}$ from (\ref{phitilde4}) as the jump condition we have,
 %%\begin{eqnarray}
@@ -142,7 +146,7 @@ Similarly it can be shown that $\left[\epsilon \frac{\partial u}{\partial y}\rig
 
 \section{Three dimensions}
 
-Consider that the interface $\Gamma$ intersects the grid line in the $x$ direction at a point $(i_\Gamma, j,k)$ which is located between $(i,j,k)$ and $(i+1,j,k)$, We therefore have two irregular grid points, $(i,j,k)$ and $(i+1,j,k)$. The fictitious values $\tilde{u}_{i,j,k}$ and $\tilde{u}_{i+1,j,k}$ are to be determined. To use one of the jump conditions which is defined in the normal direction of the interface point, it is convenient to introduce a local coordinates $(\xi,\eta,\zeta)$ such that $\xi$ is along the normal direction and $\eta $ is in the $xy$ plane. Then the coordinate transformation can be given as, 
+Consider that the interface $\Gamma$ that intersects the grid line in the $x$ direction at a point $(i_\Gamma, j,k)$ which is located between $(i,j,k)$ and $(i+1,j,k)$, We therefore have two irregular grid points, $(i,j,k)$ and $(i+1,j,k)$. The fictitious values $\tilde{u}_{i,j,k}$ and $\tilde{u}_{i+1,j,k}$ are to be determined. To use one of the jump conditions which is defined in the normal direction of the interface point, it is convenient to introduce a local coordinates $(\xi,\eta,\zeta)$ such that $\xi$ is along the normal direction and $\eta $ is in the $xy$ plane. Then the coordinate transformation can be given as, 
 \begin{align}
   \left[
             \begin{array}{c}
@@ -153,7 +157,7 @@ Consider that the interface $\Gamma$ intersects the grid line in the $x$ directi
             \xi\\
             \eta\\
             \zeta
-     \end{array}\right]\label{eqtran1}
+     \end{array}\right],\label{eqtran1}
 \end{align}
 %\begin{align}
 %    \left[\begin{array}{c}
@@ -182,73 +186,72 @@ where $\bf{P}$ is the transformation matrix
                   \cos\psi 			 & 0 			& \sin\psi
                  \end{array}\right]. \label{eqtran2}
 \end{align}
-
 Here $\theta$ and $\psi $ are the azimuth and zenith angles with respect to the normal direction $\xi$.
 % Now to express the jump condition along x-axis $\left[\epsilon \frac{\partial u}{\partial x}\right]$  in terms of $\left[\epsilon \frac{\partial u}{\partial \xi}\right]$, $\left[\epsilon \frac{\partial u}{\partial \eta}\right]$ and $\left[\epsilon \frac{\partial u}{\partial \zeta}\right]$ we have 
 Then from equation (\ref{eqtran1}) and (\ref{eqtran2}) we have, 
 \begin{eqnarray}
 	\left[\epsilon \frac{\partial u}{\partial x}\right] &=& \sin \psi \cos \theta \left[\epsilon \frac{\partial u}{\partial \xi}\right]-\sin \theta \left[\epsilon \frac{\partial u}{\partial \eta}\right]-\cos \psi \cos \theta \left[\epsilon \frac{\partial u}{\partial \zeta}\right]\label{3d_gfm1}
 \end{eqnarray}
-
- Now along $\eta$ axis,
+Now along the $\eta$ axis,
 \begin{eqnarray}
 \begin{aligned}
 	\left[\epsilon \frac{\partial u}{\partial \eta}\right] &= \epsilon^+\frac{\partial u^+}{\partial \eta }-\epsilon^-\frac{\partial u^-}{\partial \eta }\\
 	&=\epsilon^+\frac{\partial u^+}{\partial \eta }-\epsilon^-\frac{\partial u^+}{\partial \eta }+\epsilon^-\frac{\partial u^+}{\partial \eta }-\epsilon^-\frac{\partial u^-}{\partial \eta }\\
 	&= \epsilon^-\left(\frac{\partial u^+}{\partial \eta }-\frac{\partial u^-}{\partial \eta }\right)+(\epsilon^+-\epsilon^-)\frac{\partial u^+}{\partial \eta}\\
-	&= \epsilon^-\frac{\partial G}{\partial \eta}+(\epsilon^+-\epsilon^-)\frac{\partial u^+}{\partial \eta}\text{. since } \left(\frac{\partial u^+}{\partial \eta }-\frac{\partial u^-}{\partial \eta }\right)=\frac{\partial}{\partial\eta}[u]=\frac{\partial G}{\partial \eta}.\label{3d_gfm2}
+	&= \epsilon^-\frac{\partial G}{\partial \eta}+(\epsilon^+-\epsilon^-)\frac{\partial u^+}{\partial \eta}\text{ since } \left(\frac{\partial u^+}{\partial \eta }-\frac{\partial u^-}{\partial \eta }\right)=\frac{\partial}{\partial\eta}[u]=\frac{\partial G}{\partial \eta}.\label{3d_gfm2}
 \end{aligned}
 \end{eqnarray}
-    
-Similarly along $\zeta $ axis, 
+Similarly along the $\zeta $ axis, 
 \begin{equation}
-	\left[\epsilon \frac{\partial u}{\partial \zeta}\right]= \epsilon^-\frac{\partial G}{\partial \zeta}+(\epsilon^+-\epsilon^-)\frac{\partial u^+}{\partial \zeta }\label{3d_gfm3}
+	\left[\epsilon \frac{\partial u}{\partial \zeta}\right]= \epsilon^-\frac{\partial G}{\partial \zeta}+(\epsilon^+-\epsilon^-)\frac{\partial u^+}{\partial \zeta }.\label{3d_gfm3}
 \end{equation}
- 
- Then from equation (\ref{3d_gfm1}), (\ref{3d_gfm2}) and (\ref{3d_gfm3})we have,
+Then from equations (\ref{3d_gfm1}), (\ref{3d_gfm2}) and (\ref{3d_gfm3}) we have,
 \begin{eqnarray}
 \begin{aligned}   
 		\left[\epsilon \frac{\partial u}{\partial x}\right]&= \epsilon^-\left( \sin \psi \cos \theta \frac{\partial G}{\partial \xi}-\sin \theta \frac{\partial G}{\partial \eta}-\cos \psi \cos \theta \frac{\partial G}{\partial \zeta}\right)\\
 		 &-\sin\theta (\epsilon^+-\epsilon^-)\frac{\partial u}{\partial \eta}^+ -\cos{\phi} \cos \theta (\epsilon^+-\epsilon^-) \frac{\partial u^+}{\partial \zeta }\\
 		 &=\epsilon^- \frac{\partial G}{\partial x}-\sin\theta (\epsilon^+-\epsilon^-)\frac{\partial u}{\partial \eta}^+ -\cos{\phi} \cos \theta (\epsilon^+-\epsilon^-) \frac{\partial u^+}{\partial \zeta }\\
-		 &\approx \epsilon^- \frac{\partial G}{\partial x}\text{     considering } \frac{\partial u}{\partial \eta}^+ =0 \text{ and } \frac{\partial u^+}{\partial \zeta }=0.  
+		 &\approx \epsilon^- \frac{\partial G}{\partial x}\text{     assuming } \frac{\partial u}{\partial \eta}^+ =0 \text{ and } \frac{\partial u^+}{\partial \zeta }=0.  
 \end{aligned}\label{eq:m-gfm1}		  	
 \end{eqnarray}
-
-  Similarly along $x$ axis and $y$ axis we have, 
-  Then from equation (\ref{3d_gfm1}), (\ref{3d_gfm2}) and (\ref{3d_gfm3}) we have,
-    \begin{eqnarray}
-    \begin{aligned}  
-   \left[\epsilon \frac{\partial u}{\partial y}\right]\approx\epsilon^- \frac{\partial G}{\partial y}\text{ and } \left[\epsilon \frac{\partial u}{\partial z}\right]\approx\epsilon^- \frac{\partial G}{\partial z}\label{eq:m-gfm2}
-    \end{aligned}		  	
-    \end{eqnarray}
+Similarly along $y$ axis and $z$ axis from equation (\ref{3d_gfm1}),(\ref{3d_gfm2}) and (\ref{3d_gfm3}) we have:
+\begin{eqnarray}
+\begin{aligned}  
+\left[\epsilon \frac{\partial u}{\partial y}\right]\approx\epsilon^- \frac{\partial G}{\partial y}\text{ and } \left[\epsilon \frac{\partial u}{\partial z}\right]\approx\epsilon^- \frac{\partial G}{\partial z}.\label{eq:m-gfm2}
+\end{aligned}		  	
+\end{eqnarray}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Corner point for the modified GFM method}
 % TODO Maybe have to describe more about Corner point
-We have a special situation for a corner point when the interface crosses the grid line for the same axis twice around $x_i$ where $x_{i-1}$ and $x_{i+1}$ are on the other side of the interface.   
-		
+We have a special situation for a corner point when the interface crosses the grid line for the same axis twice around $x_i$ where $x_{i-1}$ and $x_{i+1}$ are on the other side of the interface as shown in Figure \ref{fig:corner_point}. There are two types of corner point situations. In one type the point $x_i$ is in $\Omega^-$ and the other two adjacent points are in $\Omega^+$ (see Figure \ref{fig:corner_point}). For this case we define $G_L=-G$ and $G_R = G$ to derive the following equations for the fictitious points $\tilde{u}_{i-1}$ and $\tilde{u}_{i+1}$: 
+\begin{figure}[!h]		
 \begin{center}
-	\includegraphics[scale=0.7]{GFMcorner.pdf}\\		
+	\includegraphics[width = 0.7\textwidth ]{GFMcorner.pdf}		
 \end{center}
-		
-Corner point case for the new GFM with $G_L=-G$ and $G_R = G$. 
-Which gives the following equations for the fictitious points $\tilde{u}_{i-1}$ and $\tilde{u}_{i+1}$. 
-	\begin{eqnarray}
-		\tilde{u}_{i-1}&=& A_1 u_{i-1}+B_1 u_{i} + C_1 G_L- D_1 \epsilon^- \frac{\partial G_L}{\partial x} \\
-		\tilde{u}_{i+1}&=& A_2 u_{i+1}+B_2 u_{i} - C_2 G_R- D_2 \epsilon^- \frac{\partial G_R}{\partial x}
-	\end{eqnarray}
-	%\begin{eqnarray*}
-	Where,
-	$$\beta_L^-=\epsilon^+,\beta_L^+=\epsilon^-,\beta_R^-=\epsilon^-,\beta_R^+=\epsilon^+$$
-	$$\lambda_L=\frac{x_i-x_{i-1}}{h},\lambda_R=\frac{x_{i+1}-x_i}{h}$$
-	$$F_1 = \beta^+_L \lambda_L+\beta^-_L(1-\lambda_L), F_2 = \beta^+_R \lambda_R+\beta^-_R(1-\lambda_R)$$
-	$$	A_1 = \frac{\beta^-_L}{F_1}, B_1  = \frac{\lambda_L(\beta^+_L-\beta^-_L)}{F_1}, C_1 = \frac{\beta^-_L}{F_1},D_1 = \frac{h \lambda_L}{F_1} $$ %, 
-	$$A_2 = \frac{\beta^+_R}{F_2}, B_2  = \frac{(1-\lambda_R)(\beta^-_R-\beta^+_R)}{F_2}, C_2 = \frac{\beta^+_R}{F_2},D_2 = \frac{h(1- \lambda_R)}{F_2}$$
+\caption{2D representation for a corner point treatment for the point $x_i$ }
+\label{fig:corner_point}
+\end{figure}
+\begin{equation}
+	\tilde{u}_{i-1}= A_1 u_{i-1}+B_1 u_{i} + C_1 G_L- D_1 \epsilon^- \frac{\partial G_L}{\partial x},\label{eq:corner1}
+\end{equation}
+and
+\begin{equation}	
+	\tilde{u}_{i+1}= A_2 u_{i+1}+B_2 u_{i} - C_2 G_R- D_2 \epsilon^- \frac{\partial G_R}{\partial x},\label{eq:corner2}
+\end{equation}
+where,
+    $$	A_1 = \frac{\beta^-_L}{F_1}, B_1  = \frac{\lambda_L(\beta^+_L-\beta^-_L)}{F_1}, C_1 = \frac{\beta^-_L}{F_1},D_1 = \frac{h \lambda_L}{F_1}, $$ %, 
+	$$A_2 = \frac{\beta^+_R}{F_2}, B_2  = \frac{(1-\lambda_R)(\beta^-_R-\beta^+_R)}{F_2}, C_2 = \frac{\beta^+_R}{F_2},D_2 = \frac{h(1- \lambda_R)}{F_2},$$
+	$$\beta_L^-=\epsilon^+,\beta_L^+=\epsilon^-,\beta_R^-=\epsilon^-,\beta_R^+=\epsilon^+,$$
+	$$\lambda_L=\frac{x^L_\Gamma-x_{i-1}}{h},\lambda_R=\frac{x^R_\Gamma-x_i}{h},$$
+	$$F_1 = \beta^+_L \lambda_L+\beta^-_L(1-\lambda_L), F_2 = \beta^+_R \lambda_R+\beta^-_R(1-\lambda_R).$$
+For the other type of the corner points we have the point $x_i$ in $ \Omega^+$ with its adjacent points in $x$ direction in $\Omega^-$. We can use the similar type of calculation like the previous type of corner points considering $G_L=G$ and $G_R = -G$ to find the factious points using the equations (\ref{eq:corner1}) and (\ref{eq:corner2}). 
+
+	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Simplicity of the modified GFM}
 
-Altogether this proposed modified GFM is much more easier to progrm compared to the MIB method used in \cite{Zhihan2017}. Unlike MIB method, modified GFM doesn't need to generate local coordinates in non-orthogonal tangential directions. We are also avoiding the tensor product decomposition of jump conditions used in mADI\cite{Zhihan2017} by the approximate jump conditions proposed in equation (\ref{eq:m-gfm1}) and (\ref{eq:m-gfm1}). At the end we are only using the three points on the finite difference stencil and it's  not necessary to consider any other auxiliary point to calculate any approximation of tangential derivatives like mADI does.    
+Altogether this proposed modified GFM is much more easier to program compared to the MIB method used in \cite{Zhihan2017}. Unlike the MIB method, the modified GFM doesn't need to generate local coordinates in the non-orthogonal tangential directions. We are also avoiding the tensor product decomposition of jump conditions used in mADI\cite{Zhihan2017} by the approximate jump conditions proposed in equations (\ref{eq:m-gfm1}) and (\ref{eq:m-gfm2}). At the end we are only using the three points on the finite difference stencil and its not necessary to consider any other auxiliary points to calculate any approximation of tangential derivatives like mADI does.    
 
 We have also simplified the step to get the axial direction jump conditions from the normal direction jump conditions. For the original GFM method in \cite{Liu2000}, Liu, Fedkiw and Kang needed the angle $\theta$ between the normal direction and the axial directions for this process which is not required for the modified GFM method. This reduces the required amount of information about the molecular surface. 

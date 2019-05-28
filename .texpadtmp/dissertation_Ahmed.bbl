@@ -2,7 +2,7 @@
 
 \bibitem{Cai2009}
 Q.~Cai, J.~Wang, H.~K. Zhao, and R.~Luo.
-\newblock On removal of charge singularity in poisson-boltzmann equation.
+\newblock {On removal of charge singularity in Poisson-Boltzmann equation}.
 \newblock {\em Journal of Chemical Physics}, 130(14), 2009.
 
 \bibitem{Chen2011}
@@ -13,7 +13,7 @@ D.~Chen, Z.~Chen, C.~Chen, W.~Geng, and G.~W. Wei.
 \bibitem{Chen2007}
 L.~Chen, M.~Holst, and J.~Xu.
 \newblock {The Finite Element Approximation of the Nonlinear Poisson-Boltzmann
-  Equation}.
+  equation}.
 \newblock {\em SIAM Journal on Numerical Analysis}, 45(6):2298--2320, 2007.
 
 \bibitem{Zhan2011}
@@ -37,7 +37,7 @@ W.~Deng, J.~Xu, and S.~Zhao.
 \bibitem{Yakonov_1963}
 E.~D'Yakonov.
 \newblock Difference schemes with split operators for multidimensional unsteady
-  prob- lems (english translation).
+  problems (english translation).
 \newblock {\em USSR Comp. Math.}, 3:518--607, 1963.
 
 \bibitem{Fedkiw1999}
@@ -77,22 +77,16 @@ W.~Geng and S.~Zhao.
 
 \bibitem{Gilson}
 M.~K. Gilson, M.~E. Davis, B.~A. Luty, and J.~A. McCammon.
-\newblock Computation of electrostatic forces on solvated molecules using the
-  poisson-boltzmann equation.
+\newblock {Computation of electrostatic forces on solvated molecules using the
+  Poisson-Boltzmann equation}.
 \newblock {\em The Journal of Physical Chemistry}, 97(14):3591--3600, 1993.
 
 \bibitem{Hazra2019}
 T.~Hazra, S.~Ahmed~Ullah, S.~Wang, E.~Alexov, and S.~Zhao.
-\newblock A super-gaussian poisson--boltzmann model for electrostatic free
+\newblock {A super-Gaussian Poisson--Boltzmann model for electrostatic free
   energy calculation: smooth dielectric distribution for protein cavities and
-  in both water and vacuum states.
+  in both water and vacuum states}.
 \newblock {\em Journal of Mathematical Biology}, Apr 2019.
-
-\bibitem{Holst2010}
-M.~Holst, J.~A. McCammon, Z.~Yu, Y.~Zhou, and Y.~Zhu.
-\newblock {Adaptive Finite Element Modeling Techniques for the
-  Poisson-Boltzmann Equation}.
-\newblock {\em Communications in computational physics}, m(1):28, 2010.
 
 \bibitem{Holst:1993}
 M.~J. Holst.
@@ -100,6 +94,12 @@ M.~J. Holst.
 \newblock PhD thesis, University of Illinois at Urbana-Champaign, Champaign,
   IL, USA, 1993.
 \newblock UMI Order No. GAX94-11653.
+
+\bibitem{Holst2010}
+M.~J. Holst, J.~A. McCammon, Z.~Yu, Y.~Zhou, and Y.~Zhu.
+\newblock {Adaptive Finite Element Modeling Techniques for the
+  Poisson-Boltzmann equation}.
+\newblock {\em Communications in computational physics}, m(1):28, 2010.
 
 \bibitem{Holst1995}
 M.~J. Holst and F.~Saied.
@@ -109,16 +109,17 @@ M.~J. Holst and F.~Saied.
 
 \bibitem{Im1998}
 W.~Im, D.~Beglov, and B.~Roux.
-\newblock Continuum solvation model: Computation of electrostatic forces from
-  numerical solutions to the poisson-boltzmann equation.
+\newblock {Continuum solvation model: Computation of electrostatic forces from
+  numerical solutions to the Poisson-Boltzmann equation}.
 \newblock {\em Computer Physics Communication}, 11(1-3):59--75, 1998.
 
 \bibitem{PDB2PQR}
 G.~Klebe, H.~Li, J.~H. Jensen, J.~E. Nielsen, P.~Czodrowski, T.~J. Dolinsky,
   and N.~A. Baker.
-\newblock Pdb2pqr: expanding and upgrading automated preparation of
-  biomolecular structures for molecular simulations.
-\newblock {\em Nucleic Acids Research}, 35(Suppl. 2):W522--W525, 07 2007.
+\newblock {PDB2PQR: Expanding and upgrading automated preparation of
+  biomolecular structures for molecular simulations}, journal = {Nucleic Acids
+  Research}.
+\newblock 35(Suppl. 2):W522--W525, 07 2007.
 
 \bibitem{LEE1971379}
 B.~Lee and F.~Richards.
@@ -178,7 +179,7 @@ A.~Prlic, B.~Yukich, B.~Beran, C.~Zardecki, C.~Bi, D.~S. Goodsell,
 C.~Quan.
 \newblock {\em {Mathematical methods for implicit solvation models in quantum
   chemistry}}.
-\newblock PhD thesis, 2018.
+\newblock PhD thesis, Pierre and Marie Curie University, 2018.
 
 \bibitem{Fred1977}
 F.~M. Richards.
@@ -230,7 +231,14 @@ M.~M. Teeter, S.~Roe, and N.~H. Heo.
 \bibitem{Tomasi2005}
 J.~Tomasi, B.~Mennucci, and R.~Cammi.
 \newblock Quantum mechanical continuum solvation models.
-\newblock {\em Chemical reviews}, 105 8:2999--3093, 2005.
+\newblock {\em Chemical Reviews}, 105 8:2999--3093, 2005.
+
+\bibitem{drug2}
+D.-P. Wang, R.~C. Rizzo, J.~Tirado-Rives, and W.~L. Jorgensen.
+\newblock Antiviral drug design: computational analyses of the effects of the
+  l100i mutation for hiv-rt on the binding of nnrtis.
+\newblock {\em Bio-organic and Medicinal Chemistry Letters}, 11(21):2799--2802,
+  2001.
 
 \bibitem{Zhihan2017}
 Z.~Wei, C.~Li, and S.~Zhao.
@@ -247,8 +255,8 @@ L.~Wilson and S.~Zhao.
 
 \bibitem{XIE2014}
 D.~Xie.
-\newblock New solution decomposition and minimization schemes for
-  poisson--boltzmann equation in calculation of biomolecular electrostatics.
+\newblock {New solution decomposition and minimization schemes for
+  Poisson--Boltzmann equation in calculation of biomolecular electrostatics}.
 \newblock {\em Journal of Computational Physics}, 275:294 -- 309, 2014.
 
 \bibitem{Yanenko_1963}
@@ -270,8 +278,8 @@ S.~Yu, W.~Geng, and G.~W. Wei.
 
 \bibitem{YU2007_3D}
 S.~Yu and G.~Wei.
-\newblock Three-dimensional matched interface and boundary (mib) method for
-  treating geometric singularities.
+\newblock {Three-dimensional matched interface and boundary (MIB) method for
+  treating geometric singularities}.
 \newblock {\em Journal of Computational Physics}, 227(1):602 -- 632, 2007.
 
 \bibitem{Yu2005}
@@ -301,14 +309,14 @@ S.~Zhao.
 
 \bibitem{ZHAO2004}
 S.~Zhao and G.~Wei.
-\newblock High-order fdtd methods via derivative matching for maxwell's
-  equations with material interfaces.
+\newblock {High-order FDTD methods via derivative matching for Maxwell's
+  equations with material interfaces}.
 \newblock {\em Journal of Computational Physics}, 200(1):60 -- 103, 2004.
 
 \bibitem{ZHOU2006}
 Y.~Zhou and G.~Wei.
-\newblock On the fictitious-domain and interpolation formulations of the
-  matched interface and boundary (mib) method.
+\newblock {On the fictitious-domain and interpolation formulations of the
+  matched interface and boundary (MIB) method}.
 \newblock {\em Journal of Computational Physics}, 219(1):228 -- 246, 2006.
 
 \bibitem{ZHOU2006_high}
@@ -319,8 +327,8 @@ Y.~Zhou, S.~Zhao, M.~Feig, and G.~Wei.
 
 \bibitem{Zhou_1996}
 Z.~Zhou, P.~Payne, M.~Vasquez, N.~Kuhn, and M.~Levitt.
-\newblock Finite-difference solution of the poisson--boltzmann equation:
-  Complete elimination of self-energy.
+\newblock {Finite-difference solution of the Poisson--Boltzmann equation:
+  Complete elimination of self-energy}.
 \newblock {\em Journal of Computational Chemistry}, 17(11):1344--1351, 1996.
 
 \end{thebibliography}
