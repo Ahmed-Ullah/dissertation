@@ -5,13 +5,16 @@ To validate our proposed algorithm we are providing numerical simulations in thi
 \section{Krikwood Sphere with analytical solution}
 \label{krik}
 
-The analytical solutions of the PBE are available only for simple geometries such as spheres. We have chosen the benchmark problem known as the Krikwood sphere, where a sphere has a charge at its center. This problem has the following analytical solution  (\ref{eq:sphere1}) with the source term (\ref{eq:sphere2}) as described in \cite{Geng2013_Fully}. 
+The analytical solutions of the PBE are available only for simple geometries such as spheres. We have chosen the benchmark problem known as the Krikwood sphere, where a sphere has a charge at its center. This problem has the following analytical solution  (\ref{eq:sphere1}) with the source term (\ref{eq:sphere2}) as described in \cite{Geng2013_Fully}: 
 \begin{align}
 	\phi({\bf r})&=\left\{\begin{array}{lc}\displaystyle\frac{1}{\varepsilon R}-\frac{1}{R}+\displaystyle\frac{1}{||{\bf r}||} & ||{\bf r}||<R, \\
-	\displaystyle\frac{1}{\varepsilon ||{\bf r}||}& ||{\bf r}||>R.\end{array}\right.\label{eq:sphere1}\\
+	\displaystyle\frac{1}{\varepsilon ||{\bf r}||}& ||{\bf r}||>R.\end{array}\right.\label{eq:sphere1}
+\end{align}
+and
+\begin{align}
 	\rho({\bf r})&=\left\{\begin{array}{lc}4\pi \delta ({\bf r)} & ||{\bf r}||<R, \\ \displaystyle\bar{\kappa}^2\sinh (\frac{1}{\varepsilon ||{\bf r}||}) & ||{\bf r}||>R,\end{array}\right.\label{eq:sphere2}
 \end{align}
-where $\varepsilon=\epsilon^+ / \epsilon^-$ and $R=2$ is the radius of the sphere and $\bar{\kappa}=1$. We have a unit charge $1e_c$ located at the center of the sphere $(0,0,0)$. Altogether this sphere is comparable to a protein molecule located inside our computational domain set by the boundaries form $-7$ to $7$ in $x,y$ and $z$ directions.  Here the dielectric constants are set as $\epsilon^+=80$ outside the sphere and $\epsilon^-=1$ inside the sphere. The ionic strength is $I_s = 0.01$ for all the tests discussed in this Section for the Krikwood sphere problem. It can be shown that this analytical solution in (\ref{eq:sphere1}) with the source term defined in (\ref{eq:sphere2}) will satisfy the nonlinear PBE in (\ref{pbe}) together with the jump condition defined in (\ref{ju_cond}). Both of the major challenges like the singularity and the non-smoothness are present in this benchmark problem. For an example the singularity is generating from the source term in (\ref{eq:sphere2}) for $||{\bf r}|| <R$. Also the non-smoothness is present due to the jump condition (\ref{ju_cond}). Both of these difficulties gives similar kind of challenge present in the nonlinear PBE to reduce the accuracy of the spatial discretization numerically. To use this benchmark problem to test the stability and the convergence in time and space we computed the $L_2$ error and $L_\infty$ error using the following measures: 
+where $\varepsilon=\epsilon^+ / \epsilon^-$ and $R=2$ is the radius of the sphere and $\bar{\kappa}=1$. We have a unit charge $1e_c$ located at the center of the sphere $(0,0,0)$. Altogether this sphere is comparable to a protein molecule located inside our computational domain set by the boundaries form $-7$ to $7$ in $x,y$ and $z$ directions.  Here the dielectric constants are set as $\epsilon^+=80$ outside the sphere and $\epsilon^-=1$ inside the sphere. The ionic strength is $I_s = 0.01$ for all the tests discussed in this section for the Krikwood sphere problem. It can be shown that this analytical solution in (\ref{eq:sphere1}) with the source term defined in (\ref{eq:sphere2}) will satisfy the nonlinear PBE in (\ref{pbe}) together with the jump condition defined in (\ref{ju_cond}). Both of the major challenges like the singularity and the non-smoothness are present in this benchmark problem. For an example the singularity is generating from the source term in (\ref{eq:sphere2}) for $||{\bf r}|| <R$. Also the non-smoothness is present due to the jump condition (\ref{ju_cond}). Both of these difficulties gives similar kind of challenge present in the nonlinear PBE to reduce the accuracy of the spatial discretization numerically. To use this benchmark problem to test the stability and the convergence in time and space we computed the $L_2$ error and $L_\infty$ error using the following measures: 
 \begin{equation}
 	L_\infty=\max\limits_{i,j,k}|\phi_{\rm exact}-\phi_{\rm num}|, L_2 = \sqrt{\frac{\sum_{i,j,k}|\phi_{\rm exact}-\phi_{\rm num}|^2}{N}},\label{eq:l2lmax}
 \end{equation}
@@ -33,7 +36,7 @@ where $\phi_{\rm true}$ is the analytical solution and $\phi_{\rm num}$ is the n
 We observe in Figure \ref{fig:stab_krik} (b), (c) and (d) that both $L_2$ and $L_\infty$ errors to be finite for all $\Delta t \in t_{set}$. For larger values of $\Delta t$ such as $\Delta t =5$, the numerical errors might feel meaningless but as long as these errors remain finite, this demonstrates the stability of the underlying time integration.  In comparison the ADI method \cite{Geng2013_Fully} in Figure \ref{fig:stab_krik} (a), blows-up for $\Delta t > 0.2$ in both cases. Also the error lines are almost flat (constant) for $\Delta t <0.02$ in Figure \ref{fig:stab_krik} (a), indicating that the $L_2$ and $L_\infty$ error are polluted and dominated by the singularities at the center of the sphere and do not decrease when $\Delta t$ becomes smaller like the other methods do. This observation again emphasizes the importance of regularization to avoid the singularity of the PBE. 
 
 
-\begin{table}[!ht]
+\begin{table}[!t]
 \centering
 %\begin{tabular}{|c|c|c|c|c|c|}
 \begin{tabular}{c c c c c c }
@@ -77,7 +80,7 @@ $h$ & $L_2$ & Order & $L_\infty$& Order & $E_{\rm sol}$ \\ \hline
 
 \textbf{Spatial Convergence:}  In this study, we investigated the order of accuracy for the spacial convergence in terms of $L_2$ and $L_\infty$ error using equation (\ref{eq:l2lmax}) in Table \ref{tab:krikwood} for the Krikwood sphere. The time step size $\Delta t$ is kept fixed at $\Delta t = 0.001$ while the grid spacing $h$ is reduced from $2$ to $1/8$. Within this range of $h$ we have noticed the accuracy of the GFM-ADI to be nearly 2nd order while it gradually decreases for the GFM-LODCN and GFM-LODIE. In this experiment, the stopping time has been set to $T_{end} = 10$ and found to be long enough to produce acceptable results. We have also computed the solvation energy $E_{\rm sol}$ for the nonlinear PBE in (\ref{pbe}) with the source term defined in (\ref{rho}). The solvation energy for this setup can also be computed analytically as $-81.97820845$. For all three of our proposed methods the solvation energies $E_{\rm sol}$ are found to be very close to this analytical value as reported in Table \ref{tab:krikwood}. In comparison the accuracy of the ADI method decreases instead of increasing as the grid spacing becomes finer. The major reason behind this is the singularity at the center being one of the grid points. The actual difference between the numerical solution and the analytical solution is $\infty$ since the term $\displaystyle \frac{1}{||{\bf r}||} $ in the analytical solution becomes $\infty$ at the center of the sphere. So we avoided this point to calculate our $L_2$ and $L_\infty$ errors  showed in Table \ref{tab:krikwood}. But still, it affects the neighboring points error and ultimately dominates the errors at all other points.    
 
-\begin{figure}[!ht]
+\begin{figure}[!t]
 	\centering
 %	\includegraphics[width=4in]{temp.jpg}
 \includegraphics[width=3in]{temp_1.jpg}
@@ -102,7 +105,7 @@ In this section, we focus on exploring the stability and accuracy of GFM-ADI, GF
 
   In this study at first we report the solvation energy of 1cbn calculated by all three of our proposed schemes in Table \ref{tab-1cbn}. After calculating the electrostatic potential $\phi$, equation (\ref{eq:solvation}) is discretized further to calculate the solvation energy using equation (\ref{eq:solvation}) where $Q$ is the trilinear interpolation of the singular charges $q_i$ at the center of the atoms.  The potential values are obtained by scaling our calculated dimensionless potentials with the constant $0.596163438$ corresponding for the room temperature (300K). In all cases a uniform mesh size $h = 0.5$ and a large stopping time $T_{end}$ are used to ensure that the steady state solution is reached. For the dielectric constant we have used $\epsilon^+=80$ for water as the solvent and $\epsilon^-=1$ the region in side the protein. The ionic strength is set to $I_s = 0.15$.
 % Table generated by Excel2LaTeX from sheet '1cbn'
-\begin{table}[!ht]
+\begin{table}[!t]
 \centering
 \begin{tabular}{c c c c c }
 \hline
@@ -151,7 +154,7 @@ $\Delta t$  & ADI  & GFM-ADI       & GFM-LODCN     & GFM-LODIE     \\ \hline
 
 Altogether GFM-ADI method is much more stable than the ADI method. This makes GFM-ADI a very practical method, while the ADI method is impractical by requiring too small $\Delta t$ values. In some sense, the GFM-ADI method is even better than LOD methods. Although LOD methods are unconditionally stable, the energies are inaccurate for large $\Delta t$ values. For GFM-ADI, the critical $\Delta t$ value for stability tells us a safe zone, within this safe zone, the GFM-ADI is both accurate and efficient. 
 
-\begin{figure}[!ht]
+\begin{figure}[!t]
 	\begin{center}
 	\includegraphics[width=3in]{space_1cbn_sol.jpg}
 	\includegraphics[width=3in]{space_1cbn_cpu.jpg}	
@@ -163,7 +166,7 @@ Altogether GFM-ADI method is much more stable than the ADI method. This makes GF
 
 {\bf Spatial Convergence:} In Figure \ref{fig:space_1cbn} we investigate how the change of grid spacing $h$ affects the solvation energy of real proteins like $1cbn$. We keep the time increment small and fixed to $ \Delta t = 0.001$ with the stopping time $T_{end} = 10$. From Figure \ref{fig:space_1cbn} (b) it is clear that the required CPU time increases dramatically when the grid spacing $h$ decreases. So we need to find the value of $h$ as large as possible without losing too much accuracy. We also observe in Figure \ref{fig:space_1cbn} (a) that for $h<0.6$ the solvation energy doesn't change that much indicating that $h = 0.5$ might be the optimum choice for the calculation of the solvation energy of proteins. 
 
-\begin{figure}[!h]
+\begin{figure}[!t]
 	\centering
 	\includegraphics[width=0.49 \textwidth ]{tend_5.jpg}
 	\includegraphics[width=0.49 \textwidth ]{tend_6.jpg}\\
@@ -184,7 +187,7 @@ As we can see in Figure \ref{fig:tend} (a), (b) and (c), all of our proposed met
 	\Delta E^n_{sol}(\phi^n)= |E^n_{sol}(\phi^n)-E^{n-1}_{sol}(\phi^{n-1})|.
 \end{equation}
 As we observe in Figure \ref{fig:tend}(b), this energy difference $\Delta E^n_{sol}$ decreases over time and it can be another tool to identify the steady state set stopping time $T_{end}$.
-\begin{table}[!ht]
+\begin{table}[!t]
 \begin{center}
 \begin{tabular}{c c c c }
 \hline
@@ -204,7 +207,7 @@ Finally we investigate the effect of the size of the computational domain on the
 
 {\bf Electrostatic potential on the molecular surface:} In Figure \ref{fig_1cbn} we focus on the electrostatic potential on the surface of the protein 1cbn for all three of our proposed schemes. The difference is not that much noticeable unless we focus in the black squared region of the front side. This shows that even though there are some differences in the solvation energies calculated by the proposed three methods there is no significant difference for the electrostatic potentials for our choice for the optimum values of the parameters.    
 
-\begin{figure}[!ht]
+\begin{figure}[!t]
 \begin{center}	
 	\includegraphics[width=2.1in]{1cbn_gfmadi_front_sq.png}\includegraphics[width=2.1in]{1cbn_gfmlodcn_front_sq.png}\includegraphics[width=2.1in]{1cbn_gfmlodie_front_sq.png}\\
 GFM-ADI front \hskip 0.7in GFM-LODCN front \hskip 0.7in GFM-LODIE front\\
@@ -267,22 +270,24 @@ The solvation energies for all three of our proposed schemes are compared  with 
 \includegraphics[width=\textwidth,height=270pt]{24_energy_diff.jpg}
 	(b)\\ 
 	\end{center}
-\caption{(a) Solvation energy of 24 proteins. (b) Difference in Solvation energy compared to rMIB method. Here "Index" is the set of all 24 proteins indexed.}
+\caption{(a) Solvation energy of 24 proteins. (b) Difference in Solvation energy compared to rMIB method. Here "Index" is representing the set of all 24 proteins individually.}
 \label{fig:24protein}
 \end{figure}
-It is noticeable in Figure \ref{fig:24protein} that the solvation energies for GFM-ADI, GFM-LODCN and GFM-LODIE are very close to each other. But the solvation energies from the ADI methods are always $200$ to $700$ $kcal/mol$ lower than the other proposed methods. This is an indicator that a major systematic difficulty like the singularity has been avoided to improve the accuracy in these newly proposed methods in this dissertation. We  also report the difference in the calculated solvation energy for our proposed methods with the rMIB method in Figure \ref{fig:24protein}. Figure \ref{fig:CPU_24protein} reports the required CPU time for these methods highlighting the fact that the ADI method takes around $10$ times more CPU time compared to the newly proposed methods. A major reason behind that is the necessity of $\Delta t$ to be as small as $0.001$ for the ADI method to keep it stable and accurate enough for all 24 proteins tested here. For the newly proposed methods we are able to use $\Delta t =0.05$ requiring less time to compute the solvation energies which are more accurate than the ADI method.    
-\begin{figure}[H]
+
+\begin{figure}[t!]
 	\begin{center}
-		\includegraphics[width=\textwidth,height=300pt]{CPU_time.png}
+		\includegraphics[width=\textwidth,height=290pt]{CPU_time.png}
 	\end{center}
 	\caption{CPU time for the Solvation Energy calculation of 24 proteins}
 	\label{fig:CPU_24protein}
 \end{figure}
+It is noticeable in Figure \ref{fig:24protein} that the solvation energies for GFM-ADI, GFM-LODCN and GFM-LODIE are very close to each other. But the solvation energies from the ADI methods are always $200$ to $700$ $kcal/mol$ lower than the other proposed methods. This is an indicator that a major systematic difficulty like the singularity has been avoided to improve the accuracy in these newly proposed methods in this dissertation. We  also report the difference in the calculated solvation energy for our proposed methods with the rMIB method in Figure \ref{fig:24protein}. Figure \ref{fig:CPU_24protein} reports the required CPU time for these methods highlighting the fact that the ADI method takes around $10$ times more CPU time compared to the newly proposed methods. A major reason behind that is the necessity of $\Delta t$ to be as small as $0.001$ for the ADI method to keep it stable and accurate enough for all 24 proteins tested here. For the newly proposed methods we are able to use $\Delta t =0.05$ requiring less time to compute the solvation energies which are more accurate than the ADI method.    
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Binding energy of 2a9x}
 Binding energies play an important role in viral transcription and antiviral drug design \cite{drug2}. In particular a better accuracy of the binding energy of the BIV Tat Protein and BIV TAR RNA in the HIV viral replication can significantly help in search of new antiviral drugs that repress the replication by blocking transactivation of viral RNA transcription \cite{Leeper2005}. In this section we demonstrate the ability of the GFM-ADI method to compute the binding energy of the BIV Tat Protein and BIV TAR RNA. 
 
-\begin{table}[H]
+\begin{table}[t!]
 \centering
 \begin{tabular}{crrrr}
 \hline
@@ -327,13 +332,13 @@ In Table \ref{tab_2a9x} we find that the binding energies calculated by GFM-ADI 
 
 \subsection{Salt effect on the binding affinity}
 The nonlinear PBE is often used to describe the salt effects on the binding of ligands, peptides, and proteins to nucleic acids, membranes, and proteins. In this investigation we have tested the performance of the proposed GFM-ADI scheme for the evaluation of the salt effect in the protein-protein binding of the complex Lactoglobulin dime(A-B) (PDB ID 1beb) and E9Dnase-Im9(10)(B-A)(PDB ID 1emv). Physically, the binding affinity can be quantitatively represented based on the binding-free energies, which reflect the non-specific salt dependence of the formation of macro- molecular complexes. The binding affinity is then calculated as the slope ratio of the salt-dependent binding energy at certain salt strength $I_s$ against the natural logarithm of $I_s$.
-The electrostatic binding-free energy can be further split into $E_{\rm cou}(I_s)$'s as the salt-independent parts and $E_{\rm sol}(I_s)$'s as the salt-dependent parts. The variation of the salt-dependent part of the binding-free energy $\Delta E_{\rm bind}(I_s)$ can thus be calculated as the difference in $E_{\rm bind}(I_s)$ for some nonzero salt strength and the zero salt concentration, because the salt independent parts cancel out. Altogether we have the following formula:\\
+The electrostatic binding-free energy can be further split into $E_{\rm cou}(I_s)$'s as the salt-independent parts and $E_{\rm sol}(I_s)$'s as the salt-dependent parts. The variation of the salt-dependent part of the binding-free energy $\Delta E_{\rm bind}(I_s)$ can thus be calculated as the difference in $E_{\rm bind}(I_s)$ for some nonzero salt strength and the zero salt concentration, because the salt independent parts cancel out. Altogether we have the following formula:
 \begin{eqnarray}
 	\Delta E_{\rm bind}(I_s) &=& E_{\rm bind}(I_s)- E_{\rm bind}(0)\label{eq_del_e_bind} \nonumber\\
 						 &=& [E_{\rm sol}^{\rm AB}(I_s)-E_{\rm sol}^{\rm AB}(0)]-[E_{\rm sol}^{\rm A}(I_s)-E_{\rm sol}^{\rm A}(0)]- [E_{\rm sol}^{\rm B}(I_s)-E_{\rm sol}^{\rm A}(0).
 \end{eqnarray}
 						 
-\begin{figure}[!ht]
+\begin{figure}[!t]
 \begin{center}
 \includegraphics[width =3in]{1beb_Tend50_TTol_neg4}
 \includegraphics[width =3in]{1emv_Tend50_TTol_neg4}

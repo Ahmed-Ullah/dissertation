@@ -1,14 +1,15 @@
-%on the points far away from the interface $\Gamma$ which are defined as regulars nodes.
-At the points adjacent to the interface $\Gamma$, the central difference operators defined in (\ref{dif_opx})-(\ref{dif_opz}) are not used since these points are defined as irregular points where at-least one of its adjacent points is on the other side of the interface $\Gamma$. 
-%On the irregular points at least one of the three point stencils for $\delta_x^2,\delta_y^2$ and $\delta_z^2$ is across the interface. 
-Here the information about the function $v$ is not available for the point which is on the other side of the interface. A non-standard finite difference formula is necessary on the irregular points to discretize $\delta_x^2,\delta_y^2$ and $\delta_z^2$.  In this regard a modified version of the Ghost Fluid Method is proposed in this chapter using fictitious points (or ghost points) and the jump conditions given by (\ref{phitilde3}) and (\ref{phitilde4}).
-
-\begin{figure}[!ht]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale = .7]{PBE1_grid.pdf}
 	\caption{Irregular grid points marked as colored disks with blue and orange color for the corner points.}
 	\label{fig_irgpoints}
 \end{figure}
+
+
+%on the points far away from the interface $\Gamma$ which are defined as regulars nodes.
+At the points adjacent to the interface $\Gamma$, the central difference operators defined in (\ref{dif_opx})-(\ref{dif_opz}) are not used since these points are defined as irregular points where at-least one of its adjacent points is on the other side of the interface $\Gamma$. 
+%On the irregular points at least one of the three point stencils for $\delta_x^2,\delta_y^2$ and $\delta_z^2$ is across the interface. 
+Here the information about the function $v$ is not available for the point which is on the other side of the interface. A non-standard finite difference formula is necessary on the irregular points to discretize $\delta_x^2,\delta_y^2$ and $\delta_z^2$.  In this regard a modified version of the Ghost Fluid Method is proposed in this chapter using fictitious points (or ghost points) and the jump conditions given by (\ref{phitilde3}) and (\ref{phitilde4}).
 
 
 The Ghost Fluid Method(GFM) is a sharpe interface technique introduced in  \cite{Fedkiw1999} to treat the two-face contact discontinuities in the Euler equations. It extends values across the interface into an artificial fluid (ghost fluid), inducing the jump conditions at the interface. This GFM method was later extended in \cite{Liu2000} to solve elliptic equations with variable coefficients. But in contrast to their method \cite{Liu2000}, the jump conditions are incorporated into the numerical discretization in such a way that the symmetry of the finite difference stencil is preserved. Which makes it compatible with most standard solvers. The flux jump has been decomposed in each axis direction treating the problem dimension by dimension. As a result this extended GFM becomes only first order accurate.   
@@ -18,7 +19,7 @@ The Ghost Fluid Method(GFM) is a sharpe interface technique introduced in  \cite
 \section{One dimension}
 
 For a one dimensional representation of the proposed GFM schemes we try to evaluate the finite difference operator $\delta_{xx}$ at the irregular points where the interface is at $x_\Gamma$ between $x_i$ and $x_{i+1}$ as shown in Figure \ref{fig_1}.  %$x_i \leq x_\Gamma\leq x_{i+1}$.   
-\begin{figure}[ht]
+\begin{figure}[t!]
 \begin{center}
 %\includegraphics[scale = .5]{PBE1_grid.pdf}
 \includegraphics[scale=1.5]{1dmib1.pdf}\hspace{10mm}
@@ -27,14 +28,16 @@ For a one dimensional representation of the proposed GFM schemes we try to evalu
 \end{center}
 \end{figure}
 
-Here $u$ satisfies the PBE as $u=\begin{cases}
-u_{in} \text{ in }\Omega^-\\
-u_{out}\text{ in }\Omega^+\\
-\end{cases}$ and we define $u^+ = u_{out}(x_\Gamma),u^- = u_{in}(x_\Gamma),h=x_{i+1}-x_i$ and  $\lambda =\frac{x_\Gamma-x_i}{h}$ to get following equations,
+Here $u$ satisfies the PBE as $u = u_{in} \text{ in }\Omega^-$ with $ u= u_{out}\text{ in }\Omega^+$
+%$u=\begin{cases}
+%u_{in} \text{ in }\Omega^-\\
+%u_{out}\text{ in }\Omega^+\\
+%\end{cases}$ 
+and we define $u^+ = u_{out}(x_\Gamma),u^- = u_{in}(x_\Gamma),h=x_{i+1}-x_i$ and  $\lambda =\frac{x_\Gamma-x_i}{h}$ to get following equations,
 \begin{eqnarray}
 \begin{aligned}
 x_\Gamma &= x_i + \lambda h,  \\
-u^- &= u_i(1-\lambda )+ \tilde{u}_{i+1} \lambda \text{ and }u^+ = \tilde{u}_i(1-\lambda )+ u_{i+1}\lambda,x\\
+u^- &= u_i(1-\lambda )+ \tilde{u}_{i+1} \lambda \text{ and }u^+ = \tilde{u}_i(1-\lambda )+ u_{i+1}\lambda,\\
 \left[u\right]  & = u^+-u^- \text{ and }\left[ \epsilon \frac{\partial u}{\partial x} \right] =  \epsilon^+ u^+_x-\epsilon^- u^-_x,
 \end{aligned}\label{1d_GFM}
 \end{eqnarray}
@@ -45,8 +48,8 @@ Our purpose here is to apply the non-standard finite difference operator $\delta
 \begin{equation}
 \delta_x^2\left(u_{i}\right)= \frac{\epsilon^-}{h^2} \left(u_{i-1}-2u_{i}+\tilde{u}_{i+1}\right)\text{ and }\delta_x^2\left(u_{i+1}\right)= \frac{\epsilon^+}{h^2} \left(\tilde{u}_{i}-2u_{i+1}+u_{i+2}\right).	\label{fnt-op}
 \end{equation}
-Now solving the above equations in (\ref{1d_GFM})  for $\tilde{u}_i $ and $\tilde{u}_{i+1}$ we get, 
-\begin{eqnarray}	\tilde{u}_i&=& \frac{\epsilon^-}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}u_i +\frac{\lambda(\epsilon^+-\epsilon^-)}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}u_{i+1}\nonumber\\ &+&\frac{\epsilon^-}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}\left[u\right] -\frac{h \lambda}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}\left[ \epsilon \frac{\partial u}{\partial x} \right]
+Now solving the equations in (\ref{1d_GFM})  for $\tilde{u}_i $ and $\tilde{u}_{i+1}$ we get, 
+\begin{eqnarray}	\tilde{u}_i&=& \frac{\epsilon^-}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}u_i +\frac{\lambda(\epsilon^+-\epsilon^-)}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}u_{i+1}\nonumber\\ &+&\frac{\epsilon^-}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}\left[u\right] -\frac{h \lambda}{\epsilon^+\lambda+\epsilon^-(1-\lambda)}\left[ \epsilon \frac{\partial u}{\partial x} \right],
 \end{eqnarray}
 and 
 \begin{eqnarray}		
@@ -55,11 +58,11 @@ and
 \end{eqnarray}
 Then substituting equation (\ref{u_fact}) into equation (\ref{fnt-op}) we get
 \begin{equation}
-		\delta_x^2\left(u_{i}\right)= \frac{1}{h^2} \left(a_1u_{i-1}+b_1 u_{i}+c_1u_{i+1}\right)+\frac{\epsilon^-}{h^2}\left(e_1.[u]+f_1.\left[ \epsilon \frac{\partial u}{\partial x} \right]\right)\label{fnt-op-1}
+		\delta_x^2\left(u_{i}\right)= \frac{1}{h^2} \left(a_1u_{i-1}+b_1 u_{i}+c_1u_{i+1}\right)+\frac{\epsilon^-}{h^2}\left(e_1.[u]+f_1.\left[ \epsilon \frac{\partial u}{\partial x} \right]\right),\label{fnt-op-1}
 \end{equation}
 and 
 \begin{equation}		
-		\delta_x^2\left(u_{i+1}\right)= \frac{1}{h^2} \left(a_2u_{i}-b_2u_{i+1}+c_2u_{i+2}\right)+\frac{\epsilon^+}{h^2}\left(e_2.[u]+f_2.\left[ \epsilon \frac{\partial u}{\partial x} \right]\right)\label{fnt-op-2}
+		\delta_x^2\left(u_{i+1}\right)= \frac{1}{h^2} \left(a_2u_{i}-b_2u_{i+1}+c_2u_{i+2}\right)+\frac{\epsilon^+}{h^2}\left(e_2.[u]+f_2.\left[ \epsilon \frac{\partial u}{\partial x} \right]\right),\label{fnt-op-2}
 \end{equation}
 where,
 \begin{eqnarray}
@@ -88,16 +91,16 @@ In this case,  $\left[ \epsilon \frac{\partial u}{\partial x} \right]$ and $\lef
 
 \begin{eqnarray}
 \begin{aligned}
-			\left[\epsilon \frac{\partial u}{\partial n}\right] &=& \cos \theta \left[\epsilon \frac{\partial u}{\partial x}\right] + sin \theta \left[\epsilon \frac{\partial u}{\partial y}\right],\label{epun} \\
-			\left[\epsilon \frac{\partial u}{\partial \tau}\right] &=& sin \theta \left[\epsilon \frac{\partial u}{\partial x}\right] - \cos \theta\left[\epsilon \frac{\partial u}{\partial y}\right],\label{eput}	
+			\left[\epsilon \frac{\partial u}{\partial n}\right] &=& \cos \theta \left[\epsilon \frac{\partial u}{\partial x}\right] + \sin \theta \left[\epsilon \frac{\partial u}{\partial y}\right],\label{epun} \\
+			\left[\epsilon \frac{\partial u}{\partial \tau}\right] &=& \sin \theta \left[\epsilon \frac{\partial u}{\partial x}\right] - \cos \theta\left[\epsilon \frac{\partial u}{\partial y}\right],\label{eput}	
 \end{aligned}		
 \end{eqnarray}
 where $\theta$ is the angle between the normal direction and positive $x$ direction, as shown in Figure \ref{fig_gfm_2D}. 
 Equation \ref{eput} can be solved for $ \left[\epsilon \frac{\partial u}{\partial x}\right]$ and $\left[\epsilon \frac{\partial u}{\partial y}\right]$:
 \begin{eqnarray}
 \begin{aligned}
-	\left[\epsilon \frac{\partial u}{\partial x}\right] &=& \cos \theta \left[\epsilon \frac{\partial u}{\partial n}\right] +sin \theta \left[\epsilon \frac{\partial u}{\partial \tau}\right],\label{epux1} \\
-	\left[\epsilon \frac{\partial u}{\partial y}\right] &=& sin \theta \left[\epsilon \frac{\partial u}{\partial n}\right] -\cos \theta \left[\epsilon \frac{\partial u}{\partial \tau}\right].\label{epuy1}
+	\left[\epsilon \frac{\partial u}{\partial x}\right] &=& \cos \theta \left[\epsilon \frac{\partial u}{\partial n}\right] +\sin \theta \left[\epsilon \frac{\partial u}{\partial \tau}\right],\label{epux1} \\
+	\left[\epsilon \frac{\partial u}{\partial y}\right] &=& \sin \theta \left[\epsilon \frac{\partial u}{\partial n}\right] -\cos \theta \left[\epsilon \frac{\partial u}{\partial \tau}\right].\label{epuy1}
 \end{aligned}	
 \end{eqnarray}
 To simplify the jump-conditions Liu, Fedkiw and Kang \cite{Liu2000}  smeared out the tangential derivative by considering $\left[\epsilon \frac{\partial u}{\partial \tau}\right]=0$ to get the following equations, 

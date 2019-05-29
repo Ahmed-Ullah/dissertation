@@ -10,7 +10,7 @@
 \contentsline {chapter}{\numberline {3}POISSON-BOLTZMANN EQUATION AND ADI-MSMS}{9}
 \contentsline {section}{\numberline {3.1}Poisson-Boltzmann Equation}{9}
 \contentsline {section}{\numberline {3.2}Molecular surfaces}{11}
-\contentsline {section}{\numberline {3.3}ADI Method for pseudo transient PBE}{12}
+\contentsline {section}{\numberline {3.3}ADI Method for pseudo transient PBE}{13}
 \contentsline {section}{\numberline {3.4}Cleaning ADI-MSMS package to develop REG-GFM-MSMS package}{14}
 \contentsline {chapter}{\numberline {4}REGULARIZED TIME DEPENDENT PBE }{17}
 \contentsline {section}{\numberline {4.1}Two-component regularization for singular sources}{17}
@@ -31,7 +31,7 @@
 \contentsline {subsection}{\numberline {6.2.1}Protein Crambin }{41}
 \contentsline {subsection}{\numberline {6.2.2}Solvation energy of 24 proteins}{46}
 \contentsline {subsection}{\numberline {6.2.3}Binding energy of 2a9x}{50}
-\contentsline {subsection}{\numberline {6.2.4}Salt effect on the binding affinity}{52}
+\contentsline {subsection}{\numberline {6.2.4}Salt effect on the binding affinity}{51}
 \contentsline {chapter}{\numberline {7}CONCLUSIONS}{54}
 \contentsline {chapter}{REFERENCES}{55}
 \contentsline {chapter}{APPENDIX}{60}
